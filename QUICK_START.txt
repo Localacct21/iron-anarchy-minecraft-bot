@@ -1,0 +1,29 @@
+🔥 IRON-ANARCHY BOT - QUICK START 🔥
+
+1. START BOT:
+   ./start-ironanarchy.sh
+
+2. ESSENTIAL COMMANDS:
+   !help          - Show all commands
+   !follow        - Follow me
+   !killaura      - Auto-attack players
+   !escape        - Flee from combat
+   !stop          - Stop everything
+   !health        - Show health/food
+   !coords        - Share coordinates
+
+3. EMERGENCY:
+   !stop          - Emergency stop
+   !suicide       - Respawn bot
+
+4. CONFIGURATION:
+   Edit config.json to change username
+   Default: ironanarchy.lol:25565 (v1.21.4)
+
+5. WEB INTERFACE:
+   http://localhost:3000
+
+6. LOGS:
+   Check ./logs/ directory for all activity
+
+Read INSTRUCTIONS.md for complete guide!
