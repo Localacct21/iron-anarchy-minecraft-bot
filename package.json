@@ -1,12 +1,13 @@
 {
   "name": "minecraft-bot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Iron-Anarchy Minecraft Bot with PvP capabilities",
+  "main": "ironanarchy-bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ironanarchy-bot.js",
+    "test": "node test-bot.js"
   },
-  "keywords": [],
+  "keywords": ["minecraft", "bot", "pvp", "iron-anarchy"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
