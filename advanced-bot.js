@@ -1,6 +1,6 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
-const pvp = require('mineflayer-pvp').plugin
+const mineflayerPvp = require('mineflayer-pvp')
 const autoEat = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
 const collectBlock = require('mineflayer-collectblock')
@@ -8,6 +8,26 @@ const { plugin: bloodhound } = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
 const moment = require('moment')
+
+// Helper function to safely load plugins with better error handling
+function loadPluginSafely(bot, plugin, pluginName) {
+  if (typeof plugin !== 'function') {
+    throw new Error(`Plugin ${pluginName} is not a function. Expected a function but got ${typeof plugin}. This may indicate a version mismatch or incorrect import.`)
+  }
+  bot.loadPlugin(plugin)
+}
+
+// Extract PVP plugin - handle both direct function export and { plugin } export
+let pvpPlugin
+if (typeof mineflayerPvp === 'function') {
+  pvpPlugin = mineflayerPvp
+} else if (mineflayerPvp.plugin && typeof mineflayerPvp.plugin === 'function') {
+  pvpPlugin = mineflayerPvp.plugin
+} else if (mineflayerPvp.default && typeof mineflayerPvp.default === 'function') {
+  pvpPlugin = mineflayerPvp.default
+} else {
+  throw new Error('mineflayer-pvp plugin could not be loaded. Expected a function export, { plugin } export, or { default } export.')
+}
 
 // Load configuration
 const config = require('./config.json')
@@ -21,27 +41,14 @@ const bot = mineflayer.createBot({
   auth: config.bot.auth
 })
 
-// Load plugins
+// Load plugins with error handling
 bot.loadPlugin(pathfinder)
-bot.loadPlugin(pvp)
-bot.loadPlugin(autoEat)
-bot.loadPlugin(armorManager)
-bot.loadPlugin(collectBlock)
-bot.loadPlugin(bloodhound)
-bot.loadPlugin(webInventory)
-
-// Create logs directory
-fs.ensureDirSync('./logs')
-
-// Global variables
-let isGuarding = false
-let following = null
-let guardInterval = null
-
-// Enhanced logging function
-function logMessage(type, message, data = null) {
-  const timestamp = moment().format('YYYY-MM-DD HH:mm:ss')
-  const logEntry = `[${timestamp}] [${type}] ${message}${data ? ' | ' + JSON.stringify(data) : ''}\n`
+loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
+loadPluginSafely(bot, autoEat, 'mineflayer-auto-eat')
+loadPluginSafely(bot, armorManager, 'mineflayer-armor-manager')
+loadPluginSafely(bot, collectBlock, 'mineflayer-collectblock')
+loadPluginSafely(bot, bloodhound, 'mineflayer-bloodhound')
+loadPluginSafely(bot, webInventory, 'mineflayer-web-inventory')
   
   // Console log with colors
   const colors = {

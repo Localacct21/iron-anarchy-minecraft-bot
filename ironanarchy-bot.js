@@ -1,6 +1,6 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
-const pvp = require('mineflayer-pvp').plugin
+const mineflayerPvp = require('mineflayer-pvp')
 const autoEat = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
 const collectBlock = require('mineflayer-collectblock')
@@ -25,7 +25,7 @@ const bot = mineflayer.createBot({
 
 // Load plugins
 bot.loadPlugin(pathfinder)
-bot.loadPlugin(pvp)
+loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
 bot.loadPlugin(autoEat)
 bot.loadPlugin(armorManager)
 bot.loadPlugin(collectBlock)
@@ -550,6 +550,26 @@ function listPlayers() {
 // Auto-reconnect for Iron-Anarchy
 let reconnectAttempts = 0
 const maxReconnectAttempts = 10
+
+// Helper function to safely load plugins with better error handling
+function loadPluginSafely(bot, plugin, pluginName) {
+  if (typeof plugin !== 'function') {
+    throw new Error(`Plugin ${pluginName} is not a function. Expected a function but got ${typeof plugin}. This may indicate a version mismatch or incorrect import.`)
+  }
+  bot.loadPlugin(plugin)
+}
+
+// Extract PVP plugin - handle both direct function export and { plugin } export
+let pvpPlugin
+if (typeof mineflayerPvp === 'function') {
+  pvpPlugin = mineflayerPvp
+} else if (mineflayerPvp.plugin && typeof mineflayerPvp.plugin === 'function') {
+  pvpPlugin = mineflayerPvp.plugin
+} else if (mineflayerPvp.default && typeof mineflayerPvp.default === 'function') {
+  pvpPlugin = mineflayerPvp.default
+} else {
+  throw new Error('mineflayer-pvp plugin could not be loaded. Expected a function export, { plugin } export, or { default } export.')
+}
 
 bot.on('end', () => {
   logMessage('ERROR', 'Disconnected from Iron-Anarchy')
