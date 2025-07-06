@@ -192,7 +192,7 @@ The source files for these diagrams are maintained in the `/wiki/architecture/` 
 To regenerate the diagrams:
 
 ```bash
-java -jar plantuml.jar -tpng -o ../images wiki/architecture/*.puml
+java -jar ../../tools/plantuml/plantuml.jar -tpng -o ../images wiki/architecture/*.puml
 ```
 
 ---

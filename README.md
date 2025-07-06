@@ -750,3 +750,30 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - `!help` - List all commands
 
 For the complete command list and usage examples, see the [User Guide](./docs/USER_GUIDE.md).
+
+## 📁 Repository Structure
+
+This repository is organized for clarity and maintainability:
+
+- **`/src`** - Source code and core bot functionality
+- **`/docs`** - Complete project documentation
+- **`/wiki`** - User-friendly wiki with guides and references
+- **`/tools`** - Development tools and utilities
+- **`/config`** - Configuration files
+- **`/tests`** - Test suite
+- **`/scripts`** - Utility scripts
+
+See [`STRUCTURE.md`](STRUCTURE.md) for complete repository organization details.
+
+## 📚 Documentation Locations
+
+| Type | Location | Description |
+|------|----------|-------------|
+| **Quick Start** | [`README.md`](README.md) | This file - project overview |
+| **Installation** | [`docs/project-info/INSTALLATION.md`](docs/project-info/INSTALLATION.md) | Detailed setup guide |
+| **User Guide** | [`wiki/Home.md`](wiki/Home.md) | Complete wiki with tutorials |
+| **API Reference** | [`docs/API_REFERENCE.md`](docs/API_REFERENCE.md) | Developer API documentation |
+| **Architecture** | [`docs/project-info/ARCHITECTURE_SUMMARY.md`](docs/project-info/ARCHITECTURE_SUMMARY.md) | System architecture |
+| **Changelog** | [`docs/project-info/CHANGELOG.md`](docs/project-info/CHANGELOG.md) | Version history |
+| **Contributing** | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
+

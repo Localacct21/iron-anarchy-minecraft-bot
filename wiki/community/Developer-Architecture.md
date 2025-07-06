@@ -433,7 +433,7 @@ The project includes comprehensive UML diagrams generated from the codebase:
 ```bash
 # Generate UML diagrams from PlantUML source
 cd docs/../images/
-java -jar plantuml.jar *.puml
+java -jar ../../tools/plantuml/plantuml.jar *.puml
 
 # Diagrams are automatically generated as PNG files
 # Source files (.puml) are version controlled
