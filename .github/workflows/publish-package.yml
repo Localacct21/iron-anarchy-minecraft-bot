@@ -64,6 +64,10 @@ jobs:
         run: |
           cp package-npm.json package.json
           
+      - name: Remove conflicting .npmrc
+        run: |
+          rm -f .npmrc
+          
       - name: Publish to NPM
         run: npm publish
         env:
