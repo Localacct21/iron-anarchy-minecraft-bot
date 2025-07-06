@@ -1,35 +1,42 @@
-# Git files
+# Development files
 .git/
 .gitignore
+.env
 
-# Test files and coverage
-coverage/
+# Documentation (keep main README)
+docs/
+*.md
+!README.md
+
+# Logs and recordings
+logs/
+recordings/
 *.log
+*.tmp
+*.temp
 
-# Development files
+# Backup files
+*.backup*
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Recordings and temporary files
-recordings/
-*.tmp
-*.temp
-
-# Environment and config files (keep examples)
-.env
+# Test configuration files
 config.json
 discord-config.json
+test-config.json
 
-# Node modules (already excluded by default)
+# Screenshots
+screenshots/
+
+# Node modules (excluded by default)
 node_modules/
-
-# Build artifacts
-dist/
-build/

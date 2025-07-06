@@ -2,18 +2,21 @@
   "name": "iron-anarchy-minecraft-bot",
   "version": "2.0.0",
   "description": "Enhanced Iron-Anarchy Minecraft Bot with Discord Integration, Recording Features, and Web Dashboard",
-  "main": "enhanced-ironanarchy-bot.js",
+  "main": "index.js",
   "bin": {
-    "iron-anarchy-bot": "./ironanarchy-bot.js"
+    "iron-anarchy-bot": "./index.js"
   },
   "scripts": {
-    "start": "node ironanarchy-bot.js",
-    "enhanced": "node enhanced-ironanarchy-bot.js",
+    "start": "node index.js",
+    "enhanced": "node src/bots/enhanced-ironanarchy-bot.js",
+    "advanced": "node src/bots/advanced-bot.js",
+    "basic": "node src/bots/bot.js",
+    "discord": "node src/bots/enhanced-discord-bot.js",
     "test": "node tests/run-all-tests.js",
     "test:plugin": "node tests/plugin-loader-simple.test.js",
     "test:discord": "node tests/discord-integration-simple.test.js",
-    "basic": "node bot.js",
-    "advanced": "node advanced-bot.js"
+    "setup": "node scripts/setup.js",
+    "validate": "node examples/plugin-test-bot.js"
   },
   "keywords": [
     "minecraft",
@@ -45,15 +48,22 @@
     "node": ">=14.0.0"
   },
   "files": [
-    "*.js",
-    "plugins/",
+    "index.js",
+    "src/",
     "tests/",
-    "config.json.example",
-    "discord-config.json.example",
+    "config/",
+    "scripts/",
+    "examples/",
     "README.md",
-    "FINALIZATION_SUMMARY.md",
+    "LICENSE",
     "package.json"
   ],
+  "directories": {
+    "lib": "src",
+    "test": "tests",
+    "example": "examples",
+    "doc": "docs"
+  },
   "type": "commonjs",
   "dependencies": {
     "discord.js": "^14.17.2",

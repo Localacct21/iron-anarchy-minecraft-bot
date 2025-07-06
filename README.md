@@ -6,35 +6,81 @@
 [![GitHub release](https://img.shields.io/github/release/Localacct21/iron-anarchy-minecraft-bot.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🚀 Quick Start (For Absolute Beginners)
+## 🚀 Quick Start (3 Simple Steps!)
 
-### What You Need First
-1. **Node.js** (version 14 or higher) - [Download here](https://nodejs.org/)
-2. **A Minecraft account** 
-3. **Discord bot token** (optional but recommended)
-
-### 1️⃣ Install the Bot
-Open your terminal/command prompt and run:
+### 1️⃣ Install
 ```bash
 npm install -g iron-anarchy-minecraft-bot
 ```
 
-### 2️⃣ Create a Folder for Your Bot
+### 2️⃣ Setup Configuration
 ```bash
-mkdir my-minecraft-bot
-cd my-minecraft-bot
+npm run setup  # Creates config files automatically
 ```
 
-### 3️⃣ Set Up Configuration
-Create these files in your folder:
+### 3️⃣ Start Bot
+```bash
+npm start
+```
+
+That's it! Your bot is running! 🎉
+
+## 📁 Project Structure
+
+```
+iron-anarchy-minecraft-bot/
+├── 📂 src/
+│   ├── 🤖 bots/           # All bot implementations
+│   ├── 🔧 utils/          # Utility functions
+│   └── 🧩 plugins/        # Plugin system
+├── 📂 config/             # Configuration examples
+├── 📂 tests/              # Test suites
+├── 📂 examples/           # Usage examples
+├── 📂 scripts/            # Helper scripts
+├── 📂 docs/               # Documentation
+└── 📄 index.js            # Main entry point
+```
+
+## 🛠️ Available Commands
+
+### Basic Usage
+```bash
+npm start           # Start main bot
+npm run enhanced    # Enhanced bot with all features
+npm run advanced    # Advanced bot features
+npm run discord     # Discord-focused bot
+```
+
+### Setup & Testing
+```bash
+npm run setup       # Create configuration files
+npm test           # Run all tests
+npm run validate   # Validate plugin system
+```
+
+### Development
+```bash
+npm run test:plugin    # Test plugin loading
+npm run test:discord   # Test Discord integration
+```
+
+## ⚙️ Configuration
+
+### Automatic Setup
+```bash
+npm run setup
+```
+This creates `config.json` and `discord-config.json` with examples.
+
+### Manual Configuration
 
 **config.json**
 ```json
 {
   "host": "ironanarchy.net",
   "port": 25565,
-  "username": "YourMinecraftUsername",
-  "password": "YourMinecraftPassword",
+  "username": "your-username",
+  "password": "your-password",
   "version": "1.20.1",
   "autoReconnect": true,
   "recording": {
@@ -51,36 +97,29 @@ Create these files in your folder:
 **discord-config.json**
 ```json
 {
-  "token": "your-discord-bot-token-here",
-  "channelId": "your-discord-channel-id-here",
+  "token": "your-discord-bot-token",
+  "channelId": "your-channel-id",
   "enabled": true
 }
 ```
 
-### 4️⃣ Start Your Bot
-```bash
-iron-anarchy-bot
-```
-
-That's it! Your bot is now running! 🎉
-
-## 🌟 What This Bot Can Do
+## 🌟 Features
 
 ### 🤖 Smart Automation
 - **Auto-reconnect** when disconnected
 - **PVP assistance** for combat
-- **Pathfinding** to navigate safely
-- **Resource finding** to locate items
+- **Pathfinding** navigation
+- **Resource finding** automation
 
 ### 💬 Discord Integration
 - **Chat bridge** between Minecraft and Discord
-- **Status updates** sent to Discord
+- **Status updates** and monitoring
 - **Remote commands** via Discord
-- **Event notifications** (deaths, spawns, etc.)
+- **Event notifications**
 
 ### 📹 Recording System
 - **Session recording** with detailed logs
-- **Video output** of bot activities
+- **Video output** generation
 - **Performance monitoring**
 - **Automatic file management**
 
@@ -90,55 +129,9 @@ That's it! Your bot is now running! 🎉
 - **Inventory viewer**
 - **Command interface**
 
-## 🔧 Easy Configuration
+## 📦 Installation Options
 
-### Minecraft Settings
-Edit `config.json`:
-- `host`: Server address (default: ironanarchy.net)
-- `username`: Your Minecraft username
-- `password`: Your Minecraft password
-- `version`: Minecraft version (1.20.1 recommended)
-
-### Discord Settings (Optional)
-Edit `discord-config.json`:
-- `token`: Your Discord bot token
-- `channelId`: Discord channel ID for messages
-- `enabled`: Set to `false` to disable Discord features
-
-### Environment Variables (Alternative)
-Create a `.env` file:
-```bash
-MINECRAFT_USERNAME=your_username
-MINECRAFT_PASSWORD=your_password
-DISCORD_BOT_TOKEN=your_discord_token
-DISCORD_CHANNEL_ID=your_channel_id
-```
-
-## 📋 Available Commands
-
-### Starting the Bot
-```bash
-# Main bot with all features
-iron-anarchy-bot
-
-# Enhanced version
-npm run enhanced
-
-# Basic version
-npm run basic
-
-# Run tests
-npm test
-```
-
-### Discord Commands
-- `!status` - Check bot status
-- `!help` - Show available commands
-- `!disconnect` - Safely disconnect bot
-
-## 🛠️ Installation Options
-
-### Option 1: Global Installation (Recommended)
+### Option 1: NPM (Recommended)
 ```bash
 npm install -g iron-anarchy-minecraft-bot
 iron-anarchy-bot
@@ -150,7 +143,7 @@ npm install iron-anarchy-minecraft-bot
 npx iron-anarchy-bot
 ```
 
-### Option 3: Direct from GitHub
+### Option 3: From Source
 ```bash
 git clone https://github.com/Localacct21/iron-anarchy-minecraft-bot.git
 cd iron-anarchy-minecraft-bot
@@ -158,99 +151,116 @@ npm install
 npm start
 ```
 
-## 📊 Web Dashboard Usage
+## 🔧 Advanced Usage
 
-1. Start the bot with dashboard enabled
-2. Open your browser to `http://localhost:3001`
-3. Monitor your bot in real-time
-4. View inventory and status
-5. Execute commands through the web interface
-
-## 🐛 Common Issues & Solutions
-
-### "Cannot connect to server"
-- Check your username and password
-- Verify the server address and port
-- Ensure you're not banned from the server
-
-### "Discord bot not responding"
-- Verify your Discord bot token
-- Check channel ID is correct
-- Ensure bot has permissions in the channel
-
-### "npm command not found"
-- Install Node.js from https://nodejs.org/
-- Restart your terminal after installation
-
-### "Permission denied"
-- Run with `sudo` on Linux/Mac: `sudo npm install -g iron-anarchy-minecraft-bot`
-- Run as Administrator on Windows
-
-## 📱 Discord Bot Setup
-
-1. Go to https://discord.com/developers/applications
-2. Create a new application
-3. Go to "Bot" section
-4. Create a bot and copy the token
-5. Add bot to your server with permissions:
-   - Send Messages
-   - Read Message History
-   - View Channels
-
-## 🧪 Testing Your Setup
-
-Run these commands to test everything:
+### Custom Bot Scripts
 ```bash
-# Test all features
-npm test
-
-# Test plugin loading
-npm run test:plugin
-
-# Test Discord integration
-npm run test:discord
+# Use specific bot implementations
+node src/bots/enhanced-ironanarchy-bot.js
+node src/bots/enhanced-discord-bot.js
+node src/bots/advanced-bot.js
 ```
 
-## 🎯 Pro Tips
+### Environment Variables
+```bash
+# Alternative to config files
+MINECRAFT_USERNAME=your_username
+MINECRAFT_PASSWORD=your_password
+DISCORD_BOT_TOKEN=your_token
+DISCORD_CHANNEL_ID=your_channel_id
+```
 
-1. **Use screen or tmux** to keep the bot running when you disconnect
-2. **Check logs** regularly for any issues
-3. **Update regularly** with `npm update -g iron-anarchy-minecraft-bot`
-4. **Join our Discord** for support and updates
-5. **Read the FINALIZATION_SUMMARY.md** for technical details
+### Plugin Development
+```bash
+# Test plugin system
+npm run validate
 
-## 📚 Additional Resources
+# Check examples
+ls examples/
+```
 
-- **NPM Package**: https://www.npmjs.com/package/iron-anarchy-minecraft-bot
-- **GitHub Repository**: https://github.com/Localacct21/iron-anarchy-minecraft-bot
-- **Issues & Support**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues
-- **Latest Release**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Bot won't connect**
+- Check username/password in `config.json`
+- Verify server address and port
+- Ensure Node.js 14+ is installed
+
+**Discord not working**
+- Verify bot token in `discord-config.json`
+- Check channel ID is correct
+- Ensure bot has proper permissions
+
+**Tests failing**
+```bash
+npm test
+# Check output for specific errors
+```
+
+### Getting Help
+- 📧 Email: localacct@ironanarchy.lol
+- 🐛 Issues: [GitHub Issues](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
+- 📚 Docs: Check the `docs/` folder
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how:
+We love contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Quick Contribution Steps
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Submit a pull request
+4. Run tests: `npm test`
+5. Submit a pull request
+
+## 📚 Documentation
+
+- **Setup Guide**: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+- **Feature Overview**: [docs/ENHANCED_FEATURES.md](docs/ENHANCED_FEATURES.md)
+- **Discord Setup**: [docs/DISCORD_INTEGRATION_GUIDE.md](docs/DISCORD_INTEGRATION_GUIDE.md)
+- **Test Results**: [docs/FEATURE_TEST_REPORT.md](docs/FEATURE_TEST_REPORT.md)
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+**Free to use, just give credit!** 🎉
+
 ## 🙏 Support
 
-- **Star this repository** if you find it useful
-- **Report bugs** via GitHub issues
-- **Suggest features** through pull requests
-- **Share with friends** who play Minecraft
+- ⭐ **Star this repository** if you find it useful
+- 🐛 **Report bugs** via GitHub issues
+- 💡 **Suggest features** through pull requests
+- 📢 **Share with friends** who play Minecraft
 
 ---
 
-## 🎉 You're All Set!
+## 🎯 Quick Examples
 
-Your Iron-Anarchy Minecraft Bot is ready to dominate the server! 
+### Start Basic Bot
+```bash
+npm start
+```
 
-**Need help?** Open an issue on GitHub or check our troubleshooting guide above.
+### Start with Discord
+```bash
+npm run discord
+```
+
+### Run Tests
+```bash
+npm test
+```
+
+### Create Config Files
+```bash
+npm run setup
+```
 
 **Happy mining!** 🎮⛏️
+
+**Contact**: localacct@ironanarchy.lol  
+**NPM**: https://www.npmjs.com/package/iron-anarchy-minecraft-bot  
+**GitHub**: https://github.com/Localacct21/iron-anarchy-minecraft-bot
