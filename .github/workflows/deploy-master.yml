@@ -368,8 +368,9 @@ jobs:
         cp README.md docs/site/
         cp CONTRIBUTING.md docs/site/
         cp SECURITY.md docs/site/
-        cp CONFIGURATION.md docs/site/
-        cp TROUBLESHOOTING.md docs/site/
+        cp CODE_OF_CONDUCT.md docs/site/ 2>/dev/null || true
+        cp CHANGELOG.md docs/site/ 2>/dev/null || true
+        cp STRUCTURE.md docs/site/ 2>/dev/null || true
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
