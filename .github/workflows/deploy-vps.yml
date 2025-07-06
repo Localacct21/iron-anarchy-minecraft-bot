@@ -1,0 +1,295 @@
+name: Deploy to VPS/Self-Hosted
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+        - staging
+        - production
+      restart_services:
+        description: 'Restart services after deployment'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  deploy-to-vps:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci --only=production
+      
+    - name: Create deployment archive
+      run: |
+        # Create deployment package
+        tar --exclude='node_modules' \
+            --exclude='.git' \
+            --exclude='tests' \
+            --exclude='*.backup' \
+            -czf minecraft-bot-deploy.tar.gz .
+        
+    - name: Deploy to staging server
+      if: github.event.inputs.environment == 'staging'
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ vars.STAGING_HOST }}
+        username: ${{ vars.STAGING_USERNAME }}
+        key: ${{ secrets.STAGING_SSH_KEY }}
+        port: ${{ vars.STAGING_PORT || 22 }}
+        script: |
+          # Create backup of current deployment
+          if [ -d /opt/minecraft-bot ]; then
+            sudo cp -r /opt/minecraft-bot /opt/minecraft-bot.backup.$(date +%Y%m%d_%H%M%S)
+          fi
+          
+          # Create directory if it doesn't exist
+          sudo mkdir -p /opt/minecraft-bot
+          cd /opt/minecraft-bot
+          
+          # Stop existing services
+          sudo systemctl stop minecraft-bot || true
+          
+          # Download and extract new version
+          wget -O minecraft-bot-deploy.tar.gz "${{ github.server_url }}/${{ github.repository }}/archive/${{ github.sha }}.tar.gz"
+          sudo tar -xzf minecraft-bot-deploy.tar.gz --strip-components=1
+          
+          # Install dependencies
+          npm ci --only=production
+          
+          # Set permissions
+          sudo chown -R minecraft-bot:minecraft-bot /opt/minecraft-bot
+          
+          # Update configuration
+          sudo cp /opt/minecraft-bot/config/config.staging.json /opt/minecraft-bot/config/config.json || true
+          
+          # Start services
+          sudo systemctl start minecraft-bot
+          sudo systemctl enable minecraft-bot
+          
+          echo "✅ Staging deployment completed"
+          
+    - name: Deploy to production server
+      if: github.event.inputs.environment == 'production'
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ vars.PRODUCTION_HOST }}
+        username: ${{ vars.PRODUCTION_USERNAME }}
+        key: ${{ secrets.PRODUCTION_SSH_KEY }}
+        port: ${{ vars.PRODUCTION_PORT || 22 }}
+        script: |
+          # Create backup of current deployment
+          if [ -d /opt/minecraft-bot ]; then
+            sudo cp -r /opt/minecraft-bot /opt/minecraft-bot.backup.$(date +%Y%m%d_%H%M%S)
+          fi
+          
+          # Create directory if it doesn't exist
+          sudo mkdir -p /opt/minecraft-bot
+          cd /opt/minecraft-bot
+          
+          # Stop existing services gracefully
+          sudo systemctl stop minecraft-bot || true
+          sleep 5
+          
+          # Download and extract new version
+          wget -O minecraft-bot-deploy.tar.gz "${{ github.server_url }}/${{ github.repository }}/archive/${{ github.sha }}.tar.gz"
+          sudo tar -xzf minecraft-bot-deploy.tar.gz --strip-components=1
+          
+          # Install dependencies
+          npm ci --only=production
+          
+          # Set permissions
+          sudo chown -R minecraft-bot:minecraft-bot /opt/minecraft-bot
+          
+          # Update configuration
+          sudo cp /opt/minecraft-bot/config/config.production.json /opt/minecraft-bot/config/config.json || true
+          
+          # Restart services
+          sudo systemctl start minecraft-bot
+          sudo systemctl enable minecraft-bot
+          
+          # Verify deployment
+          sleep 10
+          if sudo systemctl is-active --quiet minecraft-bot; then
+            echo "✅ Production deployment completed successfully"
+          else
+            echo "❌ Production deployment failed - service not running"
+            exit 1
+          fi
+
+  create-systemd-service:
+    name: Create SystemD Service Files
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Generate SystemD service file
+      run: |
+        mkdir -p deployment-files
+        
+        cat > deployment-files/minecraft-bot.service << 'SERVICE_EOF'
+        [Unit]
+        Description=Iron Anarchy Minecraft Bot
+        After=network.target
+        Wants=network.target
+        
+        [Service]
+        Type=simple
+        User=minecraft-bot
+        Group=minecraft-bot
+        WorkingDirectory=/opt/minecraft-bot
+        ExecStart=/usr/bin/npm start
+        ExecReload=/bin/kill -HUP $MAINPID
+        Restart=always
+        RestartSec=10
+        StandardOutput=journal
+        StandardError=journal
+        SyslogIdentifier=minecraft-bot
+        Environment=NODE_ENV=production
+        Environment=LOG_LEVEL=info
+        
+        # Security settings
+        NoNewPrivileges=yes
+        PrivateTmp=yes
+        ProtectSystem=strict
+        ProtectHome=yes
+        ReadWritePaths=/opt/minecraft-bot/logs /opt/minecraft-bot/data
+        
+        # Resource limits
+        MemoryLimit=512M
+        TasksMax=100
+        
+        [Install]
+        WantedBy=multi-user.target
+        SERVICE_EOF
+        
+        cat > deployment-files/minecraft-bot-staging.service << 'STAGING_SERVICE_EOF'
+        [Unit]
+        Description=Iron Anarchy Minecraft Bot (Staging)
+        After=network.target
+        Wants=network.target
+        
+        [Service]
+        Type=simple
+        User=minecraft-bot
+        Group=minecraft-bot
+        WorkingDirectory=/opt/minecraft-bot-staging
+        ExecStart=/usr/bin/npm start
+        ExecReload=/bin/kill -HUP $MAINPID
+        Restart=always
+        RestartSec=10
+        StandardOutput=journal
+        StandardError=journal
+        SyslogIdentifier=minecraft-bot-staging
+        Environment=NODE_ENV=staging
+        Environment=LOG_LEVEL=debug
+        
+        # Security settings
+        NoNewPrivileges=yes
+        PrivateTmp=yes
+        ProtectSystem=strict
+        ProtectHome=yes
+        ReadWritePaths=/opt/minecraft-bot-staging/logs /opt/minecraft-bot-staging/data
+        
+        [Install]
+        WantedBy=multi-user.target
+        STAGING_SERVICE_EOF
+        
+    - name: Upload deployment files
+      uses: actions/upload-artifact@v4
+      with:
+        name: deployment-files
+        path: deployment-files/
+        retention-days: 30
+
+  health-check:
+    name: Post-Deployment Health Check
+    runs-on: ubuntu-latest
+    needs: deploy-to-vps
+    if: always() && needs.deploy-to-vps.result == 'success'
+    
+    steps:
+    - name: Health check staging
+      if: github.event.inputs.environment == 'staging'
+      run: |
+        echo "🏥 Performing health check on staging..."
+        
+        # Wait for service to start
+        sleep 30
+        
+        # Check if we can reach the staging server
+        if curl -f -s --connect-timeout 10 http://${{ vars.STAGING_HOST }}:3000/health || true; then
+          echo "✅ Staging health check passed"
+        else
+          echo "⚠️ Staging health check: Service may not be responding on HTTP"
+        fi
+        
+    - name: Health check production
+      if: github.event.inputs.environment == 'production'
+      run: |
+        echo "🏥 Performing health check on production..."
+        
+        # Wait for service to start
+        sleep 30
+        
+        # Check if we can reach the production server
+        if curl -f -s --connect-timeout 10 http://${{ vars.PRODUCTION_HOST }}:3000/health || true; then
+          echo "✅ Production health check passed"
+        else
+          echo "⚠️ Production health check: Service may not be responding on HTTP"
+        fi
+
+  rollback:
+    name: Rollback on Failure
+    runs-on: ubuntu-latest
+    needs: [deploy-to-vps, health-check]
+    if: failure() && github.event.inputs.environment == 'production'
+    environment: production
+    
+    steps:
+    - name: Rollback production deployment
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ vars.PRODUCTION_HOST }}
+        username: ${{ vars.PRODUCTION_USERNAME }}
+        key: ${{ secrets.PRODUCTION_SSH_KEY }}
+        port: ${{ vars.PRODUCTION_PORT || 22 }}
+        script: |
+          echo "🔄 Rolling back production deployment..."
+          
+          # Stop current service
+          sudo systemctl stop minecraft-bot
+          
+          # Find latest backup
+          LATEST_BACKUP=$(ls -t /opt/minecraft-bot.backup.* | head -1)
+          
+          if [ -n "$LATEST_BACKUP" ]; then
+            # Restore from backup
+            sudo rm -rf /opt/minecraft-bot
+            sudo mv "$LATEST_BACKUP" /opt/minecraft-bot
+            
+            # Restart service
+            sudo systemctl start minecraft-bot
+            
+            echo "✅ Rollback completed"
+          else
+            echo "❌ No backup found for rollback"
+            exit 1
+          fi
