@@ -60,7 +60,7 @@ jobs:
         echo "**Full Changelog**: https://github.com/${{ github.repository }}/compare/$(git describe --tags --abbrev=0 HEAD^)...$(git describe --tags --abbrev=0)" >> RELEASE_NOTES.md
         
     - name: Create GitHub Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         body_path: RELEASE_NOTES.md
         draft: false
@@ -136,7 +136,7 @@ jobs:
         
     - name: Create pre-release
       if: github.event.inputs.pre_release == 'true'
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: v${{ steps.version.outputs.new_version }}
         name: Release v${{ steps.version.outputs.new_version }}
