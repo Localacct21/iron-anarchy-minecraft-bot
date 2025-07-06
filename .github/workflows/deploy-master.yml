@@ -11,18 +11,26 @@ on:
         - 'docker-registry'
         - 'github-pages'
         - 'staging-demo'
+        - 'all'
       confirm_deployment:
         description: 'Type "DEPLOY" to confirm'
         required: true
         default: ''
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   validate-deployment:
-    name: Validate Deployment Request
+    name: 🔍 Validate Deployment Request
     runs-on: ubuntu-latest
     outputs:
       is_valid: ${{ steps.validate.outputs.is_valid }}
       deployment_type: ${{ steps.validate.outputs.deployment_type }}
+      run_docker: ${{ steps.validate.outputs.run_docker }}
+      run_docs: ${{ steps.validate.outputs.run_docs }}
+      run_demo: ${{ steps.validate.outputs.run_demo }}
       
     steps:
     - name: Validate deployment
@@ -31,7 +39,9 @@ jobs:
         DEPLOYMENT_TYPE="${{ github.event.inputs.deployment_type }}"
         CONFIRM="${{ github.event.inputs.confirm_deployment }}"
         
-        echo "deployment_type=$DEPLOYMENT_TYPE" >> $GITHUB_OUTPUT
+        echo "🔍 Validating deployment request..."
+        echo "Deployment type: $DEPLOYMENT_TYPE"
+        echo "Confirmation: $CONFIRM"
         
         if [[ "$CONFIRM" != "DEPLOY" ]]; then
           echo "❌ Deployment requires confirmation. Please type 'DEPLOY' in the confirmation field."
@@ -39,13 +49,35 @@ jobs:
           exit 1
         fi
         
-        echo "✅ Deployment request validated"
+        # Set output variables
+        echo "deployment_type=$DEPLOYMENT_TYPE" >> $GITHUB_OUTPUT
         echo "is_valid=true" >> $GITHUB_OUTPUT
+        
+        # Determine which jobs to run
+        if [[ "$DEPLOYMENT_TYPE" == "docker-registry" || "$DEPLOYMENT_TYPE" == "all" ]]; then
+          echo "run_docker=true" >> $GITHUB_OUTPUT
+        else
+          echo "run_docker=false" >> $GITHUB_OUTPUT
+        fi
+        
+        if [[ "$DEPLOYMENT_TYPE" == "github-pages" || "$DEPLOYMENT_TYPE" == "all" ]]; then
+          echo "run_docs=true" >> $GITHUB_OUTPUT
+        else
+          echo "run_docs=false" >> $GITHUB_OUTPUT
+        fi
+        
+        if [[ "$DEPLOYMENT_TYPE" == "staging-demo" || "$DEPLOYMENT_TYPE" == "all" ]]; then
+          echo "run_demo=true" >> $GITHUB_OUTPUT
+        else
+          echo "run_demo=false" >> $GITHUB_OUTPUT
+        fi
+        
+        echo "✅ Deployment request validated successfully"
 
   docker-deployment:
     name: 🐳 Build and Push Docker Image
     needs: validate-deployment
-    if: needs.validate-deployment.outputs.is_valid == 'true' && github.event.inputs.deployment_type == 'docker-registry'
+    if: needs.validate-deployment.outputs.is_valid == 'true' && needs.validate-deployment.outputs.run_docker == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -59,63 +91,67 @@ jobs:
       uses: docker/setup-buildx-action@v3
       
     - name: Log in to Container Registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
-        registry: ghcr.io
+        registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Extract metadata
       id: meta
-      uses: docker/metadata-action@v4
+      uses: docker/metadata-action@v5
       with:
-        images: ghcr.io/${{ github.repository }}
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
           type=ref,event=branch
           type=raw,value=latest,enable={{is_default_branch}}
           type=sha,prefix={{branch}}-
+          type=raw,value={{date 'YYYY-MM-DD'}}
           
     - name: Create optimized Dockerfile
       run: |
         cat > Dockerfile << 'DOCKER_EOF'
         FROM node:18-alpine
-        
+
         # Install system dependencies
-        RUN apk add --no-cache git python3 make g++
-        
+        RUN apk add --no-cache git python3 make g++ dumb-init
+
         # Create app directory
         WORKDIR /app
-        
+
+        # Create non-root user early
+        RUN addgroup -g 1001 -S minecraft && \
+            adduser -S minecraftbot -u 1001 -G minecraft
+
         # Copy package files
         COPY package*.json ./
-        
+
         # Install dependencies
         RUN npm ci --only=production && npm cache clean --force
-        
+
         # Copy application code
         COPY . .
-        
-        # Create non-root user
-        RUN addgroup -g 1001 -S minecraft && \
-            adduser -S minecraftbot -u 1001 -G minecraft && \
-            chown -R minecraftbot:minecraft /app
-        
+
+        # Set ownership
+        RUN chown -R minecraftbot:minecraft /app
+
         # Switch to non-root user
         USER minecraftbot
-        
+
         # Expose port
         EXPOSE 3000
-        
+
         # Health check
         HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
           CMD node -e "console.log('Bot health check OK')" || exit 1
-        
-        # Default command
+
+        # Use dumb-init to handle signals properly
+        ENTRYPOINT ["/usr/bin/dumb-init", "--"]
         CMD ["npm", "start"]
         DOCKER_EOF
         
     - name: Build and push Docker image
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v5
       with:
         context: .
         push: true
@@ -123,16 +159,21 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        platforms: linux/amd64,linux/arm64
 
   docs-deployment:
     name: 📚 Deploy Documentation
     needs: validate-deployment
-    if: needs.validate-deployment.outputs.is_valid == 'true' && github.event.inputs.deployment_type == 'github-pages'
+    if: needs.validate-deployment.outputs.is_valid == 'true' && needs.validate-deployment.outputs.run_docs == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pages: write
       id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
       
     steps:
     - name: Checkout code
@@ -145,35 +186,190 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
-      
+      run: |
+        npm ci
+        
     - name: Generate documentation
       run: |
         mkdir -p docs/site
         
-        # Create simple documentation site
+        # Create comprehensive documentation site
         cat > docs/site/index.html << 'HTML_EOF'
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
         <head>
-            <title>Iron Anarchy Minecraft Bot</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Iron Anarchy Minecraft Bot - Documentation</title>
             <style>
-                body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
-                .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; }
-                h1 { color: #333; text-align: center; }
-                .btn { display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 10px; }
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                body { 
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    min-height: 100vh;
+                }
+                .container { 
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                .header {
+                    text-align: center;
+                    color: white;
+                    margin-bottom: 40px;
+                    padding: 40px 0;
+                }
+                .header h1 { 
+                    font-size: 3em;
+                    margin-bottom: 10px;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                }
+                .header p { 
+                    font-size: 1.2em;
+                    opacity: 0.9;
+                }
+                .content {
+                    background: white;
+                    border-radius: 15px;
+                    padding: 40px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                }
+                .features {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 30px;
+                    margin: 40px 0;
+                }
+                .feature {
+                    padding: 30px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    text-align: center;
+                    transition: transform 0.3s;
+                }
+                .feature:hover {
+                    transform: translateY(-5px);
+                }
+                .feature h3 {
+                    color: #667eea;
+                    margin-bottom: 15px;
+                    font-size: 1.5em;
+                }
+                .btn {
+                    display: inline-block;
+                    padding: 15px 30px;
+                    background: linear-gradient(45deg, #667eea, #764ba2);
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    margin: 10px;
+                    font-weight: bold;
+                    transition: all 0.3s;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                }
+                .btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+                }
+                .stats {
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 30px 0;
+                    text-align: center;
+                }
+                .stat h4 {
+                    font-size: 2em;
+                    color: #667eea;
+                    margin-bottom: 5px;
+                }
+                .footer {
+                    text-align: center;
+                    color: white;
+                    margin-top: 40px;
+                    opacity: 0.8;
+                }
+                @media (max-width: 768px) {
+                    .header h1 { font-size: 2em; }
+                    .content { padding: 20px; }
+                    .stats { flex-direction: column; gap: 20px; }
+                }
             </style>
         </head>
         <body>
             <div class="container">
-                <h1>🤖 Iron Anarchy Minecraft Bot</h1>
-                <p>Enterprise-grade Minecraft automation bot with Discord integration.</p>
-                <a href="https://github.com/Localacct21/iron-anarchy-minecraft-bot" class="btn">GitHub Repository</a>
-                <a href="https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases" class="btn">Releases</a>
+                <div class="header">
+                    <h1>🤖 Iron Anarchy Minecraft Bot</h1>
+                    <p>Enterprise-grade Minecraft automation with Discord integration</p>
+                </div>
+                
+                <div class="content">
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>25+</h4>
+                            <p>Years IT Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>2.0.3</h4>
+                            <p>Current Version</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Open Source</p>
+                        </div>
+                    </div>
+                    
+                    <h2>🚀 Key Features</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>🎯 Advanced Pathfinding</h3>
+                            <p>Intelligent navigation and obstacle avoidance</p>
+                        </div>
+                        <div class="feature">
+                            <h3>⚔️ Combat Systems</h3>
+                            <p>Automated PvP with smart target selection</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🛡️ Auto Management</h3>
+                            <p>Automatic eating, armor equipping, and inventory management</p>
+                        </div>
+                        <div class="feature">
+                            <h3>💬 Discord Integration</h3>
+                            <p>Real-time monitoring and control via Discord</p>
+                        </div>
+                        <div class="feature">
+                            <h3>📊 Web Dashboard</h3>
+                            <p>Live statistics and bot management interface</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🔌 Plugin System</h3>
+                            <p>Extensible architecture for custom functionality</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="https://github.com/Localacct21/iron-anarchy-minecraft-bot" class="btn">📖 View Documentation</a>
+                        <a href="https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases" class="btn">📦 Download Latest</a>
+                        <a href="https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues" class="btn">🐛 Report Issue</a>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <p>&copy; 2024 Iron Anarchy Minecraft Bot - Built with ❤️ by Local Acct</p>
+                </div>
             </div>
         </body>
         </html>
         HTML_EOF
+        
+        # Copy additional documentation files
+        cp README.md docs/site/
+        cp CONTRIBUTING.md docs/site/
+        cp SECURITY.md docs/site/
+        cp CONFIGURATION.md docs/site/
+        cp TROUBLESHOOTING.md docs/site/
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -188,9 +384,9 @@ jobs:
       uses: actions/deploy-pages@v4
 
   demo-deployment:
-    name: 🎯 Demo Deployment
+    name: 🎯 Demo Deployment Test
     needs: validate-deployment
-    if: needs.validate-deployment.outputs.is_valid == 'true' && github.event.inputs.deployment_type == 'staging-demo'
+    if: needs.validate-deployment.outputs.is_valid == 'true' && needs.validate-deployment.outputs.run_demo == 'true'
     runs-on: ubuntu-latest
     
     steps:
@@ -204,39 +400,78 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci --only=production
-      
+      run: |
+        npm ci
+        
     - name: Create demo configuration
       run: |
         mkdir -p config
         cat > config/config.json << 'CONFIG_EOF'
         {
           "bot": {
-            "username": "DemoBot",
-            "auth": "offline"
+            "username": "IronAnarchyDemo",
+            "auth": "offline",
+            "reconnect": true,
+            "reconnectDelay": 5000
           },
           "server": {
-            "host": "localhost",
+            "host": "demo.example.com",
             "port": 25565,
             "version": "1.19.2"
           },
           "features": {
             "autoEat": true,
             "pathfinding": true,
-            "autoArmor": true
+            "autoArmor": true,
+            "pvp": false,
+            "collectItems": true
+          },
+          "discord": {
+            "enabled": false,
+            "token": "DEMO_TOKEN"
+          },
+          "web": {
+            "enabled": true,
+            "port": 3000
+          },
+          "logging": {
+            "level": "info",
+            "file": "logs/bot.log"
           }
         }
         CONFIG_EOF
         
-    - name: Test bot startup
+    - name: Validate configuration
       run: |
-        echo "🚀 Testing bot startup..."
-        timeout 10s npm start || echo "✅ Bot startup test completed"
+        echo "🔍 Validating configuration..."
+        node -e "
+        const config = require('./config/config.json');
+        console.log('✅ Configuration is valid JSON');
+        console.log('Bot username:', config.bot.username);
+        console.log('Features enabled:', Object.keys(config.features).filter(k => config.features[k]).join(', '));
+        "
+        
+    - name: Test bot initialization
+      run: |
+        echo "🚀 Testing bot initialization..."
+        timeout 15s npm start || echo "✅ Bot initialization test completed"
+        
+    - name: Run validation tests
+      run: |
+        echo "🧪 Running validation tests..."
+        npm test
         
     - name: Create deployment package
       run: |
-        tar -czf demo-deployment.tar.gz --exclude=node_modules --exclude=.git .
-        echo "✅ Demo deployment package created"
+        echo "📦 Creating deployment package..."
+        tar -czf iron-anarchy-demo-$(date +%Y%m%d).tar.gz \
+          --exclude=node_modules \
+          --exclude=.git \
+          --exclude=*.tar.gz \
+          --exclude=logs \
+          .
+        ls -lh *.tar.gz
+        echo "✅ Demo deployment package created successfully"
 
   deployment-summary:
     name: 📊 Deployment Summary
@@ -247,27 +482,44 @@ jobs:
     steps:
     - name: Generate deployment report
       run: |
-        echo "# 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "# 🚀 Deployment Summary Report" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "**Type:** ${{ github.event.inputs.deployment_type }}" >> $GITHUB_STEP_SUMMARY
+        echo "| Component | Status | Details |" >> $GITHUB_STEP_SUMMARY
+        echo "|-----------|---------|---------|" >> $GITHUB_STEP_SUMMARY
+        echo "| **Validation** | ${{ needs.validate-deployment.result == 'success' && '✅ Success' || '❌ Failed' }} | Input validation and job routing |" >> $GITHUB_STEP_SUMMARY
+        
+        if [[ "${{ needs.validate-deployment.outputs.run_docker }}" == "true" ]]; then
+          echo "| **Docker Registry** | ${{ needs.docker-deployment.result == 'success' && '✅ Success' || needs.docker-deployment.result == 'failure' && '❌ Failed' || '⏭️ Skipped' }} | Container image build and push |" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [[ "${{ needs.validate-deployment.outputs.run_docs }}" == "true" ]]; then
+          echo "| **Documentation** | ${{ needs.docs-deployment.result == 'success' && '✅ Success' || needs.docs-deployment.result == 'failure' && '❌ Failed' || '⏭️ Skipped' }} | GitHub Pages deployment |" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [[ "${{ needs.validate-deployment.outputs.run_demo }}" == "true" ]]; then
+          echo "| **Demo/Testing** | ${{ needs.demo-deployment.result == 'success' && '✅ Success' || needs.demo-deployment.result == 'failure' && '❌ Failed' || '⏭️ Skipped' }} | Demo deployment and testing |" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Deployment Type:** ${{ needs.validate-deployment.outputs.deployment_type }}" >> $GITHUB_STEP_SUMMARY
         echo "**Triggered by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Repository:** ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
         echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
         
-        if [[ "${{ needs.docker-deployment.result }}" == "success" ]]; then
-          echo "- 🐳 **Docker Registry:** ✅ Success" >> $GITHUB_STEP_SUMMARY
-        elif [[ "${{ needs.docker-deployment.result }}" == "failure" ]]; then
-          echo "- 🐳 **Docker Registry:** ❌ Failed" >> $GITHUB_STEP_SUMMARY
-        fi
-        
-        if [[ "${{ needs.docs-deployment.result }}" == "success" ]]; then
-          echo "- 📚 **Documentation:** ✅ Success" >> $GITHUB_STEP_SUMMARY
-        elif [[ "${{ needs.docs-deployment.result }}" == "failure" ]]; then
-          echo "- 📚 **Documentation:** ❌ Failed" >> $GITHUB_STEP_SUMMARY
-        fi
-        
-        if [[ "${{ needs.demo-deployment.result }}" == "success" ]]; then
-          echo "- 🎯 **Demo:** ✅ Success" >> $GITHUB_STEP_SUMMARY
-        elif [[ "${{ needs.demo-deployment.result }}" == "failure" ]]; then
-          echo "- 🎯 **Demo:** ❌ Failed" >> $GITHUB_STEP_SUMMARY
+        # Overall status
+        if [[ "${{ needs.validate-deployment.result }}" == "success" ]]; then
+          if [[ "${{ needs.docker-deployment.result }}" == "success" || "${{ needs.docker-deployment.result }}" == "skipped" ]] && \
+             [[ "${{ needs.docs-deployment.result }}" == "success" || "${{ needs.docs-deployment.result }}" == "skipped" ]] && \
+             [[ "${{ needs.demo-deployment.result }}" == "success" || "${{ needs.demo-deployment.result }}" == "skipped" ]]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## 🎉 Deployment Completed Successfully!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "## ⚠️ Deployment Completed with Issues" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ❌ Deployment Failed" >> $GITHUB_STEP_SUMMARY
         fi

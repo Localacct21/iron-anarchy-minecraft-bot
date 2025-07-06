@@ -16,7 +16,8 @@
     "test:plugin": "node tests/plugin-loader-simple.test.js",
     "test:discord": "node tests/discord-integration-simple.test.js",
     "setup": "node scripts/setup.js",
-    "validate": "node examples/plugin-test-bot.js"
+    "validate": "node examples/plugin-test-bot.js",
+    "test:startup": "node scripts/test-startup.js"
   },
   "keywords": [
     "minecraft",
