@@ -1,0 +1,137 @@
+name: Code Quality & Linting
+
+on:
+  push:
+    branches: [ master, main, develop ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint and Format Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Install ESLint and Prettier
+      run: |
+        npm install --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier
+        npm install --save-dev @eslint/js eslint-plugin-node
+        
+    - name: Create ESLint config
+      run: |
+        cat > .eslintrc.js << 'ESLINT_EOF'
+        module.exports = {
+          env: {
+            node: true,
+            es2021: true
+          },
+          extends: [
+            'eslint:recommended',
+            'prettier'
+          ],
+          plugins: ['prettier'],
+          parserOptions: {
+            ecmaVersion: 12,
+            sourceType: 'module'
+          },
+          rules: {
+            'prettier/prettier': 'warn',
+            'no-unused-vars': 'warn',
+            'no-console': 'off',
+            'no-undef': 'error',
+            'semi': ['error', 'never'],
+            'quotes': ['error', 'single']
+          }
+        };
+        ESLINT_EOF
+        
+    - name: Create Prettier config
+      run: |
+        cat > .prettierrc << 'PRETTIER_EOF'
+        {
+          "semi": false,
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "printWidth": 80,
+          "bracketSpacing": true,
+          "arrowParens": "avoid"
+        }
+        PRETTIER_EOF
+        
+    - name: Run ESLint
+      run: npx eslint src/ tests/ examples/ scripts/ --ext .js --format stylish
+      continue-on-error: true
+      
+    - name: Check Prettier formatting
+      run: npx prettier --check "src/**/*.js" "tests/**/*.js" "examples/**/*.js" "scripts/**/*.js"
+      continue-on-error: true
+      
+    - name: Generate JSDoc documentation
+      run: |
+        npx jsdoc -c jsdoc.conf.json -d docs/api/ src/
+      continue-on-error: true
+      
+    - name: Upload linting results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: lint-results
+        path: |
+          eslint-report.json
+          docs/
+        retention-days: 7
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run npm audit
+      run: npm audit --audit-level=high --json > audit-results.json
+      continue-on-error: true
+      
+    - name: Install additional security tools
+      run: |
+        npm install --save-dev snyk
+        
+    - name: Run Snyk security scan
+      run: npx snyk test --json > snyk-results.json
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      continue-on-error: true
+      
+    - name: Upload security scan results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-scan-results
+        path: |
+          audit-results.json
+          snyk-results.json
+        retention-days: 30
