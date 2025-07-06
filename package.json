@@ -1,7 +1,7 @@
 {
   "name": "iron-anarchy-minecraft-bot",
   "version": "2.0.0",
-  "description": "Enhanced Iron-Anarchy Minecraft Bot with Discord Integration, Recording Features, and Web Dashboard",
+  "description": "Enterprise-grade Minecraft automation bot with Discord integration, recording features, and web dashboard. Built by 25-year IT veteran currently managing live gaming servers.",
   "main": "index.js",
   "bin": {
     "iron-anarchy-bot": "./index.js"
@@ -21,17 +21,23 @@
   "keywords": [
     "minecraft",
     "bot",
+    "automation",
     "pvp",
     "iron-anarchy",
     "discord",
     "recording",
     "dashboard",
-    "automation",
+    "enterprise",
+    "professional",
+    "gaming",
+    "server",
     "mineflayer",
-    "gaming"
+    "artificial-intelligence",
+    "nodejs",
+    "javascript"
   ],
   "author": {
-    "name": "Localacct21",
+    "name": "Local Acct",
     "email": "localacct@ironanarchy.lol",
     "url": "https://github.com/Localacct21"
   },
@@ -44,6 +50,10 @@
   "bugs": {
     "url": "https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues"
   },
+  "funding": {
+    "type": "individual",
+    "url": "mailto:localacct@ironanarchy.lol"
+  },
   "engines": {
     "node": ">=14.0.0"
   },
@@ -54,8 +64,11 @@
     "config/",
     "scripts/",
     "examples/",
+    "docs/",
     "README.md",
     "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
     "package.json"
   ],
   "directories": {
