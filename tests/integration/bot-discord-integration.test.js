@@ -1,6 +1,4 @@
 const { EventEmitter } = require('events');
-const fs = require('fs-extra');
-const path = require('path');
 
 // Mock external dependencies
 jest.mock('discord.js');

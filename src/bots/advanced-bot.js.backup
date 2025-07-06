@@ -502,7 +502,7 @@ bot.on('end', () => {
     logMessage('INFO', `Attempting to reconnect in ${delay/1000} seconds... (${reconnectAttempts}/${maxReconnectAttempts})`)
     
     setTimeout(() => {
-      mineflayer.createBot({
+      const newBot = mineflayer.createBot({
         host: config.server.host,
         port: config.server.port,
         username: config.bot.username,

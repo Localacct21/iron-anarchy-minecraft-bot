@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer')
-const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+const { pathfinder, Movements } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
 const autoEatModule = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
@@ -8,7 +8,6 @@ const bloodhound = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
 const moment = require('moment')
-const path = require('path')
 
 // Try to import dashboard (optional)
 let dashboard = null
@@ -157,10 +156,7 @@ fs.ensureDirSync('./screenshots')
 let isGuarding = false
 let following = null
 let guardInterval = null
-let autoKillAura = false
-let killAuraInterval = null
 let escapeMode = false
-let lastAttacker = null
 let isRecording = false
 let recordingData = []
 
@@ -380,16 +376,11 @@ function stopAllActions() {
   if (bot.pvp && bot.pvp.stop) bot.pvp.stop()
   following = null
   isGuarding = false
-  autoKillAura = false
   escapeMode = false
   
   if (guardInterval) {
     clearInterval(guardInterval)
     guardInterval = null
-  }
-  if (killAuraInterval) {
-    clearInterval(killAuraInterval)
-    killAuraInterval = null
   }
   
   bot.chat('🛑 All actions stopped')

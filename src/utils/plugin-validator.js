@@ -43,7 +43,6 @@
  * - Detailed logging provides visibility into validation process and failures
  */
 
-const PluginLoader = require('./plugin-loader')
 
 /**
  * Validates all configured Mineflayer plugins by testing their import patterns and function exports.

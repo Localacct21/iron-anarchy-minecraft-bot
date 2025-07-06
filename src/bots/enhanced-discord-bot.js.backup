@@ -1,11 +1,12 @@
 const mineflayer = require('mineflayer')
-const { pathfinder } = require('mineflayer-pathfinder')
+const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
 const autoEatModule = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
 const collectBlockModule = require('mineflayer-collectblock')
 const bloodhound = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
+const fs = require('fs-extra')
 const moment = require('moment')
 
 // Load configuration

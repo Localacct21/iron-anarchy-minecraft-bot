@@ -1,5 +1,3 @@
-const fs = require('fs-extra');
-const path = require('path');
 
 // Mock mineflayer bot
 const mockBot = {

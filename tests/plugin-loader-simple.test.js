@@ -11,7 +11,6 @@ class PluginLoader {
 
   defaultLog(type, message, data = null) {
     const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type}] ${message}${data ? ' | ' + JSON.stringify(data) : ''}`;
     // console.log(logEntry);
   }
 

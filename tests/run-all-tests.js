@@ -1,6 +1,4 @@
-const SimpleTestRunner = require('./test-runner');
 const { spawn } = require('child_process');
-const path = require('path');
 
 async function runTestFile(testFile) {
   return new Promise((resolve) => {

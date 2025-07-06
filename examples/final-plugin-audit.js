@@ -3,7 +3,6 @@
  * Tests all bot files to ensure plugins load correctly
  */
 
-const fs = require('fs')
 const { spawn } = require('child_process')
 
 console.log('🔥 Final Plugin Audit for Iron-Anarchy Minecraft Bot\n')

@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer')
-const { pathfinder, Movements } = require('mineflayer-pathfinder')
+const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
 const autoEatModule = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
@@ -8,6 +8,7 @@ const bloodhound = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
 const moment = require('moment')
+const path = require('path')
 
 // Try to import dashboard (optional)
 let dashboard = null
@@ -159,6 +160,7 @@ let guardInterval = null
 let autoKillAura = false
 let killAuraInterval = null
 let escapeMode = false
+let lastAttacker = null
 let isRecording = false
 let recordingData = []
 

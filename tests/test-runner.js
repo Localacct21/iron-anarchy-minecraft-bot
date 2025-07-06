@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 
 // Simple test framework for Node.js
 class SimpleTestRunner {

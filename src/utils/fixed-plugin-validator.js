@@ -1,4 +1,3 @@
-const PluginLoader = require('./plugin-loader')
 
 /**
  * Fixed Plugin Validation Script

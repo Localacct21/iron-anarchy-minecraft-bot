@@ -9,7 +9,6 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-const path = require('path');
 
 console.log('🚀 Publishing Iron-Anarchy Bot to GitHub Packages...\n');
 

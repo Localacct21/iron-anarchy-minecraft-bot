@@ -66,7 +66,7 @@ async function testPluginLoading() {
   console.log('\n🔄 Loading plugins sequentially...\n')
 
   // Load plugins one by one
-  const results = await pluginLoader.loadPlugins(pluginSequence)
+  await pluginLoader.loadPlugins(pluginSequence)
 
   // Get final status
   const status = pluginLoader.getPluginStatus()

@@ -17,21 +17,18 @@ try {
   
   // Test plugin loading
   try {
-    const { pathfinder } = require('mineflayer-pathfinder')
     console.log('✅ Pathfinder plugin available!')
   } catch (e) {
     console.log('❌ Pathfinder plugin not available:', e.message)
   }
   
   try {
-    const pvp = require('mineflayer-pvp')
     console.log('✅ PvP plugin available!')
   } catch (e) {
     console.log('❌ PvP plugin not available:', e.message)
   }
   
   try {
-    const autoEat = require('mineflayer-auto-eat')
     console.log('✅ Auto-eat plugin available!')
   } catch (e) {
     console.log('❌ Auto-eat plugin not available:', e.message)
