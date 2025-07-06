@@ -1,0 +1,7810 @@
+{
+  "startTime": "2025-07-06T00:57:55.188Z",
+  "endTime": "2025-07-06T00:59:00.995Z",
+  "server": "ironanarchy.lol",
+  "botUsername": "PvPBot",
+  "events": [
+    {
+      "timestamp": "2025-07-06T00:57:55.188Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 263,
+        "y": 71,
+        "z": -26
+      },
+      "botHealth": 16,
+      "botFood": 16,
+      "eventId": 0
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.288Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 243,
+        "y": 70,
+        "z": -332
+      },
+      "botHealth": 7,
+      "botFood": 17,
+      "eventId": 1
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.388Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 183,
+        "y": 70,
+        "z": -373
+      },
+      "botHealth": 1,
+      "botFood": 20,
+      "eventId": 2
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.488Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -324,
+        "y": 69,
+        "z": -379
+      },
+      "botHealth": 20,
+      "botFood": 13,
+      "eventId": 3
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.589Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 98,
+        "y": 64,
+        "z": 278
+      },
+      "botHealth": 7,
+      "botFood": 14,
+      "eventId": 4
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.689Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -62,
+        "y": 73,
+        "z": -277
+      },
+      "botHealth": 11,
+      "botFood": 9,
+      "eventId": 5
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.789Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -88,
+        "y": 72,
+        "z": -101
+      },
+      "botHealth": 16,
+      "botFood": 8,
+      "eventId": 6
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.889Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -496,
+        "y": 73,
+        "z": -15
+      },
+      "botHealth": 4,
+      "botFood": 4,
+      "eventId": 7
+    },
+    {
+      "timestamp": "2025-07-06T00:57:55.989Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 431,
+        "y": 68,
+        "z": -264
+      },
+      "botHealth": 17,
+      "botFood": 5,
+      "eventId": 8
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.089Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -298,
+        "y": 72,
+        "z": 70
+      },
+      "botHealth": 18,
+      "botFood": 4,
+      "eventId": 9
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.287Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -193,
+        "y": 64,
+        "z": 388
+      },
+      "botHealth": 5,
+      "botFood": 8,
+      "eventId": 10
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.387Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -57,
+        "y": 65,
+        "z": -320
+      },
+      "botHealth": 16,
+      "botFood": 18,
+      "eventId": 11
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.487Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 175,
+        "y": 69,
+        "z": -379
+      },
+      "botHealth": 4,
+      "botFood": 3,
+      "eventId": 12
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.587Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -97,
+        "y": 72,
+        "z": 429
+      },
+      "botHealth": 5,
+      "botFood": 10,
+      "eventId": 13
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.687Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -250,
+        "y": 65,
+        "z": -151
+      },
+      "botHealth": 5,
+      "botFood": 15,
+      "eventId": 14
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.787Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 28,
+        "y": 68,
+        "z": -259
+      },
+      "botHealth": 10,
+      "botFood": 19,
+      "eventId": 15
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.887Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 200,
+        "y": 65,
+        "z": 51
+      },
+      "botHealth": 8,
+      "botFood": 2,
+      "eventId": 16
+    },
+    {
+      "timestamp": "2025-07-06T00:57:56.987Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 381,
+        "y": 73,
+        "z": 472
+      },
+      "botHealth": 10,
+      "botFood": 5,
+      "eventId": 17
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.087Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 223,
+        "y": 67,
+        "z": 487
+      },
+      "botHealth": 3,
+      "botFood": 18,
+      "eventId": 18
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.187Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -385,
+        "y": 69,
+        "z": 268
+      },
+      "botHealth": 3,
+      "botFood": 6,
+      "eventId": 19
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.387Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -60,
+        "y": 70,
+        "z": 448
+      },
+      "botHealth": 13,
+      "botFood": 12,
+      "eventId": 20
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.487Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -239,
+        "y": 71,
+        "z": -42
+      },
+      "botHealth": 13,
+      "botFood": 14,
+      "eventId": 21
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.587Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 49,
+        "y": 66,
+        "z": 421
+      },
+      "botHealth": 6,
+      "botFood": 7,
+      "eventId": 22
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.687Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -66,
+        "y": 66,
+        "z": 411
+      },
+      "botHealth": 14,
+      "botFood": 18,
+      "eventId": 23
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.787Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 50,
+        "y": 66,
+        "z": -469
+      },
+      "botHealth": 20,
+      "botFood": 20,
+      "eventId": 24
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.887Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -340,
+        "y": 72,
+        "z": -167
+      },
+      "botHealth": 18,
+      "botFood": 9,
+      "eventId": 25
+    },
+    {
+      "timestamp": "2025-07-06T00:57:57.987Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 215,
+        "y": 71,
+        "z": 316
+      },
+      "botHealth": 12,
+      "botFood": 18,
+      "eventId": 26
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.087Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -259,
+        "y": 69,
+        "z": -53
+      },
+      "botHealth": 15,
+      "botFood": 11,
+      "eventId": 27
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.187Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 49,
+        "y": 73,
+        "z": -332
+      },
+      "botHealth": 19,
+      "botFood": 15,
+      "eventId": 28
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.287Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 84,
+        "y": 70,
+        "z": 116
+      },
+      "botHealth": 1,
+      "botFood": 20,
+      "eventId": 29
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.488Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 122,
+        "y": 73,
+        "z": -336
+      },
+      "botHealth": 14,
+      "botFood": 19,
+      "eventId": 30
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.588Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 367,
+        "y": 69,
+        "z": 63
+      },
+      "botHealth": 11,
+      "botFood": 3,
+      "eventId": 31
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.688Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 300,
+        "y": 64,
+        "z": -161
+      },
+      "botHealth": 1,
+      "botFood": 13,
+      "eventId": 32
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.788Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 377,
+        "y": 70,
+        "z": -125
+      },
+      "botHealth": 17,
+      "botFood": 7,
+      "eventId": 33
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.888Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 386,
+        "y": 67,
+        "z": 14
+      },
+      "botHealth": 19,
+      "botFood": 3,
+      "eventId": 34
+    },
+    {
+      "timestamp": "2025-07-06T00:57:58.988Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -266,
+        "y": 71,
+        "z": -476
+      },
+      "botHealth": 18,
+      "botFood": 17,
+      "eventId": 35
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.088Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 99,
+        "y": 64,
+        "z": 145
+      },
+      "botHealth": 16,
+      "botFood": 4,
+      "eventId": 36
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.188Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -161,
+        "y": 68,
+        "z": 472
+      },
+      "botHealth": 4,
+      "botFood": 10,
+      "eventId": 37
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.288Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -379,
+        "y": 66,
+        "z": -72
+      },
+      "botHealth": 8,
+      "botFood": 20,
+      "eventId": 38
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.388Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 62,
+        "y": 72,
+        "z": -348
+      },
+      "botHealth": 3,
+      "botFood": 18,
+      "eventId": 39
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.587Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -30,
+        "y": 66,
+        "z": 454
+      },
+      "botHealth": 13,
+      "botFood": 17,
+      "eventId": 40
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.687Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 47,
+        "y": 64,
+        "z": 214
+      },
+      "botHealth": 7,
+      "botFood": 4,
+      "eventId": 41
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.787Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -209,
+        "y": 64,
+        "z": 411
+      },
+      "botHealth": 11,
+      "botFood": 7,
+      "eventId": 42
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.887Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 155,
+        "y": 73,
+        "z": 40
+      },
+      "botHealth": 18,
+      "botFood": 4,
+      "eventId": 43
+    },
+    {
+      "timestamp": "2025-07-06T00:57:59.987Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 221,
+        "y": 71,
+        "z": 322
+      },
+      "botHealth": 20,
+      "botFood": 11,
+      "eventId": 44
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.087Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -111,
+        "y": 68,
+        "z": 159
+      },
+      "botHealth": 6,
+      "botFood": 10,
+      "eventId": 45
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.187Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 466,
+        "y": 73,
+        "z": 91
+      },
+      "botHealth": 13,
+      "botFood": 7,
+      "eventId": 46
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.287Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 460,
+        "y": 72,
+        "z": -220
+      },
+      "botHealth": 6,
+      "botFood": 20,
+      "eventId": 47
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.387Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 445,
+        "y": 70,
+        "z": -118
+      },
+      "botHealth": 20,
+      "botFood": 4,
+      "eventId": 48
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.487Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 114,
+        "y": 64,
+        "z": 389
+      },
+      "botHealth": 20,
+      "botFood": 20,
+      "eventId": 49
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.688Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 448,
+        "y": 69,
+        "z": -153
+      },
+      "botHealth": 18,
+      "botFood": 2,
+      "eventId": 50
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.788Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -278,
+        "y": 71,
+        "z": 452
+      },
+      "botHealth": 5,
+      "botFood": 11,
+      "eventId": 51
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.888Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 365,
+        "y": 71,
+        "z": -313
+      },
+      "botHealth": 13,
+      "botFood": 20,
+      "eventId": 52
+    },
+    {
+      "timestamp": "2025-07-06T00:58:00.988Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 78,
+        "y": 64,
+        "z": 141
+      },
+      "botHealth": 3,
+      "botFood": 14,
+      "eventId": 53
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.088Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 167,
+        "y": 67,
+        "z": -73
+      },
+      "botHealth": 3,
+      "botFood": 3,
+      "eventId": 54
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.188Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 75,
+        "y": 70,
+        "z": -293
+      },
+      "botHealth": 18,
+      "botFood": 9,
+      "eventId": 55
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.288Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 434,
+        "y": 64,
+        "z": 403
+      },
+      "botHealth": 18,
+      "botFood": 15,
+      "eventId": 56
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.388Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -479,
+        "y": 71,
+        "z": -325
+      },
+      "botHealth": 14,
+      "botFood": 9,
+      "eventId": 57
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.488Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -432,
+        "y": 73,
+        "z": -293
+      },
+      "botHealth": 18,
+      "botFood": 18,
+      "eventId": 58
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.588Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 284,
+        "y": 66,
+        "z": -331
+      },
+      "botHealth": 19,
+      "botFood": 20,
+      "eventId": 59
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.787Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 20,
+        "y": 65,
+        "z": -354
+      },
+      "botHealth": 4,
+      "botFood": 15,
+      "eventId": 60
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.887Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 186,
+        "y": 64,
+        "z": 44
+      },
+      "botHealth": 12,
+      "botFood": 9,
+      "eventId": 61
+    },
+    {
+      "timestamp": "2025-07-06T00:58:01.987Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 91,
+        "y": 71,
+        "z": 282
+      },
+      "botHealth": 3,
+      "botFood": 1,
+      "eventId": 62
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.087Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 236,
+        "y": 72,
+        "z": 405
+      },
+      "botHealth": 6,
+      "botFood": 9,
+      "eventId": 63
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.187Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 459,
+        "y": 67,
+        "z": 233
+      },
+      "botHealth": 14,
+      "botFood": 4,
+      "eventId": 64
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.287Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 150,
+        "y": 71,
+        "z": -214
+      },
+      "botHealth": 16,
+      "botFood": 7,
+      "eventId": 65
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.387Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 310,
+        "y": 67,
+        "z": 0
+      },
+      "botHealth": 3,
+      "botFood": 16,
+      "eventId": 66
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.487Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 350,
+        "y": 73,
+        "z": 78
+      },
+      "botHealth": 13,
+      "botFood": 12,
+      "eventId": 67
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.587Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -116,
+        "y": 70,
+        "z": 105
+      },
+      "botHealth": 12,
+      "botFood": 12,
+      "eventId": 68
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.687Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 235,
+        "y": 70,
+        "z": -390
+      },
+      "botHealth": 7,
+      "botFood": 4,
+      "eventId": 69
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.888Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -181,
+        "y": 66,
+        "z": -92
+      },
+      "botHealth": 11,
+      "botFood": 18,
+      "eventId": 70
+    },
+    {
+      "timestamp": "2025-07-06T00:58:02.988Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -454,
+        "y": 72,
+        "z": 396
+      },
+      "botHealth": 10,
+      "botFood": 9,
+      "eventId": 71
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.088Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -129,
+        "y": 64,
+        "z": 349
+      },
+      "botHealth": 15,
+      "botFood": 12,
+      "eventId": 72
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.188Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -360,
+        "y": 67,
+        "z": -398
+      },
+      "botHealth": 8,
+      "botFood": 8,
+      "eventId": 73
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.288Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -132,
+        "y": 73,
+        "z": -402
+      },
+      "botHealth": 10,
+      "botFood": 17,
+      "eventId": 74
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.388Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -11,
+        "y": 71,
+        "z": 127
+      },
+      "botHealth": 3,
+      "botFood": 6,
+      "eventId": 75
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.488Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 464,
+        "y": 68,
+        "z": -78
+      },
+      "botHealth": 7,
+      "botFood": 17,
+      "eventId": 76
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.588Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -451,
+        "y": 66,
+        "z": 390
+      },
+      "botHealth": 20,
+      "botFood": 8,
+      "eventId": 77
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.688Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 44,
+        "y": 68,
+        "z": -141
+      },
+      "botHealth": 13,
+      "botFood": 13,
+      "eventId": 78
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.788Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 483,
+        "y": 64,
+        "z": 396
+      },
+      "botHealth": 18,
+      "botFood": 16,
+      "eventId": 79
+    },
+    {
+      "timestamp": "2025-07-06T00:58:03.987Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 187,
+        "y": 66,
+        "z": -19
+      },
+      "botHealth": 15,
+      "botFood": 5,
+      "eventId": 80
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.087Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 304,
+        "y": 68,
+        "z": -87
+      },
+      "botHealth": 19,
+      "botFood": 18,
+      "eventId": 81
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.187Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 201,
+        "y": 67,
+        "z": 153
+      },
+      "botHealth": 1,
+      "botFood": 8,
+      "eventId": 82
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.287Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -235,
+        "y": 65,
+        "z": 309
+      },
+      "botHealth": 1,
+      "botFood": 12,
+      "eventId": 83
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.387Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 324,
+        "y": 70,
+        "z": 249
+      },
+      "botHealth": 2,
+      "botFood": 1,
+      "eventId": 84
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.487Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 7,
+        "y": 64,
+        "z": 117
+      },
+      "botHealth": 19,
+      "botFood": 13,
+      "eventId": 85
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.587Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -230,
+        "y": 66,
+        "z": -343
+      },
+      "botHealth": 14,
+      "botFood": 20,
+      "eventId": 86
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.687Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -381,
+        "y": 67,
+        "z": -273
+      },
+      "botHealth": 19,
+      "botFood": 2,
+      "eventId": 87
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.787Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 402,
+        "y": 65,
+        "z": -134
+      },
+      "botHealth": 12,
+      "botFood": 5,
+      "eventId": 88
+    },
+    {
+      "timestamp": "2025-07-06T00:58:04.887Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -164,
+        "y": 72,
+        "z": -281
+      },
+      "botHealth": 5,
+      "botFood": 20,
+      "eventId": 89
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.088Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 436,
+        "y": 70,
+        "z": -498
+      },
+      "botHealth": 19,
+      "botFood": 19,
+      "eventId": 90
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.188Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 116,
+        "y": 70,
+        "z": 17
+      },
+      "botHealth": 19,
+      "botFood": 20,
+      "eventId": 91
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.288Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 67,
+        "y": 64,
+        "z": 163
+      },
+      "botHealth": 4,
+      "botFood": 10,
+      "eventId": 92
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.388Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 174,
+        "y": 73,
+        "z": 39
+      },
+      "botHealth": 6,
+      "botFood": 8,
+      "eventId": 93
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.488Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -264,
+        "y": 69,
+        "z": -179
+      },
+      "botHealth": 12,
+      "botFood": 11,
+      "eventId": 94
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.588Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 57,
+        "y": 68,
+        "z": -172
+      },
+      "botHealth": 20,
+      "botFood": 9,
+      "eventId": 95
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.688Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -487,
+        "y": 69,
+        "z": -220
+      },
+      "botHealth": 16,
+      "botFood": 16,
+      "eventId": 96
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.788Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -444,
+        "y": 66,
+        "z": -279
+      },
+      "botHealth": 4,
+      "botFood": 4,
+      "eventId": 97
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.888Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 301,
+        "y": 68,
+        "z": 485
+      },
+      "botHealth": 18,
+      "botFood": 20,
+      "eventId": 98
+    },
+    {
+      "timestamp": "2025-07-06T00:58:05.988Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 419,
+        "y": 65,
+        "z": -261
+      },
+      "botHealth": 12,
+      "botFood": 17,
+      "eventId": 99
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.187Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 178,
+        "y": 64,
+        "z": 487
+      },
+      "botHealth": 12,
+      "botFood": 20,
+      "eventId": 100
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.287Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 229,
+        "y": 64,
+        "z": -289
+      },
+      "botHealth": 7,
+      "botFood": 16,
+      "eventId": 101
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.387Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 22,
+        "y": 73,
+        "z": -26
+      },
+      "botHealth": 15,
+      "botFood": 20,
+      "eventId": 102
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.487Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -447,
+        "y": 73,
+        "z": -7
+      },
+      "botHealth": 16,
+      "botFood": 20,
+      "eventId": 103
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.587Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 132,
+        "y": 65,
+        "z": -184
+      },
+      "botHealth": 3,
+      "botFood": 20,
+      "eventId": 104
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.687Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -426,
+        "y": 68,
+        "z": 32
+      },
+      "botHealth": 9,
+      "botFood": 10,
+      "eventId": 105
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.787Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -434,
+        "y": 72,
+        "z": -346
+      },
+      "botHealth": 8,
+      "botFood": 7,
+      "eventId": 106
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.887Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -59,
+        "y": 70,
+        "z": 403
+      },
+      "botHealth": 11,
+      "botFood": 20,
+      "eventId": 107
+    },
+    {
+      "timestamp": "2025-07-06T00:58:06.987Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 15,
+        "y": 68,
+        "z": -123
+      },
+      "botHealth": 5,
+      "botFood": 16,
+      "eventId": 108
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.087Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 56,
+        "y": 69,
+        "z": 454
+      },
+      "botHealth": 19,
+      "botFood": 6,
+      "eventId": 109
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.288Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 361,
+        "y": 66,
+        "z": 382
+      },
+      "botHealth": 15,
+      "botFood": 12,
+      "eventId": 110
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.388Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 373,
+        "y": 66,
+        "z": 54
+      },
+      "botHealth": 18,
+      "botFood": 1,
+      "eventId": 111
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.488Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -382,
+        "y": 68,
+        "z": 259
+      },
+      "botHealth": 16,
+      "botFood": 1,
+      "eventId": 112
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.588Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 220,
+        "y": 64,
+        "z": 237
+      },
+      "botHealth": 8,
+      "botFood": 6,
+      "eventId": 113
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.688Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -206,
+        "y": 66,
+        "z": 142
+      },
+      "botHealth": 3,
+      "botFood": 4,
+      "eventId": 114
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.788Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 407,
+        "y": 67,
+        "z": -205
+      },
+      "botHealth": 16,
+      "botFood": 3,
+      "eventId": 115
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.888Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 454,
+        "y": 70,
+        "z": 159
+      },
+      "botHealth": 4,
+      "botFood": 10,
+      "eventId": 116
+    },
+    {
+      "timestamp": "2025-07-06T00:58:07.988Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 397,
+        "y": 73,
+        "z": 211
+      },
+      "botHealth": 8,
+      "botFood": 17,
+      "eventId": 117
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.088Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -43,
+        "y": 73,
+        "z": 341
+      },
+      "botHealth": 9,
+      "botFood": 5,
+      "eventId": 118
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.188Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -423,
+        "y": 70,
+        "z": -241
+      },
+      "botHealth": 6,
+      "botFood": 15,
+      "eventId": 119
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.388Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -416,
+        "y": 66,
+        "z": -28
+      },
+      "botHealth": 1,
+      "botFood": 4,
+      "eventId": 120
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.488Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -76,
+        "y": 68,
+        "z": -496
+      },
+      "botHealth": 1,
+      "botFood": 1,
+      "eventId": 121
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.588Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -239,
+        "y": 65,
+        "z": -201
+      },
+      "botHealth": 14,
+      "botFood": 11,
+      "eventId": 122
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.688Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -142,
+        "y": 73,
+        "z": -151
+      },
+      "botHealth": 5,
+      "botFood": 9,
+      "eventId": 123
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.788Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 309,
+        "y": 71,
+        "z": -111
+      },
+      "botHealth": 10,
+      "botFood": 13,
+      "eventId": 124
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.888Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 342,
+        "y": 73,
+        "z": 23
+      },
+      "botHealth": 6,
+      "botFood": 17,
+      "eventId": 125
+    },
+    {
+      "timestamp": "2025-07-06T00:58:08.988Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 314,
+        "y": 68,
+        "z": -295
+      },
+      "botHealth": 2,
+      "botFood": 6,
+      "eventId": 126
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.088Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 363,
+        "y": 73,
+        "z": -83
+      },
+      "botHealth": 19,
+      "botFood": 13,
+      "eventId": 127
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.188Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 176,
+        "y": 65,
+        "z": 223
+      },
+      "botHealth": 2,
+      "botFood": 2,
+      "eventId": 128
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.288Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 381,
+        "y": 69,
+        "z": 103
+      },
+      "botHealth": 17,
+      "botFood": 16,
+      "eventId": 129
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.489Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 43,
+        "y": 72,
+        "z": 199
+      },
+      "botHealth": 9,
+      "botFood": 5,
+      "eventId": 130
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.589Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -326,
+        "y": 65,
+        "z": -443
+      },
+      "botHealth": 8,
+      "botFood": 13,
+      "eventId": 131
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.689Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -11,
+        "y": 72,
+        "z": -196
+      },
+      "botHealth": 8,
+      "botFood": 1,
+      "eventId": 132
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.789Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 199,
+        "y": 70,
+        "z": -190
+      },
+      "botHealth": 7,
+      "botFood": 7,
+      "eventId": 133
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.889Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 296,
+        "y": 64,
+        "z": -119
+      },
+      "botHealth": 11,
+      "botFood": 1,
+      "eventId": 134
+    },
+    {
+      "timestamp": "2025-07-06T00:58:09.989Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 296,
+        "y": 69,
+        "z": 430
+      },
+      "botHealth": 15,
+      "botFood": 10,
+      "eventId": 135
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.089Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 407,
+        "y": 67,
+        "z": 264
+      },
+      "botHealth": 18,
+      "botFood": 6,
+      "eventId": 136
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.189Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 437,
+        "y": 70,
+        "z": 430
+      },
+      "botHealth": 12,
+      "botFood": 20,
+      "eventId": 137
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.289Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -317,
+        "y": 67,
+        "z": 313
+      },
+      "botHealth": 1,
+      "botFood": 6,
+      "eventId": 138
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.389Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -21,
+        "y": 71,
+        "z": 340
+      },
+      "botHealth": 9,
+      "botFood": 16,
+      "eventId": 139
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.588Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -280,
+        "y": 69,
+        "z": -78
+      },
+      "botHealth": 7,
+      "botFood": 5,
+      "eventId": 140
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.688Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 449,
+        "y": 72,
+        "z": 294
+      },
+      "botHealth": 8,
+      "botFood": 9,
+      "eventId": 141
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.788Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 336,
+        "y": 70,
+        "z": 78
+      },
+      "botHealth": 9,
+      "botFood": 1,
+      "eventId": 142
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.888Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -381,
+        "y": 72,
+        "z": -412
+      },
+      "botHealth": 10,
+      "botFood": 9,
+      "eventId": 143
+    },
+    {
+      "timestamp": "2025-07-06T00:58:10.988Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -372,
+        "y": 71,
+        "z": -252
+      },
+      "botHealth": 16,
+      "botFood": 5,
+      "eventId": 144
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.088Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 298,
+        "y": 73,
+        "z": -71
+      },
+      "botHealth": 2,
+      "botFood": 19,
+      "eventId": 145
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.188Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 294,
+        "y": 69,
+        "z": 22
+      },
+      "botHealth": 17,
+      "botFood": 6,
+      "eventId": 146
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.288Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 134,
+        "y": 69,
+        "z": -390
+      },
+      "botHealth": 13,
+      "botFood": 1,
+      "eventId": 147
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.388Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 32,
+        "y": 70,
+        "z": -51
+      },
+      "botHealth": 17,
+      "botFood": 13,
+      "eventId": 148
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.488Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 195,
+        "y": 72,
+        "z": 442
+      },
+      "botHealth": 15,
+      "botFood": 12,
+      "eventId": 149
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.689Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -78,
+        "y": 64,
+        "z": -120
+      },
+      "botHealth": 17,
+      "botFood": 20,
+      "eventId": 150
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.789Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 233,
+        "y": 73,
+        "z": -468
+      },
+      "botHealth": 1,
+      "botFood": 4,
+      "eventId": 151
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.889Z",
+      "type": "FOOD_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -443,
+        "y": 69,
+        "z": 398
+      },
+      "botHealth": 18,
+      "botFood": 1,
+      "eventId": 152
+    },
+    {
+      "timestamp": "2025-07-06T00:58:11.989Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 447,
+        "y": 69,
+        "z": 195
+      },
+      "botHealth": 9,
+      "botFood": 8,
+      "eventId": 153
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.089Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -455,
+        "y": 66,
+        "z": 458
+      },
+      "botHealth": 6,
+      "botFood": 20,
+      "eventId": 154
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.189Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 369,
+        "y": 64,
+        "z": 374
+      },
+      "botHealth": 4,
+      "botFood": 5,
+      "eventId": 155
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.289Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -35,
+        "y": 70,
+        "z": 192
+      },
+      "botHealth": 20,
+      "botFood": 13,
+      "eventId": 156
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.389Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -1,
+        "y": 66,
+        "z": -453
+      },
+      "botHealth": 13,
+      "botFood": 17,
+      "eventId": 157
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.489Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -476,
+        "y": 70,
+        "z": -402
+      },
+      "botHealth": 3,
+      "botFood": 3,
+      "eventId": 158
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.589Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -214,
+        "y": 65,
+        "z": 442
+      },
+      "botHealth": 1,
+      "botFood": 5,
+      "eventId": 159
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.789Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 483,
+        "y": 68,
+        "z": 204
+      },
+      "botHealth": 2,
+      "botFood": 13,
+      "eventId": 160
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.889Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -427,
+        "y": 64,
+        "z": -472
+      },
+      "botHealth": 13,
+      "botFood": 20,
+      "eventId": 161
+    },
+    {
+      "timestamp": "2025-07-06T00:58:12.989Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -360,
+        "y": 73,
+        "z": 261
+      },
+      "botHealth": 20,
+      "botFood": 13,
+      "eventId": 162
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.089Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 370,
+        "y": 71,
+        "z": -448
+      },
+      "botHealth": 15,
+      "botFood": 19,
+      "eventId": 163
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.189Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 485,
+        "y": 72,
+        "z": 385
+      },
+      "botHealth": 4,
+      "botFood": 3,
+      "eventId": 164
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.289Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 363,
+        "y": 69,
+        "z": -204
+      },
+      "botHealth": 19,
+      "botFood": 11,
+      "eventId": 165
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.389Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 498,
+        "y": 65,
+        "z": -281
+      },
+      "botHealth": 8,
+      "botFood": 4,
+      "eventId": 166
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.489Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 400,
+        "y": 65,
+        "z": -359
+      },
+      "botHealth": 13,
+      "botFood": 1,
+      "eventId": 167
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.589Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 351,
+        "y": 64,
+        "z": -421
+      },
+      "botHealth": 7,
+      "botFood": 5,
+      "eventId": 168
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.689Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -326,
+        "y": 73,
+        "z": 455
+      },
+      "botHealth": 13,
+      "botFood": 12,
+      "eventId": 169
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.889Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 126,
+        "y": 72,
+        "z": 475
+      },
+      "botHealth": 9,
+      "botFood": 12,
+      "eventId": 170
+    },
+    {
+      "timestamp": "2025-07-06T00:58:13.989Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -138,
+        "y": 66,
+        "z": 60
+      },
+      "botHealth": 9,
+      "botFood": 15,
+      "eventId": 171
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.089Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 152,
+        "y": 66,
+        "z": -54
+      },
+      "botHealth": 13,
+      "botFood": 14,
+      "eventId": 172
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.189Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 304,
+        "y": 72,
+        "z": 131
+      },
+      "botHealth": 6,
+      "botFood": 6,
+      "eventId": 173
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.289Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -377,
+        "y": 72,
+        "z": 132
+      },
+      "botHealth": 15,
+      "botFood": 10,
+      "eventId": 174
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.389Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -393,
+        "y": 68,
+        "z": -272
+      },
+      "botHealth": 9,
+      "botFood": 9,
+      "eventId": 175
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.489Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -169,
+        "y": 71,
+        "z": 494
+      },
+      "botHealth": 15,
+      "botFood": 13,
+      "eventId": 176
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.589Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 431,
+        "y": 69,
+        "z": -355
+      },
+      "botHealth": 17,
+      "botFood": 16,
+      "eventId": 177
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.689Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -490,
+        "y": 72,
+        "z": -256
+      },
+      "botHealth": 10,
+      "botFood": 3,
+      "eventId": 178
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.789Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -319,
+        "y": 65,
+        "z": -464
+      },
+      "botHealth": 12,
+      "botFood": 13,
+      "eventId": 179
+    },
+    {
+      "timestamp": "2025-07-06T00:58:14.990Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -482,
+        "y": 68,
+        "z": -444
+      },
+      "botHealth": 10,
+      "botFood": 8,
+      "eventId": 180
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.090Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 350,
+        "y": 64,
+        "z": -440
+      },
+      "botHealth": 16,
+      "botFood": 17,
+      "eventId": 181
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.190Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -299,
+        "y": 73,
+        "z": 271
+      },
+      "botHealth": 15,
+      "botFood": 6,
+      "eventId": 182
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.290Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -31,
+        "y": 70,
+        "z": -191
+      },
+      "botHealth": 5,
+      "botFood": 9,
+      "eventId": 183
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.390Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -57,
+        "y": 73,
+        "z": 112
+      },
+      "botHealth": 18,
+      "botFood": 1,
+      "eventId": 184
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.490Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -270,
+        "y": 69,
+        "z": 308
+      },
+      "botHealth": 14,
+      "botFood": 16,
+      "eventId": 185
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.590Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -207,
+        "y": 72,
+        "z": 492
+      },
+      "botHealth": 3,
+      "botFood": 20,
+      "eventId": 186
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.690Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -480,
+        "y": 64,
+        "z": -278
+      },
+      "botHealth": 15,
+      "botFood": 13,
+      "eventId": 187
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.790Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 158,
+        "y": 69,
+        "z": 401
+      },
+      "botHealth": 19,
+      "botFood": 14,
+      "eventId": 188
+    },
+    {
+      "timestamp": "2025-07-06T00:58:15.890Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 307,
+        "y": 65,
+        "z": 188
+      },
+      "botHealth": 19,
+      "botFood": 17,
+      "eventId": 189
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.089Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -471,
+        "y": 64,
+        "z": -489
+      },
+      "botHealth": 17,
+      "botFood": 16,
+      "eventId": 190
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.189Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -315,
+        "y": 68,
+        "z": -66
+      },
+      "botHealth": 19,
+      "botFood": 18,
+      "eventId": 191
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.289Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 346,
+        "y": 69,
+        "z": 109
+      },
+      "botHealth": 13,
+      "botFood": 10,
+      "eventId": 192
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.389Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -124,
+        "y": 69,
+        "z": -357
+      },
+      "botHealth": 20,
+      "botFood": 1,
+      "eventId": 193
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.489Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 340,
+        "y": 64,
+        "z": -455
+      },
+      "botHealth": 12,
+      "botFood": 5,
+      "eventId": 194
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.589Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -456,
+        "y": 69,
+        "z": 248
+      },
+      "botHealth": 17,
+      "botFood": 18,
+      "eventId": 195
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.689Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 171,
+        "y": 69,
+        "z": 499
+      },
+      "botHealth": 20,
+      "botFood": 17,
+      "eventId": 196
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.789Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 403,
+        "y": 72,
+        "z": -428
+      },
+      "botHealth": 4,
+      "botFood": 3,
+      "eventId": 197
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.889Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -242,
+        "y": 64,
+        "z": 128
+      },
+      "botHealth": 13,
+      "botFood": 11,
+      "eventId": 198
+    },
+    {
+      "timestamp": "2025-07-06T00:58:16.989Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -301,
+        "y": 67,
+        "z": -160
+      },
+      "botHealth": 10,
+      "botFood": 3,
+      "eventId": 199
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.189Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 411,
+        "y": 64,
+        "z": -192
+      },
+      "botHealth": 13,
+      "botFood": 6,
+      "eventId": 200
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.289Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 224,
+        "y": 71,
+        "z": -126
+      },
+      "botHealth": 4,
+      "botFood": 7,
+      "eventId": 201
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.389Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 362,
+        "y": 64,
+        "z": 47
+      },
+      "botHealth": 14,
+      "botFood": 12,
+      "eventId": 202
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.489Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -185,
+        "y": 68,
+        "z": -237
+      },
+      "botHealth": 14,
+      "botFood": 19,
+      "eventId": 203
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.589Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -364,
+        "y": 70,
+        "z": 276
+      },
+      "botHealth": 10,
+      "botFood": 20,
+      "eventId": 204
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.689Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 321,
+        "y": 66,
+        "z": 341
+      },
+      "botHealth": 1,
+      "botFood": 10,
+      "eventId": 205
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.789Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 8,
+        "y": 72,
+        "z": -28
+      },
+      "botHealth": 13,
+      "botFood": 11,
+      "eventId": 206
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.889Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 396,
+        "y": 67,
+        "z": 92
+      },
+      "botHealth": 9,
+      "botFood": 7,
+      "eventId": 207
+    },
+    {
+      "timestamp": "2025-07-06T00:58:17.989Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 34,
+        "y": 66,
+        "z": 301
+      },
+      "botHealth": 6,
+      "botFood": 20,
+      "eventId": 208
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.089Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 404,
+        "y": 65,
+        "z": -69
+      },
+      "botHealth": 6,
+      "botFood": 6,
+      "eventId": 209
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.290Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 137,
+        "y": 64,
+        "z": 60
+      },
+      "botHealth": 17,
+      "botFood": 19,
+      "eventId": 210
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.390Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -119,
+        "y": 73,
+        "z": 276
+      },
+      "botHealth": 11,
+      "botFood": 19,
+      "eventId": 211
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.490Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -152,
+        "y": 65,
+        "z": -81
+      },
+      "botHealth": 2,
+      "botFood": 8,
+      "eventId": 212
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.590Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 167,
+        "y": 69,
+        "z": 442
+      },
+      "botHealth": 2,
+      "botFood": 14,
+      "eventId": 213
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.690Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 0,
+        "y": 68,
+        "z": 25
+      },
+      "botHealth": 10,
+      "botFood": 15,
+      "eventId": 214
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.790Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 307,
+        "y": 66,
+        "z": 417
+      },
+      "botHealth": 11,
+      "botFood": 9,
+      "eventId": 215
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.890Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -418,
+        "y": 67,
+        "z": 150
+      },
+      "botHealth": 9,
+      "botFood": 15,
+      "eventId": 216
+    },
+    {
+      "timestamp": "2025-07-06T00:58:18.990Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -98,
+        "y": 66,
+        "z": 263
+      },
+      "botHealth": 4,
+      "botFood": 3,
+      "eventId": 217
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.090Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -126,
+        "y": 64,
+        "z": -244
+      },
+      "botHealth": 16,
+      "botFood": 5,
+      "eventId": 218
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.190Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 174,
+        "y": 70,
+        "z": 282
+      },
+      "botHealth": 1,
+      "botFood": 7,
+      "eventId": 219
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.389Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -18,
+        "y": 66,
+        "z": 266
+      },
+      "botHealth": 2,
+      "botFood": 18,
+      "eventId": 220
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.489Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 78,
+        "y": 71,
+        "z": -124
+      },
+      "botHealth": 6,
+      "botFood": 16,
+      "eventId": 221
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.589Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 168,
+        "y": 66,
+        "z": 162
+      },
+      "botHealth": 5,
+      "botFood": 12,
+      "eventId": 222
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.689Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -392,
+        "y": 73,
+        "z": 129
+      },
+      "botHealth": 2,
+      "botFood": 1,
+      "eventId": 223
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.789Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 207,
+        "y": 68,
+        "z": -290
+      },
+      "botHealth": 6,
+      "botFood": 11,
+      "eventId": 224
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.889Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 422,
+        "y": 69,
+        "z": -391
+      },
+      "botHealth": 1,
+      "botFood": 12,
+      "eventId": 225
+    },
+    {
+      "timestamp": "2025-07-06T00:58:19.989Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -459,
+        "y": 73,
+        "z": -311
+      },
+      "botHealth": 3,
+      "botFood": 8,
+      "eventId": 226
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.089Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -55,
+        "y": 66,
+        "z": 338
+      },
+      "botHealth": 13,
+      "botFood": 1,
+      "eventId": 227
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.189Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 409,
+        "y": 64,
+        "z": 16
+      },
+      "botHealth": 3,
+      "botFood": 19,
+      "eventId": 228
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.289Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -316,
+        "y": 71,
+        "z": -359
+      },
+      "botHealth": 9,
+      "botFood": 2,
+      "eventId": 229
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.489Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -400,
+        "y": 71,
+        "z": 24
+      },
+      "botHealth": 16,
+      "botFood": 9,
+      "eventId": 230
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.589Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 138,
+        "y": 67,
+        "z": -447
+      },
+      "botHealth": 19,
+      "botFood": 19,
+      "eventId": 231
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.690Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 239,
+        "y": 72,
+        "z": -103
+      },
+      "botHealth": 16,
+      "botFood": 15,
+      "eventId": 232
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.790Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 189,
+        "y": 72,
+        "z": 162
+      },
+      "botHealth": 11,
+      "botFood": 16,
+      "eventId": 233
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.890Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 211,
+        "y": 70,
+        "z": -256
+      },
+      "botHealth": 17,
+      "botFood": 17,
+      "eventId": 234
+    },
+    {
+      "timestamp": "2025-07-06T00:58:20.990Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -121,
+        "y": 72,
+        "z": -151
+      },
+      "botHealth": 17,
+      "botFood": 6,
+      "eventId": 235
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.090Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -40,
+        "y": 67,
+        "z": 124
+      },
+      "botHealth": 19,
+      "botFood": 3,
+      "eventId": 236
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.190Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -127,
+        "y": 73,
+        "z": -189
+      },
+      "botHealth": 10,
+      "botFood": 19,
+      "eventId": 237
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.290Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 81,
+        "y": 66,
+        "z": 238
+      },
+      "botHealth": 16,
+      "botFood": 19,
+      "eventId": 238
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.390Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -492,
+        "y": 65,
+        "z": 177
+      },
+      "botHealth": 7,
+      "botFood": 17,
+      "eventId": 239
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.590Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -57,
+        "y": 66,
+        "z": -195
+      },
+      "botHealth": 7,
+      "botFood": 20,
+      "eventId": 240
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.690Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -68,
+        "y": 70,
+        "z": 244
+      },
+      "botHealth": 1,
+      "botFood": 6,
+      "eventId": 241
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.790Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 496,
+        "y": 69,
+        "z": -434
+      },
+      "botHealth": 13,
+      "botFood": 1,
+      "eventId": 242
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.890Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -99,
+        "y": 71,
+        "z": -116
+      },
+      "botHealth": 8,
+      "botFood": 13,
+      "eventId": 243
+    },
+    {
+      "timestamp": "2025-07-06T00:58:21.990Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 416,
+        "y": 66,
+        "z": -204
+      },
+      "botHealth": 4,
+      "botFood": 14,
+      "eventId": 244
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.090Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -387,
+        "y": 66,
+        "z": -282
+      },
+      "botHealth": 8,
+      "botFood": 18,
+      "eventId": 245
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.190Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 218,
+        "y": 73,
+        "z": 7
+      },
+      "botHealth": 13,
+      "botFood": 19,
+      "eventId": 246
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.290Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -97,
+        "y": 72,
+        "z": 136
+      },
+      "botHealth": 14,
+      "botFood": 7,
+      "eventId": 247
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.390Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -371,
+        "y": 65,
+        "z": 146
+      },
+      "botHealth": 20,
+      "botFood": 4,
+      "eventId": 248
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.490Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -274,
+        "y": 69,
+        "z": -44
+      },
+      "botHealth": 13,
+      "botFood": 3,
+      "eventId": 249
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.690Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 200,
+        "y": 69,
+        "z": -122
+      },
+      "botHealth": 4,
+      "botFood": 15,
+      "eventId": 250
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.790Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -113,
+        "y": 72,
+        "z": 462
+      },
+      "botHealth": 2,
+      "botFood": 17,
+      "eventId": 251
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.890Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 218,
+        "y": 70,
+        "z": 308
+      },
+      "botHealth": 3,
+      "botFood": 20,
+      "eventId": 252
+    },
+    {
+      "timestamp": "2025-07-06T00:58:22.990Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -188,
+        "y": 72,
+        "z": 54
+      },
+      "botHealth": 19,
+      "botFood": 8,
+      "eventId": 253
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.090Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -65,
+        "y": 64,
+        "z": 1
+      },
+      "botHealth": 18,
+      "botFood": 18,
+      "eventId": 254
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.190Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 282,
+        "y": 68,
+        "z": 358
+      },
+      "botHealth": 17,
+      "botFood": 4,
+      "eventId": 255
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.290Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -131,
+        "y": 73,
+        "z": -207
+      },
+      "botHealth": 19,
+      "botFood": 11,
+      "eventId": 256
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.390Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -323,
+        "y": 73,
+        "z": -375
+      },
+      "botHealth": 6,
+      "botFood": 20,
+      "eventId": 257
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.490Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 327,
+        "y": 64,
+        "z": -407
+      },
+      "botHealth": 14,
+      "botFood": 20,
+      "eventId": 258
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.590Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -23,
+        "y": 72,
+        "z": 122
+      },
+      "botHealth": 12,
+      "botFood": 14,
+      "eventId": 259
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.790Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -238,
+        "y": 68,
+        "z": 226
+      },
+      "botHealth": 17,
+      "botFood": 17,
+      "eventId": 260
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.891Z",
+      "type": "CHAT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -4,
+        "y": 70,
+        "z": -477
+      },
+      "botHealth": 12,
+      "botFood": 5,
+      "eventId": 261
+    },
+    {
+      "timestamp": "2025-07-06T00:58:23.991Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 480,
+        "y": 66,
+        "z": -405
+      },
+      "botHealth": 7,
+      "botFood": 7,
+      "eventId": 262
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.091Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -361,
+        "y": 69,
+        "z": 172
+      },
+      "botHealth": 5,
+      "botFood": 1,
+      "eventId": 263
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.191Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -287,
+        "y": 69,
+        "z": -345
+      },
+      "botHealth": 7,
+      "botFood": 14,
+      "eventId": 264
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.291Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -421,
+        "y": 68,
+        "z": -138
+      },
+      "botHealth": 2,
+      "botFood": 13,
+      "eventId": 265
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.391Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 352,
+        "y": 72,
+        "z": 271
+      },
+      "botHealth": 10,
+      "botFood": 18,
+      "eventId": 266
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.491Z",
+      "type": "FOOD_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 498,
+        "y": 66,
+        "z": 100
+      },
+      "botHealth": 13,
+      "botFood": 15,
+      "eventId": 267
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.591Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 164,
+        "y": 65,
+        "z": 252
+      },
+      "botHealth": 1,
+      "botFood": 6,
+      "eventId": 268
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.691Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 242,
+        "y": 66,
+        "z": -73
+      },
+      "botHealth": 13,
+      "botFood": 17,
+      "eventId": 269
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.891Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 209,
+        "y": 67,
+        "z": -273
+      },
+      "botHealth": 7,
+      "botFood": 6,
+      "eventId": 270
+    },
+    {
+      "timestamp": "2025-07-06T00:58:24.991Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -77,
+        "y": 70,
+        "z": -481
+      },
+      "botHealth": 3,
+      "botFood": 18,
+      "eventId": 271
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.091Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -22,
+        "y": 73,
+        "z": -63
+      },
+      "botHealth": 16,
+      "botFood": 16,
+      "eventId": 272
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.191Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 31,
+        "y": 66,
+        "z": 315
+      },
+      "botHealth": 5,
+      "botFood": 9,
+      "eventId": 273
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.291Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 264,
+        "y": 68,
+        "z": -51
+      },
+      "botHealth": 18,
+      "botFood": 15,
+      "eventId": 274
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.391Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -183,
+        "y": 65,
+        "z": 29
+      },
+      "botHealth": 16,
+      "botFood": 8,
+      "eventId": 275
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.491Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -91,
+        "y": 73,
+        "z": 353
+      },
+      "botHealth": 2,
+      "botFood": 10,
+      "eventId": 276
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.591Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -41,
+        "y": 67,
+        "z": 471
+      },
+      "botHealth": 12,
+      "botFood": 8,
+      "eventId": 277
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.691Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 348,
+        "y": 65,
+        "z": 325
+      },
+      "botHealth": 15,
+      "botFood": 20,
+      "eventId": 278
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.791Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -197,
+        "y": 69,
+        "z": -495
+      },
+      "botHealth": 6,
+      "botFood": 16,
+      "eventId": 279
+    },
+    {
+      "timestamp": "2025-07-06T00:58:25.991Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -271,
+        "y": 66,
+        "z": 346
+      },
+      "botHealth": 3,
+      "botFood": 9,
+      "eventId": 280
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.091Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -391,
+        "y": 72,
+        "z": -497
+      },
+      "botHealth": 10,
+      "botFood": 10,
+      "eventId": 281
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.191Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 191,
+        "y": 65,
+        "z": -402
+      },
+      "botHealth": 20,
+      "botFood": 12,
+      "eventId": 282
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.291Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 300,
+        "y": 65,
+        "z": -66
+      },
+      "botHealth": 13,
+      "botFood": 9,
+      "eventId": 283
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.391Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -104,
+        "y": 66,
+        "z": 177
+      },
+      "botHealth": 13,
+      "botFood": 7,
+      "eventId": 284
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.491Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -459,
+        "y": 65,
+        "z": 274
+      },
+      "botHealth": 13,
+      "botFood": 13,
+      "eventId": 285
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.591Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -13,
+        "y": 71,
+        "z": 371
+      },
+      "botHealth": 9,
+      "botFood": 16,
+      "eventId": 286
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.691Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -454,
+        "y": 66,
+        "z": 239
+      },
+      "botHealth": 18,
+      "botFood": 3,
+      "eventId": 287
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.791Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 77,
+        "y": 67,
+        "z": -333
+      },
+      "botHealth": 12,
+      "botFood": 1,
+      "eventId": 288
+    },
+    {
+      "timestamp": "2025-07-06T00:58:26.891Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -9,
+        "y": 66,
+        "z": 70
+      },
+      "botHealth": 10,
+      "botFood": 20,
+      "eventId": 289
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.091Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 271,
+        "y": 68,
+        "z": 153
+      },
+      "botHealth": 18,
+      "botFood": 17,
+      "eventId": 290
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.192Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 166,
+        "y": 71,
+        "z": -389
+      },
+      "botHealth": 9,
+      "botFood": 16,
+      "eventId": 291
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.292Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 340,
+        "y": 68,
+        "z": -271
+      },
+      "botHealth": 18,
+      "botFood": 12,
+      "eventId": 292
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.392Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -186,
+        "y": 71,
+        "z": -423
+      },
+      "botHealth": 9,
+      "botFood": 7,
+      "eventId": 293
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.492Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -83,
+        "y": 67,
+        "z": 494
+      },
+      "botHealth": 9,
+      "botFood": 13,
+      "eventId": 294
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.592Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -416,
+        "y": 64,
+        "z": 396
+      },
+      "botHealth": 10,
+      "botFood": 15,
+      "eventId": 295
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.692Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -45,
+        "y": 66,
+        "z": 259
+      },
+      "botHealth": 12,
+      "botFood": 8,
+      "eventId": 296
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.792Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 420,
+        "y": 68,
+        "z": 321
+      },
+      "botHealth": 14,
+      "botFood": 15,
+      "eventId": 297
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.892Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -276,
+        "y": 64,
+        "z": 50
+      },
+      "botHealth": 16,
+      "botFood": 20,
+      "eventId": 298
+    },
+    {
+      "timestamp": "2025-07-06T00:58:27.992Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -405,
+        "y": 71,
+        "z": -129
+      },
+      "botHealth": 3,
+      "botFood": 17,
+      "eventId": 299
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.192Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -345,
+        "y": 65,
+        "z": 299
+      },
+      "botHealth": 3,
+      "botFood": 16,
+      "eventId": 300
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.292Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 229,
+        "y": 65,
+        "z": 235
+      },
+      "botHealth": 6,
+      "botFood": 1,
+      "eventId": 301
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.392Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 338,
+        "y": 72,
+        "z": -130
+      },
+      "botHealth": 14,
+      "botFood": 15,
+      "eventId": 302
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.492Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -364,
+        "y": 68,
+        "z": -40
+      },
+      "botHealth": 1,
+      "botFood": 2,
+      "eventId": 303
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.592Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 189,
+        "y": 66,
+        "z": 58
+      },
+      "botHealth": 6,
+      "botFood": 7,
+      "eventId": 304
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.692Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 352,
+        "y": 69,
+        "z": -16
+      },
+      "botHealth": 16,
+      "botFood": 13,
+      "eventId": 305
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.792Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 121,
+        "y": 72,
+        "z": 80
+      },
+      "botHealth": 13,
+      "botFood": 14,
+      "eventId": 306
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.892Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 352,
+        "y": 68,
+        "z": -356
+      },
+      "botHealth": 17,
+      "botFood": 12,
+      "eventId": 307
+    },
+    {
+      "timestamp": "2025-07-06T00:58:28.992Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 220,
+        "y": 66,
+        "z": -104
+      },
+      "botHealth": 6,
+      "botFood": 14,
+      "eventId": 308
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.092Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 171,
+        "y": 65,
+        "z": 61
+      },
+      "botHealth": 8,
+      "botFood": 8,
+      "eventId": 309
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.292Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 484,
+        "y": 69,
+        "z": 357
+      },
+      "botHealth": 6,
+      "botFood": 1,
+      "eventId": 310
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.392Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -395,
+        "y": 68,
+        "z": 59
+      },
+      "botHealth": 9,
+      "botFood": 18,
+      "eventId": 311
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.492Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 130,
+        "y": 70,
+        "z": -165
+      },
+      "botHealth": 15,
+      "botFood": 5,
+      "eventId": 312
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.592Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 498,
+        "y": 68,
+        "z": 307
+      },
+      "botHealth": 6,
+      "botFood": 10,
+      "eventId": 313
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.692Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -252,
+        "y": 72,
+        "z": 57
+      },
+      "botHealth": 16,
+      "botFood": 3,
+      "eventId": 314
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.792Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -381,
+        "y": 71,
+        "z": -70
+      },
+      "botHealth": 6,
+      "botFood": 14,
+      "eventId": 315
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.892Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -442,
+        "y": 70,
+        "z": -150
+      },
+      "botHealth": 1,
+      "botFood": 3,
+      "eventId": 316
+    },
+    {
+      "timestamp": "2025-07-06T00:58:29.992Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -307,
+        "y": 66,
+        "z": 133
+      },
+      "botHealth": 20,
+      "botFood": 4,
+      "eventId": 317
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.092Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -498,
+        "y": 72,
+        "z": -87
+      },
+      "botHealth": 3,
+      "botFood": 19,
+      "eventId": 318
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.192Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 212,
+        "y": 66,
+        "z": -251
+      },
+      "botHealth": 5,
+      "botFood": 20,
+      "eventId": 319
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.393Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 323,
+        "y": 66,
+        "z": -226
+      },
+      "botHealth": 1,
+      "botFood": 12,
+      "eventId": 320
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.493Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -177,
+        "y": 65,
+        "z": 377
+      },
+      "botHealth": 13,
+      "botFood": 5,
+      "eventId": 321
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.593Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 443,
+        "y": 72,
+        "z": 140
+      },
+      "botHealth": 10,
+      "botFood": 14,
+      "eventId": 322
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.693Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -126,
+        "y": 65,
+        "z": 176
+      },
+      "botHealth": 8,
+      "botFood": 8,
+      "eventId": 323
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.793Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 493,
+        "y": 65,
+        "z": 495
+      },
+      "botHealth": 14,
+      "botFood": 11,
+      "eventId": 324
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.893Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 249,
+        "y": 71,
+        "z": -35
+      },
+      "botHealth": 5,
+      "botFood": 14,
+      "eventId": 325
+    },
+    {
+      "timestamp": "2025-07-06T00:58:30.993Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 144,
+        "y": 73,
+        "z": -430
+      },
+      "botHealth": 19,
+      "botFood": 11,
+      "eventId": 326
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.093Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 177,
+        "y": 64,
+        "z": -75
+      },
+      "botHealth": 2,
+      "botFood": 5,
+      "eventId": 327
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.193Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 364,
+        "y": 64,
+        "z": 6
+      },
+      "botHealth": 11,
+      "botFood": 15,
+      "eventId": 328
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.293Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 193,
+        "y": 71,
+        "z": -173
+      },
+      "botHealth": 2,
+      "botFood": 7,
+      "eventId": 329
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.492Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 43,
+        "y": 73,
+        "z": -38
+      },
+      "botHealth": 17,
+      "botFood": 17,
+      "eventId": 330
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.592Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 385,
+        "y": 67,
+        "z": -443
+      },
+      "botHealth": 17,
+      "botFood": 11,
+      "eventId": 331
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.692Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -247,
+        "y": 67,
+        "z": -384
+      },
+      "botHealth": 18,
+      "botFood": 2,
+      "eventId": 332
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.792Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -129,
+        "y": 68,
+        "z": 317
+      },
+      "botHealth": 2,
+      "botFood": 15,
+      "eventId": 333
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.892Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -211,
+        "y": 66,
+        "z": 142
+      },
+      "botHealth": 4,
+      "botFood": 7,
+      "eventId": 334
+    },
+    {
+      "timestamp": "2025-07-06T00:58:31.992Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 396,
+        "y": 73,
+        "z": -77
+      },
+      "botHealth": 14,
+      "botFood": 20,
+      "eventId": 335
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.092Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 255,
+        "y": 71,
+        "z": -137
+      },
+      "botHealth": 18,
+      "botFood": 15,
+      "eventId": 336
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.192Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 256,
+        "y": 66,
+        "z": 476
+      },
+      "botHealth": 4,
+      "botFood": 15,
+      "eventId": 337
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.292Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -439,
+        "y": 67,
+        "z": 313
+      },
+      "botHealth": 12,
+      "botFood": 4,
+      "eventId": 338
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.392Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -345,
+        "y": 66,
+        "z": 8
+      },
+      "botHealth": 17,
+      "botFood": 9,
+      "eventId": 339
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.592Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -46,
+        "y": 71,
+        "z": -161
+      },
+      "botHealth": 9,
+      "botFood": 18,
+      "eventId": 340
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.692Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 117,
+        "y": 65,
+        "z": 113
+      },
+      "botHealth": 15,
+      "botFood": 3,
+      "eventId": 341
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.792Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -294,
+        "y": 70,
+        "z": 200
+      },
+      "botHealth": 5,
+      "botFood": 8,
+      "eventId": 342
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.892Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -469,
+        "y": 68,
+        "z": 148
+      },
+      "botHealth": 7,
+      "botFood": 6,
+      "eventId": 343
+    },
+    {
+      "timestamp": "2025-07-06T00:58:32.993Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 342,
+        "y": 64,
+        "z": 30
+      },
+      "botHealth": 14,
+      "botFood": 8,
+      "eventId": 344
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.093Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -110,
+        "y": 66,
+        "z": -347
+      },
+      "botHealth": 18,
+      "botFood": 1,
+      "eventId": 345
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.193Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 71,
+        "y": 65,
+        "z": -163
+      },
+      "botHealth": 12,
+      "botFood": 15,
+      "eventId": 346
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.293Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -61,
+        "y": 64,
+        "z": -185
+      },
+      "botHealth": 10,
+      "botFood": 10,
+      "eventId": 347
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.393Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -198,
+        "y": 71,
+        "z": -51
+      },
+      "botHealth": 1,
+      "botFood": 16,
+      "eventId": 348
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.493Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -441,
+        "y": 65,
+        "z": 353
+      },
+      "botHealth": 7,
+      "botFood": 13,
+      "eventId": 349
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.693Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -385,
+        "y": 67,
+        "z": 451
+      },
+      "botHealth": 14,
+      "botFood": 20,
+      "eventId": 350
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.793Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 103,
+        "y": 66,
+        "z": 291
+      },
+      "botHealth": 7,
+      "botFood": 17,
+      "eventId": 351
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.893Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 481,
+        "y": 66,
+        "z": 92
+      },
+      "botHealth": 1,
+      "botFood": 4,
+      "eventId": 352
+    },
+    {
+      "timestamp": "2025-07-06T00:58:33.993Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 328,
+        "y": 66,
+        "z": -307
+      },
+      "botHealth": 1,
+      "botFood": 6,
+      "eventId": 353
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.093Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 264,
+        "y": 73,
+        "z": 190
+      },
+      "botHealth": 5,
+      "botFood": 1,
+      "eventId": 354
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.193Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -223,
+        "y": 70,
+        "z": 413
+      },
+      "botHealth": 10,
+      "botFood": 14,
+      "eventId": 355
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.293Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -22,
+        "y": 66,
+        "z": 127
+      },
+      "botHealth": 15,
+      "botFood": 10,
+      "eventId": 356
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.393Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -392,
+        "y": 70,
+        "z": 250
+      },
+      "botHealth": 2,
+      "botFood": 17,
+      "eventId": 357
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.493Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 296,
+        "y": 67,
+        "z": -364
+      },
+      "botHealth": 4,
+      "botFood": 10,
+      "eventId": 358
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.593Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 425,
+        "y": 70,
+        "z": -50
+      },
+      "botHealth": 4,
+      "botFood": 13,
+      "eventId": 359
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.793Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 220,
+        "y": 64,
+        "z": 495
+      },
+      "botHealth": 3,
+      "botFood": 4,
+      "eventId": 360
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.893Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -43,
+        "y": 65,
+        "z": 225
+      },
+      "botHealth": 17,
+      "botFood": 3,
+      "eventId": 361
+    },
+    {
+      "timestamp": "2025-07-06T00:58:34.993Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -210,
+        "y": 68,
+        "z": -405
+      },
+      "botHealth": 2,
+      "botFood": 4,
+      "eventId": 362
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.093Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -106,
+        "y": 64,
+        "z": -78
+      },
+      "botHealth": 8,
+      "botFood": 7,
+      "eventId": 363
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.193Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 6,
+        "y": 68,
+        "z": -496
+      },
+      "botHealth": 9,
+      "botFood": 5,
+      "eventId": 364
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.293Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 435,
+        "y": 69,
+        "z": 116
+      },
+      "botHealth": 11,
+      "botFood": 11,
+      "eventId": 365
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.393Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 91,
+        "y": 66,
+        "z": 89
+      },
+      "botHealth": 16,
+      "botFood": 15,
+      "eventId": 366
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.493Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -250,
+        "y": 65,
+        "z": -492
+      },
+      "botHealth": 11,
+      "botFood": 16,
+      "eventId": 367
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.593Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -258,
+        "y": 65,
+        "z": -14
+      },
+      "botHealth": 9,
+      "botFood": 3,
+      "eventId": 368
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.693Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 376,
+        "y": 66,
+        "z": 394
+      },
+      "botHealth": 9,
+      "botFood": 12,
+      "eventId": 369
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.892Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 51,
+        "y": 72,
+        "z": -370
+      },
+      "botHealth": 19,
+      "botFood": 11,
+      "eventId": 370
+    },
+    {
+      "timestamp": "2025-07-06T00:58:35.992Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 403,
+        "y": 68,
+        "z": 188
+      },
+      "botHealth": 20,
+      "botFood": 12,
+      "eventId": 371
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.092Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 119,
+        "y": 71,
+        "z": 407
+      },
+      "botHealth": 12,
+      "botFood": 3,
+      "eventId": 372
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.192Z",
+      "type": "FOOD_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 72,
+        "y": 66,
+        "z": 196
+      },
+      "botHealth": 1,
+      "botFood": 17,
+      "eventId": 373
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.292Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 479,
+        "y": 68,
+        "z": 498
+      },
+      "botHealth": 7,
+      "botFood": 16,
+      "eventId": 374
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.392Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 438,
+        "y": 65,
+        "z": -254
+      },
+      "botHealth": 1,
+      "botFood": 20,
+      "eventId": 375
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.492Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 493,
+        "y": 71,
+        "z": 161
+      },
+      "botHealth": 15,
+      "botFood": 1,
+      "eventId": 376
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.592Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -404,
+        "y": 73,
+        "z": 432
+      },
+      "botHealth": 13,
+      "botFood": 5,
+      "eventId": 377
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.692Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 183,
+        "y": 73,
+        "z": 2
+      },
+      "botHealth": 19,
+      "botFood": 14,
+      "eventId": 378
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.792Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 194,
+        "y": 66,
+        "z": -324
+      },
+      "botHealth": 8,
+      "botFood": 1,
+      "eventId": 379
+    },
+    {
+      "timestamp": "2025-07-06T00:58:36.992Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 142,
+        "y": 67,
+        "z": -410
+      },
+      "botHealth": 14,
+      "botFood": 17,
+      "eventId": 380
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.093Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 8,
+        "y": 71,
+        "z": 228
+      },
+      "botHealth": 12,
+      "botFood": 17,
+      "eventId": 381
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.193Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 68,
+        "y": 65,
+        "z": 12
+      },
+      "botHealth": 5,
+      "botFood": 7,
+      "eventId": 382
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.293Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -264,
+        "y": 67,
+        "z": -112
+      },
+      "botHealth": 2,
+      "botFood": 11,
+      "eventId": 383
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.393Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -228,
+        "y": 68,
+        "z": -372
+      },
+      "botHealth": 1,
+      "botFood": 16,
+      "eventId": 384
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.493Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 497,
+        "y": 73,
+        "z": 131
+      },
+      "botHealth": 14,
+      "botFood": 13,
+      "eventId": 385
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.593Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -202,
+        "y": 65,
+        "z": 434
+      },
+      "botHealth": 19,
+      "botFood": 3,
+      "eventId": 386
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.693Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -387,
+        "y": 67,
+        "z": 97
+      },
+      "botHealth": 2,
+      "botFood": 2,
+      "eventId": 387
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.793Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -327,
+        "y": 72,
+        "z": -273
+      },
+      "botHealth": 8,
+      "botFood": 9,
+      "eventId": 388
+    },
+    {
+      "timestamp": "2025-07-06T00:58:37.893Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -357,
+        "y": 72,
+        "z": -433
+      },
+      "botHealth": 11,
+      "botFood": 16,
+      "eventId": 389
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.093Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 219,
+        "y": 73,
+        "z": -338
+      },
+      "botHealth": 11,
+      "botFood": 13,
+      "eventId": 390
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.193Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -64,
+        "y": 69,
+        "z": 65
+      },
+      "botHealth": 18,
+      "botFood": 5,
+      "eventId": 391
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.293Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -194,
+        "y": 67,
+        "z": 141
+      },
+      "botHealth": 13,
+      "botFood": 3,
+      "eventId": 392
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.393Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 403,
+        "y": 65,
+        "z": 292
+      },
+      "botHealth": 17,
+      "botFood": 12,
+      "eventId": 393
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.493Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -291,
+        "y": 66,
+        "z": 154
+      },
+      "botHealth": 8,
+      "botFood": 10,
+      "eventId": 394
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.593Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -379,
+        "y": 71,
+        "z": 192
+      },
+      "botHealth": 10,
+      "botFood": 11,
+      "eventId": 395
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.693Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 313,
+        "y": 70,
+        "z": 43
+      },
+      "botHealth": 19,
+      "botFood": 3,
+      "eventId": 396
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.793Z",
+      "type": "FOOD_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 479,
+        "y": 64,
+        "z": -458
+      },
+      "botHealth": 11,
+      "botFood": 9,
+      "eventId": 397
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.893Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 258,
+        "y": 72,
+        "z": 412
+      },
+      "botHealth": 18,
+      "botFood": 18,
+      "eventId": 398
+    },
+    {
+      "timestamp": "2025-07-06T00:58:38.993Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 418,
+        "y": 73,
+        "z": -264
+      },
+      "botHealth": 2,
+      "botFood": 6,
+      "eventId": 399
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.193Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -304,
+        "y": 69,
+        "z": -204
+      },
+      "botHealth": 4,
+      "botFood": 15,
+      "eventId": 400
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.293Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 191,
+        "y": 69,
+        "z": -44
+      },
+      "botHealth": 14,
+      "botFood": 19,
+      "eventId": 401
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.393Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 478,
+        "y": 71,
+        "z": 305
+      },
+      "botHealth": 19,
+      "botFood": 1,
+      "eventId": 402
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.493Z",
+      "type": "CHAT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -336,
+        "y": 71,
+        "z": 142
+      },
+      "botHealth": 9,
+      "botFood": 19,
+      "eventId": 403
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.593Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 44,
+        "y": 69,
+        "z": -433
+      },
+      "botHealth": 13,
+      "botFood": 2,
+      "eventId": 404
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.693Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -36,
+        "y": 68,
+        "z": -325
+      },
+      "botHealth": 18,
+      "botFood": 13,
+      "eventId": 405
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.793Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 303,
+        "y": 69,
+        "z": 429
+      },
+      "botHealth": 18,
+      "botFood": 14,
+      "eventId": 406
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.893Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 92,
+        "y": 71,
+        "z": -200
+      },
+      "botHealth": 14,
+      "botFood": 3,
+      "eventId": 407
+    },
+    {
+      "timestamp": "2025-07-06T00:58:39.993Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -334,
+        "y": 67,
+        "z": 347
+      },
+      "botHealth": 10,
+      "botFood": 16,
+      "eventId": 408
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.093Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -270,
+        "y": 69,
+        "z": -290
+      },
+      "botHealth": 8,
+      "botFood": 4,
+      "eventId": 409
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.294Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 316,
+        "y": 64,
+        "z": 231
+      },
+      "botHealth": 12,
+      "botFood": 12,
+      "eventId": 410
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.394Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -153,
+        "y": 73,
+        "z": 420
+      },
+      "botHealth": 17,
+      "botFood": 15,
+      "eventId": 411
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.494Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 498,
+        "y": 72,
+        "z": 289
+      },
+      "botHealth": 11,
+      "botFood": 3,
+      "eventId": 412
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.594Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 228,
+        "y": 70,
+        "z": -73
+      },
+      "botHealth": 17,
+      "botFood": 7,
+      "eventId": 413
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.694Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -195,
+        "y": 64,
+        "z": 190
+      },
+      "botHealth": 9,
+      "botFood": 11,
+      "eventId": 414
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.794Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 363,
+        "y": 68,
+        "z": 229
+      },
+      "botHealth": 19,
+      "botFood": 4,
+      "eventId": 415
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.894Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -47,
+        "y": 69,
+        "z": 228
+      },
+      "botHealth": 4,
+      "botFood": 5,
+      "eventId": 416
+    },
+    {
+      "timestamp": "2025-07-06T00:58:40.994Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 85,
+        "y": 71,
+        "z": -7
+      },
+      "botHealth": 15,
+      "botFood": 4,
+      "eventId": 417
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.094Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -94,
+        "y": 65,
+        "z": -343
+      },
+      "botHealth": 5,
+      "botFood": 9,
+      "eventId": 418
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.194Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 404,
+        "y": 69,
+        "z": -458
+      },
+      "botHealth": 15,
+      "botFood": 9,
+      "eventId": 419
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.394Z",
+      "type": "PVP",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -122,
+        "y": 73,
+        "z": -266
+      },
+      "botHealth": 2,
+      "botFood": 17,
+      "eventId": 420
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.494Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -347,
+        "y": 72,
+        "z": -124
+      },
+      "botHealth": 15,
+      "botFood": 18,
+      "eventId": 421
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.594Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 292,
+        "y": 65,
+        "z": -353
+      },
+      "botHealth": 1,
+      "botFood": 16,
+      "eventId": 422
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.694Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 207,
+        "y": 65,
+        "z": 416
+      },
+      "botHealth": 9,
+      "botFood": 9,
+      "eventId": 423
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.794Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 201,
+        "y": 69,
+        "z": -457
+      },
+      "botHealth": 13,
+      "botFood": 19,
+      "eventId": 424
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -303,
+        "y": 72,
+        "z": 172
+      },
+      "botHealth": 3,
+      "botFood": 20,
+      "eventId": 425
+    },
+    {
+      "timestamp": "2025-07-06T00:58:41.994Z",
+      "type": "CHAT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 166,
+        "y": 69,
+        "z": 251
+      },
+      "botHealth": 8,
+      "botFood": 8,
+      "eventId": 426
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.094Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 183,
+        "y": 68,
+        "z": 270
+      },
+      "botHealth": 3,
+      "botFood": 15,
+      "eventId": 427
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.194Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -60,
+        "y": 68,
+        "z": -349
+      },
+      "botHealth": 12,
+      "botFood": 17,
+      "eventId": 428
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.294Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 485,
+        "y": 68,
+        "z": -59
+      },
+      "botHealth": 10,
+      "botFood": 13,
+      "eventId": 429
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.494Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -161,
+        "y": 71,
+        "z": -50
+      },
+      "botHealth": 12,
+      "botFood": 8,
+      "eventId": 430
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.594Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -306,
+        "y": 64,
+        "z": -113
+      },
+      "botHealth": 13,
+      "botFood": 17,
+      "eventId": 431
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.694Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -48,
+        "y": 64,
+        "z": -56
+      },
+      "botHealth": 12,
+      "botFood": 4,
+      "eventId": 432
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.794Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -453,
+        "y": 73,
+        "z": -466
+      },
+      "botHealth": 20,
+      "botFood": 2,
+      "eventId": 433
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.894Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 468,
+        "y": 68,
+        "z": -389
+      },
+      "botHealth": 6,
+      "botFood": 7,
+      "eventId": 434
+    },
+    {
+      "timestamp": "2025-07-06T00:58:42.994Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 476,
+        "y": 73,
+        "z": 273
+      },
+      "botHealth": 10,
+      "botFood": 3,
+      "eventId": 435
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.094Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 409,
+        "y": 69,
+        "z": -132
+      },
+      "botHealth": 11,
+      "botFood": 3,
+      "eventId": 436
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.194Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -4,
+        "y": 66,
+        "z": 97
+      },
+      "botHealth": 13,
+      "botFood": 19,
+      "eventId": 437
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.294Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 171,
+        "y": 64,
+        "z": -486
+      },
+      "botHealth": 17,
+      "botFood": 15,
+      "eventId": 438
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.394Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -353,
+        "y": 68,
+        "z": 191
+      },
+      "botHealth": 20,
+      "botFood": 10,
+      "eventId": 439
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.595Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 27,
+        "y": 71,
+        "z": 176
+      },
+      "botHealth": 20,
+      "botFood": 7,
+      "eventId": 440
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.695Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 5,
+        "y": 68,
+        "z": 43
+      },
+      "botHealth": 4,
+      "botFood": 15,
+      "eventId": 441
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.795Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 187,
+        "y": 67,
+        "z": 87
+      },
+      "botHealth": 3,
+      "botFood": 4,
+      "eventId": 442
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.895Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 371,
+        "y": 64,
+        "z": 158
+      },
+      "botHealth": 8,
+      "botFood": 12,
+      "eventId": 443
+    },
+    {
+      "timestamp": "2025-07-06T00:58:43.995Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 229,
+        "y": 65,
+        "z": -304
+      },
+      "botHealth": 15,
+      "botFood": 8,
+      "eventId": 444
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.095Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -416,
+        "y": 72,
+        "z": 357
+      },
+      "botHealth": 16,
+      "botFood": 13,
+      "eventId": 445
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.195Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -337,
+        "y": 71,
+        "z": 222
+      },
+      "botHealth": 10,
+      "botFood": 9,
+      "eventId": 446
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.295Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -160,
+        "y": 64,
+        "z": -142
+      },
+      "botHealth": 9,
+      "botFood": 17,
+      "eventId": 447
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.395Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 486,
+        "y": 67,
+        "z": 312
+      },
+      "botHealth": 15,
+      "botFood": 16,
+      "eventId": 448
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.495Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 128,
+        "y": 65,
+        "z": 83
+      },
+      "botHealth": 4,
+      "botFood": 19,
+      "eventId": 449
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.694Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 152,
+        "y": 73,
+        "z": -362
+      },
+      "botHealth": 18,
+      "botFood": 11,
+      "eventId": 450
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.794Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 462,
+        "y": 70,
+        "z": 2
+      },
+      "botHealth": 4,
+      "botFood": 5,
+      "eventId": 451
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.894Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 452,
+        "y": 71,
+        "z": -350
+      },
+      "botHealth": 5,
+      "botFood": 9,
+      "eventId": 452
+    },
+    {
+      "timestamp": "2025-07-06T00:58:44.994Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 356,
+        "y": 69,
+        "z": -290
+      },
+      "botHealth": 5,
+      "botFood": 18,
+      "eventId": 453
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.094Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 54,
+        "y": 70,
+        "z": -372
+      },
+      "botHealth": 14,
+      "botFood": 1,
+      "eventId": 454
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.194Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -478,
+        "y": 66,
+        "z": 462
+      },
+      "botHealth": 20,
+      "botFood": 12,
+      "eventId": 455
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.294Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 265,
+        "y": 68,
+        "z": -152
+      },
+      "botHealth": 16,
+      "botFood": 5,
+      "eventId": 456
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.394Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -420,
+        "y": 69,
+        "z": 34
+      },
+      "botHealth": 20,
+      "botFood": 7,
+      "eventId": 457
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.494Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 360,
+        "y": 70,
+        "z": 311
+      },
+      "botHealth": 16,
+      "botFood": 11,
+      "eventId": 458
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.594Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -271,
+        "y": 67,
+        "z": -82
+      },
+      "botHealth": 13,
+      "botFood": 19,
+      "eventId": 459
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.794Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -83,
+        "y": 69,
+        "z": 344
+      },
+      "botHealth": 12,
+      "botFood": 13,
+      "eventId": 460
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 90,
+        "y": 65,
+        "z": -258
+      },
+      "botHealth": 2,
+      "botFood": 6,
+      "eventId": 461
+    },
+    {
+      "timestamp": "2025-07-06T00:58:45.994Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -422,
+        "y": 71,
+        "z": -309
+      },
+      "botHealth": 3,
+      "botFood": 9,
+      "eventId": 462
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.094Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -137,
+        "y": 64,
+        "z": 295
+      },
+      "botHealth": 13,
+      "botFood": 17,
+      "eventId": 463
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.194Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -105,
+        "y": 71,
+        "z": 60
+      },
+      "botHealth": 18,
+      "botFood": 7,
+      "eventId": 464
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.294Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 168,
+        "y": 64,
+        "z": 355
+      },
+      "botHealth": 7,
+      "botFood": 17,
+      "eventId": 465
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.394Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 226,
+        "y": 64,
+        "z": -303
+      },
+      "botHealth": 19,
+      "botFood": 16,
+      "eventId": 466
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.494Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -332,
+        "y": 64,
+        "z": 423
+      },
+      "botHealth": 8,
+      "botFood": 16,
+      "eventId": 467
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.594Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 340,
+        "y": 65,
+        "z": -261
+      },
+      "botHealth": 17,
+      "botFood": 18,
+      "eventId": 468
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.694Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -68,
+        "y": 73,
+        "z": -320
+      },
+      "botHealth": 19,
+      "botFood": 14,
+      "eventId": 469
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.895Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -442,
+        "y": 67,
+        "z": 320
+      },
+      "botHealth": 12,
+      "botFood": 9,
+      "eventId": 470
+    },
+    {
+      "timestamp": "2025-07-06T00:58:46.995Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -142,
+        "y": 69,
+        "z": 40
+      },
+      "botHealth": 17,
+      "botFood": 1,
+      "eventId": 471
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.095Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 288,
+        "y": 70,
+        "z": -278
+      },
+      "botHealth": 17,
+      "botFood": 3,
+      "eventId": 472
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.195Z",
+      "type": "FOOD_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 199,
+        "y": 70,
+        "z": -397
+      },
+      "botHealth": 18,
+      "botFood": 20,
+      "eventId": 473
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.295Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 403,
+        "y": 69,
+        "z": -445
+      },
+      "botHealth": 14,
+      "botFood": 5,
+      "eventId": 474
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.395Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -491,
+        "y": 64,
+        "z": -53
+      },
+      "botHealth": 15,
+      "botFood": 17,
+      "eventId": 475
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.495Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -79,
+        "y": 71,
+        "z": -303
+      },
+      "botHealth": 11,
+      "botFood": 11,
+      "eventId": 476
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.595Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 461,
+        "y": 69,
+        "z": -489
+      },
+      "botHealth": 8,
+      "botFood": 19,
+      "eventId": 477
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.695Z",
+      "type": "INFO",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 134,
+        "y": 66,
+        "z": 250
+      },
+      "botHealth": 6,
+      "botFood": 16,
+      "eventId": 478
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.795Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 93,
+        "y": 67,
+        "z": 366
+      },
+      "botHealth": 1,
+      "botFood": 13,
+      "eventId": 479
+    },
+    {
+      "timestamp": "2025-07-06T00:58:47.994Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -5,
+        "y": 64,
+        "z": 492
+      },
+      "botHealth": 2,
+      "botFood": 5,
+      "eventId": 480
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.094Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -462,
+        "y": 65,
+        "z": 383
+      },
+      "botHealth": 15,
+      "botFood": 9,
+      "eventId": 481
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.194Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -162,
+        "y": 65,
+        "z": -180
+      },
+      "botHealth": 16,
+      "botFood": 7,
+      "eventId": 482
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.294Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -344,
+        "y": 65,
+        "z": -192
+      },
+      "botHealth": 15,
+      "botFood": 19,
+      "eventId": 483
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.394Z",
+      "type": "FOOD_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -333,
+        "y": 66,
+        "z": -103
+      },
+      "botHealth": 6,
+      "botFood": 19,
+      "eventId": 484
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.494Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -156,
+        "y": 64,
+        "z": 7
+      },
+      "botHealth": 17,
+      "botFood": 20,
+      "eventId": 485
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.594Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -36,
+        "y": 71,
+        "z": 7
+      },
+      "botHealth": 7,
+      "botFood": 5,
+      "eventId": 486
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.694Z",
+      "type": "CHAT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 459,
+        "y": 72,
+        "z": -464
+      },
+      "botHealth": 15,
+      "botFood": 7,
+      "eventId": 487
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.794Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 275,
+        "y": 68,
+        "z": -75
+      },
+      "botHealth": 15,
+      "botFood": 16,
+      "eventId": 488
+    },
+    {
+      "timestamp": "2025-07-06T00:58:48.894Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 382,
+        "y": 64,
+        "z": 313
+      },
+      "botHealth": 2,
+      "botFood": 3,
+      "eventId": 489
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.094Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 235,
+        "y": 64,
+        "z": 176
+      },
+      "botHealth": 8,
+      "botFood": 19,
+      "eventId": 490
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.194Z",
+      "type": "PVP",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -37,
+        "y": 66,
+        "z": 302
+      },
+      "botHealth": 1,
+      "botFood": 15,
+      "eventId": 491
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.294Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -275,
+        "y": 65,
+        "z": 154
+      },
+      "botHealth": 16,
+      "botFood": 1,
+      "eventId": 492
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.394Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 12,
+        "y": 66,
+        "z": 27
+      },
+      "botHealth": 12,
+      "botFood": 6,
+      "eventId": 493
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.494Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -197,
+        "y": 65,
+        "z": -269
+      },
+      "botHealth": 15,
+      "botFood": 13,
+      "eventId": 494
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.594Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -284,
+        "y": 68,
+        "z": 162
+      },
+      "botHealth": 20,
+      "botFood": 5,
+      "eventId": 495
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.694Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -218,
+        "y": 64,
+        "z": -360
+      },
+      "botHealth": 1,
+      "botFood": 5,
+      "eventId": 496
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.794Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -144,
+        "y": 67,
+        "z": -162
+      },
+      "botHealth": 16,
+      "botFood": 14,
+      "eventId": 497
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.895Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 475,
+        "y": 73,
+        "z": -336
+      },
+      "botHealth": 20,
+      "botFood": 2,
+      "eventId": 498
+    },
+    {
+      "timestamp": "2025-07-06T00:58:49.995Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 446,
+        "y": 73,
+        "z": -209
+      },
+      "botHealth": 4,
+      "botFood": 5,
+      "eventId": 499
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.195Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -117,
+        "y": 64,
+        "z": 476
+      },
+      "botHealth": 7,
+      "botFood": 6,
+      "eventId": 500
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.295Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 402,
+        "y": 68,
+        "z": -490
+      },
+      "botHealth": 10,
+      "botFood": 1,
+      "eventId": 501
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.395Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -130,
+        "y": 72,
+        "z": 252
+      },
+      "botHealth": 6,
+      "botFood": 3,
+      "eventId": 502
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.495Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 202,
+        "y": 69,
+        "z": 433
+      },
+      "botHealth": 7,
+      "botFood": 12,
+      "eventId": 503
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.595Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 85,
+        "y": 65,
+        "z": -418
+      },
+      "botHealth": 20,
+      "botFood": 12,
+      "eventId": 504
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.695Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -228,
+        "y": 73,
+        "z": 432
+      },
+      "botHealth": 5,
+      "botFood": 17,
+      "eventId": 505
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.795Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 189,
+        "y": 64,
+        "z": -167
+      },
+      "botHealth": 3,
+      "botFood": 15,
+      "eventId": 506
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.895Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -416,
+        "y": 66,
+        "z": -263
+      },
+      "botHealth": 16,
+      "botFood": 4,
+      "eventId": 507
+    },
+    {
+      "timestamp": "2025-07-06T00:58:50.995Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -466,
+        "y": 69,
+        "z": -106
+      },
+      "botHealth": 10,
+      "botFood": 16,
+      "eventId": 508
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.095Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 474,
+        "y": 72,
+        "z": -204
+      },
+      "botHealth": 12,
+      "botFood": 4,
+      "eventId": 509
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.294Z",
+      "type": "MOVEMENT",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 369,
+        "y": 68,
+        "z": 52
+      },
+      "botHealth": 11,
+      "botFood": 8,
+      "eventId": 510
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.394Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -233,
+        "y": 73,
+        "z": -88
+      },
+      "botHealth": 4,
+      "botFood": 1,
+      "eventId": 511
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.494Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 108,
+        "y": 67,
+        "z": 237
+      },
+      "botHealth": 14,
+      "botFood": 12,
+      "eventId": 512
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.594Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -198,
+        "y": 66,
+        "z": -385
+      },
+      "botHealth": 11,
+      "botFood": 12,
+      "eventId": 513
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.694Z",
+      "type": "CHAT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -200,
+        "y": 72,
+        "z": -479
+      },
+      "botHealth": 9,
+      "botFood": 13,
+      "eventId": 514
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.794Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -250,
+        "y": 68,
+        "z": -9
+      },
+      "botHealth": 14,
+      "botFood": 10,
+      "eventId": 515
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 449,
+        "y": 69,
+        "z": 97
+      },
+      "botHealth": 18,
+      "botFood": 13,
+      "eventId": 516
+    },
+    {
+      "timestamp": "2025-07-06T00:58:51.994Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 274,
+        "y": 73,
+        "z": -289
+      },
+      "botHealth": 15,
+      "botFood": 15,
+      "eventId": 517
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.094Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -114,
+        "y": 70,
+        "z": -436
+      },
+      "botHealth": 16,
+      "botFood": 11,
+      "eventId": 518
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.194Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -267,
+        "y": 70,
+        "z": -164
+      },
+      "botHealth": 19,
+      "botFood": 8,
+      "eventId": 519
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.394Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -422,
+        "y": 68,
+        "z": -286
+      },
+      "botHealth": 11,
+      "botFood": 7,
+      "eventId": 520
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.494Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 277,
+        "y": 68,
+        "z": 319
+      },
+      "botHealth": 2,
+      "botFood": 13,
+      "eventId": 521
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.594Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -165,
+        "y": 68,
+        "z": 268
+      },
+      "botHealth": 17,
+      "botFood": 19,
+      "eventId": 522
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.694Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -224,
+        "y": 70,
+        "z": -424
+      },
+      "botHealth": 6,
+      "botFood": 13,
+      "eventId": 523
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.794Z",
+      "type": "INFO",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 37,
+        "y": 67,
+        "z": 458
+      },
+      "botHealth": 13,
+      "botFood": 20,
+      "eventId": 524
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 447,
+        "y": 65,
+        "z": -149
+      },
+      "botHealth": 18,
+      "botFood": 10,
+      "eventId": 525
+    },
+    {
+      "timestamp": "2025-07-06T00:58:52.994Z",
+      "type": "INFO",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -177,
+        "y": 66,
+        "z": 200
+      },
+      "botHealth": 8,
+      "botFood": 2,
+      "eventId": 526
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.094Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -317,
+        "y": 64,
+        "z": -314
+      },
+      "botHealth": 12,
+      "botFood": 1,
+      "eventId": 527
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.194Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 78,
+        "y": 70,
+        "z": 446
+      },
+      "botHealth": 20,
+      "botFood": 18,
+      "eventId": 528
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.294Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -325,
+        "y": 70,
+        "z": -328
+      },
+      "botHealth": 19,
+      "botFood": 9,
+      "eventId": 529
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.495Z",
+      "type": "INFO",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -244,
+        "y": 70,
+        "z": -334
+      },
+      "botHealth": 1,
+      "botFood": 12,
+      "eventId": 530
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.595Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -315,
+        "y": 64,
+        "z": -51
+      },
+      "botHealth": 2,
+      "botFood": 14,
+      "eventId": 531
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.695Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -472,
+        "y": 69,
+        "z": 415
+      },
+      "botHealth": 11,
+      "botFood": 19,
+      "eventId": 532
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.795Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 237,
+        "y": 71,
+        "z": 77
+      },
+      "botHealth": 12,
+      "botFood": 11,
+      "eventId": 533
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.895Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -463,
+        "y": 67,
+        "z": 408
+      },
+      "botHealth": 2,
+      "botFood": 13,
+      "eventId": 534
+    },
+    {
+      "timestamp": "2025-07-06T00:58:53.995Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -77,
+        "y": 64,
+        "z": 454
+      },
+      "botHealth": 2,
+      "botFood": 2,
+      "eventId": 535
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.095Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 152,
+        "y": 64,
+        "z": -297
+      },
+      "botHealth": 9,
+      "botFood": 6,
+      "eventId": 536
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.195Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -167,
+        "y": 64,
+        "z": 473
+      },
+      "botHealth": 2,
+      "botFood": 2,
+      "eventId": 537
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.295Z",
+      "type": "MOVEMENT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -391,
+        "y": 67,
+        "z": -298
+      },
+      "botHealth": 20,
+      "botFood": 13,
+      "eventId": 538
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.395Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 124,
+        "y": 68,
+        "z": 40
+      },
+      "botHealth": 16,
+      "botFood": 12,
+      "eventId": 539
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.594Z",
+      "type": "CHAT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 205,
+        "y": 70,
+        "z": -129
+      },
+      "botHealth": 15,
+      "botFood": 9,
+      "eventId": 540
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.694Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 382,
+        "y": 65,
+        "z": -65
+      },
+      "botHealth": 13,
+      "botFood": 15,
+      "eventId": 541
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.794Z",
+      "type": "CHAT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 339,
+        "y": 66,
+        "z": 69
+      },
+      "botHealth": 10,
+      "botFood": 18,
+      "eventId": 542
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.894Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 201,
+        "y": 66,
+        "z": 275
+      },
+      "botHealth": 16,
+      "botFood": 6,
+      "eventId": 543
+    },
+    {
+      "timestamp": "2025-07-06T00:58:54.994Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -163,
+        "y": 73,
+        "z": 167
+      },
+      "botHealth": 17,
+      "botFood": 10,
+      "eventId": 544
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.094Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -182,
+        "y": 72,
+        "z": -47
+      },
+      "botHealth": 17,
+      "botFood": 20,
+      "eventId": 545
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.194Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": 414,
+        "y": 73,
+        "z": 249
+      },
+      "botHealth": 16,
+      "botFood": 8,
+      "eventId": 546
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.294Z",
+      "type": "CHAT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 172,
+        "y": 69,
+        "z": 290
+      },
+      "botHealth": 10,
+      "botFood": 2,
+      "eventId": 547
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.394Z",
+      "type": "INFO",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -272,
+        "y": 70,
+        "z": -277
+      },
+      "botHealth": 1,
+      "botFood": 6,
+      "eventId": 548
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.494Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 409,
+        "y": 65,
+        "z": 151
+      },
+      "botHealth": 10,
+      "botFood": 13,
+      "eventId": 549
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.694Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 119,
+        "y": 69,
+        "z": 52
+      },
+      "botHealth": 5,
+      "botFood": 5,
+      "eventId": 550
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.794Z",
+      "type": "INFO",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 169,
+        "y": 72,
+        "z": -408
+      },
+      "botHealth": 3,
+      "botFood": 3,
+      "eventId": 551
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -330,
+        "y": 71,
+        "z": -37
+      },
+      "botHealth": 12,
+      "botFood": 6,
+      "eventId": 552
+    },
+    {
+      "timestamp": "2025-07-06T00:58:55.994Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 473,
+        "y": 65,
+        "z": -30
+      },
+      "botHealth": 11,
+      "botFood": 19,
+      "eventId": 553
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.094Z",
+      "type": "INFO",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 144,
+        "y": 68,
+        "z": -106
+      },
+      "botHealth": 12,
+      "botFood": 9,
+      "eventId": 554
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.194Z",
+      "type": "PVP",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -166,
+        "y": 66,
+        "z": -156
+      },
+      "botHealth": 11,
+      "botFood": 2,
+      "eventId": 555
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.294Z",
+      "type": "MOVEMENT",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -203,
+        "y": 71,
+        "z": 92
+      },
+      "botHealth": 17,
+      "botFood": 15,
+      "eventId": 556
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.394Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 38,
+        "y": 64,
+        "z": 338
+      },
+      "botHealth": 1,
+      "botFood": 15,
+      "eventId": 557
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.494Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -33,
+        "y": 66,
+        "z": -182
+      },
+      "botHealth": 14,
+      "botFood": 11,
+      "eventId": 558
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.594Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 400,
+        "y": 70,
+        "z": 459
+      },
+      "botHealth": 9,
+      "botFood": 15,
+      "eventId": 559
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.795Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -280,
+        "y": 69,
+        "z": -73
+      },
+      "botHealth": 2,
+      "botFood": 4,
+      "eventId": 560
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.895Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -40,
+        "y": 64,
+        "z": 233
+      },
+      "botHealth": 13,
+      "botFood": 14,
+      "eventId": 561
+    },
+    {
+      "timestamp": "2025-07-06T00:58:56.995Z",
+      "type": "PVP",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -38,
+        "y": 68,
+        "z": 121
+      },
+      "botHealth": 9,
+      "botFood": 10,
+      "eventId": 562
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.095Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 354,
+        "y": 70,
+        "z": -479
+      },
+      "botHealth": 7,
+      "botFood": 18,
+      "eventId": 563
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.195Z",
+      "type": "MOVEMENT",
+      "message": "Block broken",
+      "botPosition": {
+        "x": -384,
+        "y": 70,
+        "z": 469
+      },
+      "botHealth": 10,
+      "botFood": 11,
+      "eventId": 564
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.295Z",
+      "type": "CHAT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 334,
+        "y": 72,
+        "z": -366
+      },
+      "botHealth": 16,
+      "botFood": 1,
+      "eventId": 565
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.395Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -101,
+        "y": 71,
+        "z": 383
+      },
+      "botHealth": 10,
+      "botFood": 20,
+      "eventId": 566
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.495Z",
+      "type": "CHAT",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": -372,
+        "y": 65,
+        "z": 213
+      },
+      "botHealth": 9,
+      "botFood": 5,
+      "eventId": 567
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.595Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 43,
+        "y": 68,
+        "z": -189
+      },
+      "botHealth": 13,
+      "botFood": 4,
+      "eventId": 568
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.695Z",
+      "type": "INFO",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": -397,
+        "y": 64,
+        "z": -143
+      },
+      "botHealth": 6,
+      "botFood": 9,
+      "eventId": 569
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.894Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 275,
+        "y": 68,
+        "z": -236
+      },
+      "botHealth": 4,
+      "botFood": 14,
+      "eventId": 570
+    },
+    {
+      "timestamp": "2025-07-06T00:58:57.994Z",
+      "type": "PVP",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": 71,
+        "y": 71,
+        "z": -71
+      },
+      "botHealth": 14,
+      "botFood": 12,
+      "eventId": 571
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.094Z",
+      "type": "INFO",
+      "message": "Food level changed",
+      "botPosition": {
+        "x": -211,
+        "y": 66,
+        "z": -262
+      },
+      "botHealth": 8,
+      "botFood": 18,
+      "eventId": 572
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.194Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -435,
+        "y": 64,
+        "z": 100
+      },
+      "botHealth": 18,
+      "botFood": 11,
+      "eventId": 573
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.294Z",
+      "type": "PVP",
+      "message": "Combat initiated",
+      "botPosition": {
+        "x": 497,
+        "y": 73,
+        "z": -289
+      },
+      "botHealth": 11,
+      "botFood": 7,
+      "eventId": 574
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.394Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -487,
+        "y": 64,
+        "z": 485
+      },
+      "botHealth": 7,
+      "botFood": 16,
+      "eventId": 575
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.494Z",
+      "type": "FOOD_CHANGE",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 43,
+        "y": 73,
+        "z": -12
+      },
+      "botHealth": 17,
+      "botFood": 3,
+      "eventId": 576
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.594Z",
+      "type": "PVP",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 251,
+        "y": 71,
+        "z": 374
+      },
+      "botHealth": 2,
+      "botFood": 17,
+      "eventId": 577
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.694Z",
+      "type": "FOOD_CHANGE",
+      "message": "Environment interaction",
+      "botPosition": {
+        "x": 23,
+        "y": 64,
+        "z": -214
+      },
+      "botHealth": 9,
+      "botFood": 11,
+      "eventId": 578
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.794Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -155,
+        "y": 67,
+        "z": -308
+      },
+      "botHealth": 15,
+      "botFood": 17,
+      "eventId": 579
+    },
+    {
+      "timestamp": "2025-07-06T00:58:58.994Z",
+      "type": "PVP",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -24,
+        "y": 68,
+        "z": 419
+      },
+      "botHealth": 4,
+      "botFood": 6,
+      "eventId": 580
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.095Z",
+      "type": "INFO",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": -199,
+        "y": 73,
+        "z": -78
+      },
+      "botHealth": 20,
+      "botFood": 15,
+      "eventId": 581
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.195Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 127,
+        "y": 64,
+        "z": 221
+      },
+      "botHealth": 17,
+      "botFood": 5,
+      "eventId": 582
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.295Z",
+      "type": "MOVEMENT",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 359,
+        "y": 64,
+        "z": 442
+      },
+      "botHealth": 1,
+      "botFood": 16,
+      "eventId": 583
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.395Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": 347,
+        "y": 65,
+        "z": 103
+      },
+      "botHealth": 2,
+      "botFood": 6,
+      "eventId": 584
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.495Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -12,
+        "y": 66,
+        "z": -435
+      },
+      "botHealth": 2,
+      "botFood": 5,
+      "eventId": 585
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.595Z",
+      "type": "MOVEMENT",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 370,
+        "y": 66,
+        "z": -164
+      },
+      "botHealth": 17,
+      "botFood": 7,
+      "eventId": 586
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.695Z",
+      "type": "PVP",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": -405,
+        "y": 65,
+        "z": -476
+      },
+      "botHealth": 12,
+      "botFood": 2,
+      "eventId": 587
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.795Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": -98,
+        "y": 71,
+        "z": -45
+      },
+      "botHealth": 16,
+      "botFood": 5,
+      "eventId": 588
+    },
+    {
+      "timestamp": "2025-07-06T00:58:59.895Z",
+      "type": "FOOD_CHANGE",
+      "message": "Health updated",
+      "botPosition": {
+        "x": 169,
+        "y": 66,
+        "z": -273
+      },
+      "botHealth": 6,
+      "botFood": 4,
+      "eventId": 589
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.095Z",
+      "type": "MOVEMENT",
+      "message": "Player movement detected",
+      "botPosition": {
+        "x": -10,
+        "y": 67,
+        "z": 340
+      },
+      "botHealth": 16,
+      "botFood": 19,
+      "eventId": 590
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.195Z",
+      "type": "FOOD_CHANGE",
+      "message": "Chat message received",
+      "botPosition": {
+        "x": 387,
+        "y": 67,
+        "z": -55
+      },
+      "botHealth": 12,
+      "botFood": 10,
+      "eventId": 591
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.295Z",
+      "type": "FOOD_CHANGE",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 92,
+        "y": 71,
+        "z": 276
+      },
+      "botHealth": 7,
+      "botFood": 12,
+      "eventId": 592
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.395Z",
+      "type": "MOVEMENT",
+      "message": "Player attacked",
+      "botPosition": {
+        "x": -160,
+        "y": 71,
+        "z": 482
+      },
+      "botHealth": 8,
+      "botFood": 19,
+      "eventId": 593
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.495Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 222,
+        "y": 72,
+        "z": -338
+      },
+      "botHealth": 11,
+      "botFood": 18,
+      "eventId": 594
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.595Z",
+      "type": "PVP",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": -499,
+        "y": 73,
+        "z": -206
+      },
+      "botHealth": 15,
+      "botFood": 6,
+      "eventId": 595
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.695Z",
+      "type": "FOOD_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 415,
+        "y": 69,
+        "z": 107
+      },
+      "botHealth": 8,
+      "botFood": 14,
+      "eventId": 596
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.795Z",
+      "type": "MOVEMENT",
+      "message": "Item picked up",
+      "botPosition": {
+        "x": 97,
+        "y": 64,
+        "z": 422
+      },
+      "botHealth": 7,
+      "botFood": 20,
+      "eventId": 597
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.895Z",
+      "type": "MOVEMENT",
+      "message": "Bot moved",
+      "botPosition": {
+        "x": 71,
+        "y": 67,
+        "z": -156
+      },
+      "botHealth": 14,
+      "botFood": 10,
+      "eventId": 598
+    },
+    {
+      "timestamp": "2025-07-06T00:59:00.995Z",
+      "type": "HEALTH_CHANGE",
+      "message": "Block broken",
+      "botPosition": {
+        "x": 184,
+        "y": 70,
+        "z": 345
+      },
+      "botHealth": 17,
+      "botFood": 5,
+      "eventId": 599
+    }
+  ],
+  "chunkNumber": "final",
+  "totalEvents": 600
+}

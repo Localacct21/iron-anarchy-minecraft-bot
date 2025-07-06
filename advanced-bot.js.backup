@@ -1,40 +1,23 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
-const autoEatModule = require('mineflayer-auto-eat')
+const autoEat = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
-const collectBlockModule = require('mineflayer-collectblock')
-const bloodhound = require('mineflayer-bloodhound')
+const collectBlock = require('mineflayer-collectblock')
+const { plugin: bloodhound } = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
 const moment = require('moment')
 
-// Enhanced plugin loading function
+// Helper function to safely load plugins with better error handling
 function loadPluginSafely(bot, plugin, pluginName) {
-  console.log(`Loading plugin: ${pluginName}`)
-  
-  if (!plugin) {
-    throw new Error(`Plugin ${pluginName} is null or undefined`)
-  }
-  
   if (typeof plugin !== 'function') {
     throw new Error(`Plugin ${pluginName} is not a function. Expected a function but got ${typeof plugin}. This may indicate a version mismatch or incorrect import.`)
   }
-  
-  try {
-    bot.loadPlugin(plugin)
-    console.log(`✅ Successfully loaded: ${pluginName}`)
-    return true
-  } catch (error) {
-    console.error(`❌ Failed to load ${pluginName}:`, error.message)
-    throw error
-  }
+  bot.loadPlugin(plugin)
 }
 
-// Extract correct plugin functions
-console.log('📦 Preparing plugins...')
-
-// PVP plugin - handle { plugin } export
+// Extract PVP plugin - handle both direct function export and { plugin } export
 let pvpPlugin
 if (typeof mineflayerPvp === 'function') {
   pvpPlugin = mineflayerPvp
@@ -46,22 +29,8 @@ if (typeof mineflayerPvp === 'function') {
   throw new Error('mineflayer-pvp plugin could not be loaded. Expected a function export, { plugin } export, or { default } export.')
 }
 
-// Auto-eat plugin - handle { loader } export
-const autoEat = autoEatModule.loader || autoEatModule
-if (typeof autoEat !== 'function') {
-  throw new Error('mineflayer-auto-eat plugin could not be loaded. Expected loader function.')
-}
-
-// Collect block plugin - handle { plugin } export
-const collectBlock = collectBlockModule.plugin || collectBlockModule
-if (typeof collectBlock !== 'function') {
-  throw new Error('mineflayer-collectblock plugin could not be loaded. Expected plugin function.')
-}
-
 // Load configuration
 const config = require('./config.json')
-
-console.log('🤖 Creating advanced bot...')
 
 // Create bot
 const bot = mineflayer.createBot({
@@ -72,35 +41,14 @@ const bot = mineflayer.createBot({
   auth: config.bot.auth
 })
 
-console.log('🔌 Loading plugins sequentially...')
-
-// Load plugins with enhanced error handling
-try {
-  loadPluginSafely(bot, pathfinder, 'pathfinder')
-  loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
-  loadPluginSafely(bot, autoEat, 'mineflayer-auto-eat')
-  loadPluginSafely(bot, armorManager, 'mineflayer-armor-manager')
-  loadPluginSafely(bot, collectBlock, 'mineflayer-collectblock')
-  loadPluginSafely(bot, bloodhound, 'mineflayer-bloodhound')
-  loadPluginSafely(bot, webInventory, 'mineflayer-web-inventory')
-  
-  console.log('🎉 All plugins loaded successfully!')
-  
-} catch (error) {
-  console.error('💥 Critical plugin loading error:', error.message)
-  console.error('Bot cannot continue without required plugins.')
-  process.exit(1)
-}
-
-// Global variables
-let isGuarding = false
-let following = null
-let guardInterval = null
-
-// Enhanced logging function
-function logMessage(type, message, data = null) {
-  const timestamp = moment().format('YYYY-MM-DD HH:mm:ss')
-  const logEntry = `[${timestamp}] [${type}] ${message}${data ? ' | ' + JSON.stringify(data) : ''}\n`
+// Load plugins with error handling
+bot.loadPlugin(pathfinder)
+loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
+loadPluginSafely(bot, autoEat, 'mineflayer-auto-eat')
+loadPluginSafely(bot, armorManager, 'mineflayer-armor-manager')
+loadPluginSafely(bot, collectBlock, 'mineflayer-collectblock')
+loadPluginSafely(bot, bloodhound, 'mineflayer-bloodhound')
+loadPluginSafely(bot, webInventory, 'mineflayer-web-inventory')
   
   // Console log with colors
   const colors = {
@@ -123,17 +71,7 @@ function logMessage(type, message, data = null) {
 
 // Enhanced bot events
 bot.once('spawn', () => {
-  logMessage('SUCCESS', 'Advanced bot spawned successfully!')
-  
-  // Test plugin functionality
-  console.log('🧪 Testing plugin functionality...')
-  console.log('Pathfinder:', bot.pathfinder ? '✅' : '❌')
-  console.log('PvP:', bot.pvp ? '✅' : '❌')
-  console.log('Auto-eat:', bot.autoEat ? '✅' : '❌')
-  console.log('Armor Manager:', bot.armorManager ? '✅' : '❌')
-  console.log('Collect Block:', bot.collectBlock ? '✅' : '❌')
-  console.log('Bloodhound:', bot.bloodhound ? '✅' : '❌')
-  console.log('Web Inventory:', bot.webInventory ? '✅' : '❌')
+  logMessage('SUCCESS', 'Bot spawned successfully!')
   
   // Set up pathfinder
   const defaultMove = new Movements(bot)
@@ -272,9 +210,6 @@ function handleCommand(username, command) {
     case 'pos':
       showPosition()
       break
-    case 'plugins':
-      bot.chat('🔌 All plugins loaded and validated!')
-      break
     case 'help':
       showHelp()
       break
@@ -302,7 +237,7 @@ function followPlayer(commander, targetName) {
 
 function stopAllActions() {
   bot.pathfinder.setGoal(null)
-  if (bot.pvp && bot.pvp.stop) bot.pvp.stop()
+  bot.pvp.stop()
   following = null
   isGuarding = false
   
@@ -478,7 +413,6 @@ function showHelp() {
     '!status - Show bot status',
     '!players - List online players',
     '!pos - Show position',
-    '!plugins - Show plugin status',
     '!help - Show this help'
   ]
   
@@ -519,7 +453,7 @@ bot.on('spawn', () => {
   reconnectAttempts = 0 // Reset on successful connection
 })
 
-logMessage('INFO', 'Advanced bot script loaded, connecting to server...', {
+logMessage('INFO', 'Bot script loaded, connecting to server...', {
   host: config.server.host,
   port: config.server.port,
   username: config.bot.username

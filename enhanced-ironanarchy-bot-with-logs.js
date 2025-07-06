@@ -355,8 +355,8 @@ bot.once('spawn', () => {
   // Start dashboard if available
   if (dashboard && bot.dashboard) {
     try {
-      bot.dashboard.start(8081)
-      logMessage('INFO', 'Dashboard started on http://localhost:8081')
+      bot.dashboard.start(8080)
+      logMessage('INFO', 'Dashboard started on http://localhost:8080')
     } catch (error) {
       logMessage('ERROR', `Dashboard failed to start: ${error.message}`)
     }
