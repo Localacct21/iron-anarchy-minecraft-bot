@@ -155,7 +155,6 @@ fs.ensureDirSync('./screenshots')
 // Global variables
 let isGuarding = false
 let following = null
-let guardInterval = null
 let escapeMode = false
 let isRecording = false
 let recordingData = []
@@ -378,10 +377,6 @@ function stopAllActions() {
   isGuarding = false
   escapeMode = false
   
-  if (guardInterval) {
-    clearInterval(guardInterval)
-    guardInterval = null
-  }
   
   bot.chat('🛑 All actions stopped')
   logMessage('INFO', 'Stopped all actions')
