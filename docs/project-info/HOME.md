@@ -11,7 +11,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Localacct21/iron-anarchy-minecraft-bot?style=social)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
 [![Build Status](https://img.shields.io/github/workflow/status/Localacct21/iron-anarchy-minecraft-bot/CI)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
-[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/YOUR_INVITE_LINK)
+[![Discord](https://img.shields.io/discord/KteVHS4nne)](https://discord.gg/KteVHS4nne)
 
 **🏆 Professional Minecraft automation solution built by a 25-year IT veteran**
 
@@ -201,7 +201,7 @@ We're building a community of developers, gamers, and IT professionals who belie
 |----------|---------|------|
 | 🐛 **GitHub Issues** | Bug reports & feature requests | [Open Issue →](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues) |
 | 💻 **GitHub Discussions** | Community discussions & Q&A | [Join Discussion →](https://github.com/Localacct21/iron-anarchy-minecraft-bot/discussions) |
-| 🎮 **Discord Server** | Real-time chat & support | [Join Discord →](https://discord.gg/YOUR_INVITE_LINK) |
+| 🎮 **Discord Server** | Real-time chat & support | [Join Discord →](https://discord.gg/KteVHS4nne) |
 | 📧 **Email Support** | Professional support | [Contact →](mailto:localacct@ironanarchy.lol) |
 | 📱 **Reddit Community** | Share experiences & tips | [r/IronAnarchyBot →](https://reddit.com/r/IronAnarchyBot) |
 
@@ -278,7 +278,7 @@ npm start
 
 [![Download Now](https://img.shields.io/badge/Download-Now-brightgreen?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/iron-anarchy-minecraft-bot)
 [![View on GitHub](https://img.shields.io/badge/View-GitHub-black?style=for-the-badge&logo=github)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
-[![Join Discord](https://img.shields.io/badge/Join-Discord-7289da?style=for-the-badge&logo=discord)](https://discord.gg/YOUR_INVITE_LINK)
+[![Join Discord](https://img.shields.io/badge/Join-Discord-7289da?style=for-the-badge&logo=discord)](https://discord.gg/KteVHS4nne)
 
 ---
 

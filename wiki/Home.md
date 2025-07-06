@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dt/iron-anarchy-minecraft-bot.svg)](https://www.npmjs.com/package/iron-anarchy-minecraft-bot)
 [![GitHub stars](https://img.shields.io/github/stars/Localacct21/iron-anarchy-minecraft-bot?style=social)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
-[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord)](https://discord.gg/YOUR_INVITE_LINK)
+[![Discord](https://img.shields.io/discord/KteVHS4nne)](https://discord.gg/KteVHS4nne)
 
 **🏆 Enterprise-grade Minecraft automation solution built by a 25-year IT veteran**
 
@@ -154,8 +154,8 @@ npx iron-anarchy-minecraft-bot --demo
 
 ## 📞 Support & Community
 
-- **💬 Discord**: [Join our community](https://discord.gg/YOUR_INVITE_LINK)
-- **📧 Email**: support@iron-anarchy.com
+- **💬 Discord**: [Join our community](https://discord.gg/KteVHS4nne)
+- **📧 Email**: localacct@ironanarchy.lol
 - **🐛 Issues**: [GitHub Issues](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
 - **📖 Wiki**: Complete documentation available here
 - **🎥 Tutorials**: Video guides on our YouTube channel
