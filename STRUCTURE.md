@@ -29,17 +29,25 @@ This document describes the organization of the Iron-Anarchy Minecraft Bot repos
 ## Source Code
 ```
 src/
-├── bot/                   # Core bot functionality
-├── plugins/               # Bot plugins
-├── utils/                 # Utility functions
-└── config/                # Configuration modules
+├── bots/                  # Bot implementations
+│   ├── bot.js             # Basic bot
+│   ├── advanced-bot.js    # Advanced features
+│   ├── ironanarchy-bot.js # Main bot implementation
+│   ├── enhanced-discord-bot.js # Discord integration
+│   └── enhanced-ironanarchy-bot-with-logs.js
+├── plugins/               # Bot plugins (empty - ready for plugins)
+└── utils/                 # Utility functions
+    ├── plugin-loader.js   # Plugin management
+    ├── plugin-validator.js # Plugin validation
+    └── plugin-types.js    # Plugin type definitions
 ```
 
 ## Configuration
 ```
 config/
-├── bot-config.js          # Bot configuration
-├── discord-config.js      # Discord integration config
+├── config.json.example    # Bot configuration template
+├── discord-config.json.example # Discord integration config
+├── test-config.json       # Test configuration
 └── jsdoc.json            # JSDoc documentation config
 ```
 
@@ -65,13 +73,15 @@ docs/
 wiki/
 ├── Home.md               # Wiki home page
 ├── _Sidebar.md           # Wiki navigation
-├── guides/              # User guides
-├── developer/           # Developer documentation
-├── community/           # Community resources
-├── reference/           # Reference materials
-├── troubleshooting/     # Help and troubleshooting
+├── Installation-Guide.md # Installation guide
+├── API-Reference.md      # API documentation
+├── Architecture.md       # Architecture details
+├── Contributing.md       # Contribution guide
+├── Security.md           # Security policies
+├── Troubleshooting-Guide.md # Help guide
 ├── images/              # Wiki images and diagrams
-└── screenshots/         # Application screenshots
+├── screenshots/         # Application screenshots
+└── [43 total wiki pages - all in flat structure]
 ```
 
 ## Development Tools
@@ -82,7 +92,12 @@ tools/
 │   ├── wiki_migration_*.md
 │   └── [other analysis tools]
 ├── backups/            # Backup files
+│   ├── README.md.backup-*
+│   └── package.json.backup
 ├── packages/           # Package variant files
+│   ├── package-github.json
+│   ├── package-npm.json
+│   └── [other package variants]
 └── plantuml/           # PlantUML diagram generation
     └── plantuml.jar
 ```
@@ -97,9 +112,9 @@ tests/
 
 ## Runtime Directories
 ```
-├── logs/               # Application logs
+├── logs/               # Application logs (.gitkeep)
 ├── recordings/         # Bot session recordings
-├── screenshots/        # Generated screenshots
+├── screenshots/        # Generated screenshots (.gitkeep)
 └── examples/           # Usage examples
 ```
 
@@ -128,7 +143,7 @@ scripts/
 ### Documentation
 - `README.md` - Project overview and quick start
 - `docs/project-info/INSTALLATION.md` - Detailed installation guide
-- `wiki/` - Complete project wiki
+- `wiki/` - Complete project wiki (GitHub wiki format)
 
 ### Configuration
 - `.env.example` - Environment configuration template
@@ -139,17 +154,27 @@ scripts/
 - `tests/` - Test suite
 - `scripts/` - Utility scripts
 
-## Best Practices
+## Repository Organization Principles
 
-1. **Keep root clean** - Only essential files in the root directory
-2. **Logical grouping** - Related files in appropriate subdirectories
-3. **Clear naming** - Descriptive directory and file names
-4. **Documentation** - Maintain this structure document
-5. **Consistent organization** - Follow established patterns
+1. **Clean Root Directory** - Only essential files in root
+2. **Logical Grouping** - Related files in appropriate subdirectories
+3. **Clear Naming** - Descriptive directory and file names
+4. **Documentation Separation** - Wiki vs docs distinction
+5. **Development Tools Isolation** - Tools separate from application code
 
 ## Navigation
 
-- For users: Start with `README.md` then `wiki/Home.md`
-- For developers: See `CONTRIBUTING.md` and `docs/developer/`
-- For deployment: Check `docs/project-info/DEPLOYMENT_STATUS.md`
-- For API usage: Refer to `docs/API_REFERENCE.md`
+- **For Users**: Start with `README.md` then `wiki/Home.md`
+- **For Developers**: See `CONTRIBUTING.md` and `docs/API_REFERENCE.md`
+- **For Deployment**: Check `docs/project-info/DEPLOYMENT_STATUS.md`
+- **For API Usage**: Refer to `wiki/API-Reference.md`
+
+## File Counts
+- **Root files**: 17 (essential files only)
+- **Wiki pages**: 43 (flat structure for GitHub wiki)
+- **Documentation files**: 20+ (comprehensive coverage)
+- **Source files**: 10+ (organized by functionality)
+
+---
+
+*This structure ensures maintainability, clarity, and ease of navigation for both users and contributors.*
