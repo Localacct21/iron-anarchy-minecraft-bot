@@ -9,7 +9,7 @@ const webInventory = require('mineflayer-web-inventory')
 const moment = require('moment')
 
 // Load configuration
-const config = require('./config.json')
+const config = require('../../config/config.json')
 
 // Discord.js imports
 let discordClient = null
@@ -29,7 +29,7 @@ try {
 // Discord configuration
 let discordConfig = null
 try {
-  discordConfig = require('./discord-config.json')
+  discordConfig = require('../../config/discord-config.json')
   console.log('✅ Discord config loaded')
 } catch (error) {
   console.log('⚠️  Discord config not found:', error.message)

@@ -10,7 +10,7 @@
     "start": "node index.js",
     "enhanced": "node src/bots/enhanced-ironanarchy-bot.js",
     "advanced": "node src/bots/advanced-bot.js",
-    "basic": "node src/bots/bot.js",
+    "basic": "node src/bots/bot-fixed.js",
     "discord": "node src/bots/enhanced-discord-bot.js",
     "test": "node tests/run-all-tests.js",
     "test:plugin": "node tests/plugin-loader-simple.test.js",

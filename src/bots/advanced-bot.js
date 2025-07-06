@@ -59,7 +59,7 @@ if (typeof collectBlock !== 'function') {
 }
 
 // Load configuration
-const config = require('./config.json')
+const config = require('../../config/config.json')
 
 console.log('🤖 Creating advanced bot...')
 

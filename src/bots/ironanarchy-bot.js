@@ -10,7 +10,7 @@ const fs = require('fs-extra')
 const moment = require('moment')
 
 // Load configuration
-const config = require('./config.json')
+const config = require('../../config/config.json')
 
 console.log('🔥 Iron-Anarchy PvP Bot Starting...')
 

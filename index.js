@@ -10,7 +10,7 @@ const path = require('path');
 const fs = require('fs');
 
 // Main bot file
-const botPath = path.join(__dirname, 'src', 'bots', 'ironanarchy-bot.js');
+const botPath = path.join(__dirname, 'src', 'bots', 'ironanarchy-bot-fixed.js');
 
 // Check if bot file exists
 if (!fs.existsSync(botPath)) {
@@ -20,11 +20,16 @@ if (!fs.existsSync(botPath)) {
 }
 
 // Load and start the bot
-try {
-    console.log('🚀 Starting Iron-Anarchy Minecraft Bot...');
-    require(botPath);
-} catch (error) {
-    console.error('❌ Failed to start bot:', error.message);
-    console.error('Check your configuration and try again.');
-    process.exit(1);
+async function startBot() {
+    try {
+        console.log('🚀 Starting Iron-Anarchy Minecraft Bot...');
+        const createBot = require(botPath);
+        await createBot();
+    } catch (error) {
+        console.error('❌ Failed to start bot:', error.message);
+        console.error('Check your configuration and try again.');
+        process.exit(1);
+    }
 }
+
+startBot();
