@@ -1,0 +1,38 @@
+@startuml
+title Iron-Anarchy Minecraft Bot - Project Structure
+
+package "Root Directory" {
+  [index.js] 
+  [package.json]
+  [config/]
+  [src/]
+  [tests/]
+  [docs/]
+  [examples/]
+  [scripts/]
+}
+
+package "src/" {
+  [bots/]
+  [utils/]
+  [plugins/]
+}
+
+package "bots/" {
+  [bot.js]
+  [advanced-bot.js]
+  [ironanarchy-bot.js]
+  [enhanced-discord-bot.js]
+}
+
+package "utils/" {
+  [plugin-loader.js]
+  [plugin-validator.js]
+}
+
+[index.js] --> [src/]
+[src/] --> [bots/]
+[src/] --> [utils/]
+[bots/] --> [utils/]
+
+@enduml

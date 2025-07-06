@@ -1,0 +1,99 @@
+# Wiki Configuration for Iron-Anarchy Minecraft Bot
+
+# Site Information
+title: "Iron-Anarchy Minecraft Bot Wiki"
+description: "Enterprise-grade Minecraft automation solution documentation"
+version: "2.0.2"
+author: "25-year IT veteran"
+
+# Wiki Settings
+wiki_root: "wiki"
+sidebar_file: "_Sidebar.md"
+home_page: "Home.md"
+toc_file: "Table-of-Contents.md"
+
+# Navigation Structure
+navigation:
+  - name: "Home"
+    path: "Home.md"
+    icon: "🏠"
+    
+  - name: "Guides"
+    path: "guides/"
+    icon: "🎯"
+    children:
+      - "Installation.md"
+      - "Quick-Start.md"
+      - "Configuration.md"
+      - "Basic-Usage.md"
+      - "Advanced-Features.md"
+      - "Discord-Integration.md"
+      - "Plugin-Management.md"
+      - "Deployment.md"
+      
+  - name: "Developer"
+    path: "developer/"
+    icon: "👨‍💻"
+    children:
+      - "API-Reference.md"
+      - "Contributing.md"
+      - "Development-Setup.md"
+      - "Testing.md"
+      - "Build-Process.md"
+      - "Code-Style.md"
+      - "CI-CD.md"
+      
+  - name: "Reference"
+    path: "reference/"
+    icon: "📚"
+    children:
+      - "Commands.md"
+      - "Configuration.md"
+      - "Events.md"
+      - "Plugin-API.md"
+      - "Database.md"
+      - "Network.md"
+      - "Metrics.md"
+      
+  - name: "Troubleshooting"
+    path: "troubleshooting/"
+    icon: "🔧"
+    children:
+      - "Common-Issues.md"
+      - "Error-Codes.md"
+      - "Performance.md"
+      - "Debug-Mode.md"
+      - "Logs.md"
+      - "Health-Checks.md"
+      
+  - name: "Community"
+    path: "community/"
+    icon: "🤝"
+    children:
+      - "Code-of-Conduct.md"
+      - "Contributing.md"
+      - "Security.md"
+      - "Release-Notes.md"
+      - "Contributors.md"
+      - "Feature-Requests.md"
+
+# Theme Settings
+theme:
+  primary_color: "#2196F3"
+  accent_color: "#FF9800"
+  font_family: "Roboto, Arial, sans-serif"
+  code_theme: "github"
+
+# Features
+features:
+  search: true
+  syntax_highlighting: true
+  table_of_contents: true
+  breadcrumbs: true
+  edit_page: true
+  
+# GitHub Integration
+github:
+  repository: "Localacct21/iron-anarchy-minecraft-bot"
+  branch: "main"
+  edit_base_url: "https://github.com/Localacct21/iron-anarchy-minecraft-bot/edit/main/wiki"

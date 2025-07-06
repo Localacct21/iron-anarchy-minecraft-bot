@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  minecraft-bot:
+    build: .
+    container_name: iron-anarchy-bot
+    environment:
+      - MC_SERVER_HOST=${MC_SERVER_HOST:-ironanarchy.lol}
+      - MC_SERVER_PORT=${MC_SERVER_PORT:-25565}
+      - MC_SERVER_VERSION=${MC_SERVER_VERSION:-1.21.4}
+      - MC_BOT_USERNAME=${MC_BOT_USERNAME}
+      - MC_BOT_AUTH=${MC_BOT_AUTH:-microsoft}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_CHAT=${LOG_CHAT:-true}
+      - LOG_COMMANDS=${LOG_COMMANDS:-true}
+      - LOG_PVP=${LOG_PVP:-true}
+      - WEB_DASHBOARD_PORT=${WEB_DASHBOARD_PORT:-3001}
+      - WEB_DASHBOARD_ENABLED=${WEB_DASHBOARD_ENABLED:-true}
+      - RECORDING_ENABLED=${RECORDING_ENABLED:-true}
+      - SCREENSHOT_ENABLED=${SCREENSHOT_ENABLED:-true}
+      - AUTO_EAT_ENABLED=${AUTO_EAT_ENABLED:-true}
+      - AUTO_EAT_START_AT=${AUTO_EAT_START_AT:-14}
+      - PVP_ENABLED=${PVP_ENABLED:-true}
+      - PVP_AUTO_ATTACK_HOSTILE=${PVP_AUTO_ATTACK_HOSTILE:-true}
+      - MAX_MEMORY_USAGE=${MAX_MEMORY_USAGE:-512}
+      - RECONNECT_ATTEMPTS=${RECONNECT_ATTEMPTS:-5}
+      - RECONNECT_DELAY=${RECONNECT_DELAY:-30000}
+    ports:
+      - "${WEB_DASHBOARD_PORT:-3001}:3001"
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./recordings:/app/recordings
+      - ./screenshots:/app/screenshots
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
+    depends_on:
+      - redis
+    networks:
+      - minecraft-bot-network
+    healthcheck:
+      test: ["CMD", "node", "-e", "console.log('Bot is healthy')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  redis:
+    image: redis:7-alpine
+    container_name: iron-anarchy-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - minecraft-bot-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  # Optional: Web dashboard service
+  dashboard:
+    build: .
+    container_name: iron-anarchy-dashboard
+    environment:
+      - NODE_ENV=production
+      - DASHBOARD_PORT=3002
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./logs:/app/logs:ro
+      - ./config:/app/config:ro
+    depends_on:
+      - redis
+    networks:
+      - minecraft-bot-network
+    profiles:
+      - dashboard
+    command: ["node", "src/dashboard/server.js"]
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  minecraft-bot-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

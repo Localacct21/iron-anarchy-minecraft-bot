@@ -1,0 +1,86 @@
+@startuml command-flow
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Command Processing Flow
+
+actor Player
+participant "Minecraft Server" as Server
+participant "Bot Event Handler" as Events
+participant "Command Processor" as Processor
+participant "Command Implementation" as Command
+participant "Mineflayer APIs" as APIs
+participant "Logger" as Logger
+participant "Discord" as Discord
+
+Player -> Server: Types "!attack player123"
+activate Server
+
+Server -> Events: chat event(username, message)
+activate Events
+
+Events -> Events: Check if message starts with '!'
+Events -> Processor: handleCommand(username, "attack player123")
+activate Processor
+
+Processor -> Processor: Parse command: ["attack", "player123"]
+Processor -> Processor: Validate command exists
+Processor -> Logger: Log command execution
+activate Logger
+Logger -> Logger: Write to file
+Logger -> Discord: Send command log (if enabled)
+Logger --> Processor: Logged
+deactivate Logger
+
+Processor -> Command: attackPlayer("player123")
+activate Command
+
+Command -> Command: Find target player
+alt Player found
+    Command -> APIs: Get player entity
+    activate APIs
+    APIs --> Command: Player entity
+    deactivate APIs
+    
+    Command -> Command: Check distance to target
+    
+    alt Target too far
+        Command -> APIs: pathfinder.setGoal(approach target)
+        activate APIs
+        APIs --> Command: Goal set
+        deactivate APIs
+        Command -> APIs: Listen for 'goal_reached'
+        activate APIs
+        APIs -> Command: Goal reached
+        Command -> APIs: pvp.attack(target)
+        APIs --> Command: Attack started
+        deactivate APIs
+    else Target in range
+        Command -> APIs: pvp.attack(target)
+        activate APIs
+        APIs --> Command: Attack started
+        deactivate APIs
+    end
+    
+    Command -> Server: Chat "⚔️ Attacking player123!"
+    Command -> Logger: Log PvP action
+    activate Logger
+    Logger --> Command: Logged
+    deactivate Logger
+    
+else Player not found
+    Command -> Server: Chat "❌ Cannot find player: player123"
+end
+
+Command --> Processor: Command executed
+deactivate Command
+
+Processor --> Events: Command processed
+deactivate Processor
+
+Events --> Server: Response sent
+deactivate Events
+deactivate Server
+
+note over Player, Discord: Command execution complete.\nPlayer sees response in game,\naction is logged and optionally\nsent to Discord.
+
+@enduml

@@ -1,18 +1,22 @@
 # Recording and Replay Features Validation Report
 
 ## ✅ Task 1: Enable recording in the config
+
 **Status: COMPLETED**
+
 - Recording is enabled in `/root/minecraft-bot/discord-config.json`
 - Configuration shows: `"enabled": true` in the recording section
 - Additional settings include:
   - `"recordChat": true`
-  - `"recordMovement": true` 
+  - `"recordMovement": true`
   - `"recordPvP": true`
   - `"maxFileSize": "50MB"`
   - `"outputDir": "./recordings"`
 
 ## ✅ Task 2: Trigger a short session and inspect generated files
+
 **Status: COMPLETED**
+
 - Successfully started enhanced bot with recording enabled
 - Generated test recording files:
   - `test_recording_2025-07-05_20-57-08.json` (1.37KB)
@@ -21,7 +25,9 @@
     - Proper JSON formatting with metadata
 
 ## ✅ Task 3: Verify ffmpeg is properly called and outputs playable media
+
 **Status: COMPLETED**
+
 - ffmpeg is installed and accessible at `/usr/bin/ffmpeg`
 - Successfully generated video files:
   - `replay_2025-07-05_20-57-08.mp4` (18.8KB, 5s duration)
@@ -34,7 +40,9 @@
 - Both videos are playable and properly encoded
 
 ## ✅ Task 4: Stress-test with extended recording (memory leaks and disk issues)
+
 **Status: COMPLETED**
+
 - Simulated 600 events over 1 minute (scaled down from 10 minutes for testing)
 - **Memory Performance:**
   - Initial memory: 53.1MB RSS
@@ -49,6 +57,7 @@
   - Automatic file rotation prevents single large files
 
 ## 📊 Summary Statistics
+
 - **Recording files generated:** 4 files (2 JSON, 2 MP4)
 - **Total disk usage:** 200KB
 - **Memory efficiency:** Excellent (minimal growth)
@@ -56,14 +65,17 @@
 - **Configuration:** Properly loaded and applied
 
 ## 🛠️ Technical Details
+
 - **JSON Structure:** Well-formed with metadata, timestamps, and event data
 - **Video Encoding:** H.264/MP4 with proper headers and playability
 - **Memory Management:** Chunked recording prevents memory leaks
 - **Error Handling:** Graceful fallback configurations present
 - **Disk Management:** Automatic directory creation and file rotation
 
-## ✅ All validation tasks completed successfully!
+## ✅ All validation tasks completed successfully
+
 The recording and replay features are working correctly with proper:
+
 - Configuration loading
 - Event recording and JSON output
 - Video generation via ffmpeg

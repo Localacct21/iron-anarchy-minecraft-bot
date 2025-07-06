@@ -1,0 +1,80 @@
+@startuml event-flow
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Event Flow Architecture
+
+participant "Minecraft Server" as Server
+participant "Mineflayer Core" as Core
+participant "Event Manager" as Events
+participant "Bot Logic" as Bot
+participant "Plugin System" as Plugins
+participant "Command Handler" as Commands
+participant "Discord Bridge" as Discord
+participant "Logger" as Logger
+
+== Bot Startup ==
+Server -> Core: Connection established
+Core -> Events: 'login' event
+Events -> Bot: Initialize bot state
+Bot -> Plugins: Load and configure plugins
+Bot -> Commands: Register command handlers
+Bot -> Discord: Initialize Discord bridge
+Events -> Logger: Log startup success
+
+== Normal Operation ==
+loop Game Events
+  Server -> Core: Game events (movement, chat, etc.)
+  Core -> Events: Emit processed events
+  Events -> Bot: Handle game state
+  Bot -> Logger: Log important events
+  
+  alt Chat Event
+    Events -> Commands: Process potential commands
+    Commands -> Bot: Execute command logic
+    Bot -> Plugins: Use plugin functionality
+    Plugins -> Core: Interact with game
+    Core -> Server: Send responses
+    Commands -> Discord: Bridge to Discord (if enabled)
+  end
+  
+  alt PvP Event
+    Events -> Bot: Handle combat events
+    Bot -> Plugins: Auto-combat response
+    Bot -> Logger: Log PvP actions
+    Bot -> Discord: Send PvP notifications
+  end
+  
+  alt Player Join/Leave
+    Events -> Bot: Update player tracking
+    Bot -> Discord: Send join/leave notifications
+    Bot -> Logger: Log player events
+  end
+end
+
+== Error Handling ==
+alt Network Error
+  Server -> Core: Connection lost
+  Core -> Events: 'end' event
+  Events -> Bot: Handle disconnection
+  Bot -> Logger: Log error
+  Bot -> Discord: Send error notification
+  Bot -> Bot: Attempt reconnection
+end
+
+alt Plugin Error
+  Plugins -> Events: Plugin failure
+  Events -> Bot: Handle plugin error
+  Bot -> Logger: Log plugin error
+  Bot -> Discord: Send error notification
+  Bot -> Bot: Continue with remaining plugins
+end
+
+== Shutdown ==
+Events -> Bot: Shutdown signal
+Bot -> Plugins: Cleanup plugins
+Bot -> Discord: Send shutdown notification
+Bot -> Logger: Log shutdown
+Bot -> Core: Disconnect gracefully
+Core -> Server: Close connection
+
+@enduml

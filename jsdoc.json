@@ -1,0 +1,23 @@
+{
+  "source": {
+    "include": ["./src/", "./index.js"],
+    "includePattern": "\\.(js|jsx)$",
+    "exclude": ["node_modules/", "tests/"]
+  },
+  "opts": {
+    "destination": "./docs/api/",
+    "readme": "./README.md",
+    "recurse": true
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "metadata": {
+    "title": "Iron-Anarchy Minecraft Bot API Documentation",
+    "description": "Enterprise-grade Minecraft automation bot with Discord integration"
+  }
+}

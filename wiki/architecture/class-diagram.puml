@@ -1,0 +1,198 @@
+@startuml class-diagram
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Class Architecture
+
+package "Core Classes" {
+  class MinecraftBot {
+    -mineflayer.Bot bot
+    -config: Object
+    -plugins: Map
+    -logger: Function
+    -status: BotStatus
+    --
+    +connect(): void
+    +disconnect(): void
+    +chat(message: string): void
+    +executeCommand(cmd: string): void
+    +loadPlugin(plugin: Function): boolean
+    +getStatus(): BotStatus
+  }
+  
+  class PluginLoader {
+    -bot: MinecraftBot
+    -loadedPlugins: Map
+    -failedPlugins: Map
+    -log: Function
+    --
+    +loadPlugin(module, name, options): boolean
+    +loadPlugins(pluginList): Promise<Array>
+    +extractPluginFunction(module, name): Function
+    +getPluginStatus(): Object
+    +testBotFunctionality(): Promise<Array>
+  }
+  
+  class ConfigManager {
+    -configPath: string
+    -config: Object
+    -discordConfig: Object
+    --
+    +loadConfig(): Object
+    +validateConfig(): boolean
+    +getServerConfig(): Object
+    +getBotConfig(): Object
+    +getFeatureConfig(): Object
+  }
+  
+  class Logger {
+    -logLevel: string
+    -logFile: string
+    -discordChannel: Object
+    --
+    +log(level, message, data): void
+    +info(message): void
+    +error(message, error): void
+    +warn(message): void
+    +debug(message): void
+  }
+}
+
+package "Discord Integration" {
+  class DiscordBot {
+    -client: Discord.Client
+    -config: Object
+    -minecraftBot: MinecraftBot
+    -channels: Map
+    --
+    +connect(): Promise<void>
+    +sendMessage(channel, message): void
+    +handleCommand(message, command): void
+    +bridgeChat(username, message): void
+    +sendStatusUpdate(status): void
+  }
+  
+  class DiscordCommandHandler {
+    -bot: MinecraftBot
+    -discordBot: DiscordBot
+    -commands: Map
+    --
+    +registerCommand(name, handler): void
+    +executeCommand(command, args, message): void
+    +getHelp(): string
+  }
+}
+
+package "Plugins" {
+  interface MineflayerPlugin {
+    +inject(bot): void
+  }
+  
+  class PathfinderPlugin {
+    +inject(bot): void
+    +setGoal(goal): void
+    +stop(): void
+  }
+  
+  class PvPPlugin {
+    +inject(bot): void
+    +attack(target): void
+    +stop(): void
+    +forceStop(): void
+  }
+  
+  class AutoEatPlugin {
+    +inject(bot): void
+    +options: Object
+    +disable(): void
+    +enable(): void
+  }
+  
+  class ArmorManagerPlugin {
+    +inject(bot): void
+    +equipAll(): void
+  }
+}
+
+package "Commands" {
+  class CommandProcessor {
+    -bot: MinecraftBot
+    -commands: Map
+    -permissions: Map
+    --
+    +registerCommand(name, handler): void
+    +executeCommand(username, command): void
+    +hasPermission(username, command): boolean
+  }
+  
+  class PvPCommands {
+    +attack(target): void
+    +guard(): void
+    +killAura(): void
+    +escape(): void
+    +revenge(): void
+  }
+  
+  class MovementCommands {
+    +follow(player): void
+    +come(player): void
+    +stop(): void
+    +goto(coordinates): void
+  }
+  
+  class UtilityCommands {
+    +status(): void
+    +health(): void
+    +inventory(): void
+    +collect(block, amount): void
+    +help(): void
+  }
+}
+
+package "Event System" {
+  class EventManager {
+    -listeners: Map
+    -bot: MinecraftBot
+    --
+    +on(event, handler): void
+    +emit(event, data): void
+    +removeListener(event, handler): void
+  }
+  
+  class GameEventHandler {
+    +onSpawn(): void
+    +onChat(username, message): void
+    +onDeath(): void
+    +onRespawn(): void
+    +onError(error): void
+  }
+  
+  class PvPEventHandler {
+    +onEntityHurt(entity): void
+    +onPlayerJoined(player): void
+    +onPlayerLeft(player): void
+  }
+}
+
+' Relationships
+MinecraftBot ||--o{ PluginLoader
+MinecraftBot ||--|| ConfigManager
+MinecraftBot ||--|| Logger
+MinecraftBot ||--|| EventManager
+MinecraftBot ||--o| DiscordBot
+
+DiscordBot ||--|| DiscordCommandHandler
+PluginLoader ||--o{ MineflayerPlugin
+MineflayerPlugin <|-- PathfinderPlugin
+MineflayerPlugin <|-- PvPPlugin
+MineflayerPlugin <|-- AutoEatPlugin
+MineflayerPlugin <|-- ArmorManagerPlugin
+
+MinecraftBot ||--|| CommandProcessor
+CommandProcessor ||--o{ PvPCommands
+CommandProcessor ||--o{ MovementCommands
+CommandProcessor ||--o{ UtilityCommands
+
+EventManager ||--|| GameEventHandler
+EventManager ||--|| PvPEventHandler
+
+@enduml

@@ -1,0 +1,32 @@
+file,type,status,wiki_match,suggested_name,suggested_path,source_mtime,wiki_mtime,source_size,wiki_size,first_heading
+SECURITY.md,root,missing,,Security,Security.md,2025-07-05 22:45:05,N/A,1105,0,Security Policy
+CODE_OF_CONDUCT.md,root,missing,,Code-Of-Conduct,Code-Of-Conduct.md,2025-07-05 22:44:57,N/A,1604,0,Code of Conduct
+TYPEDEF_IMPLEMENTATION_SUMMARY.md,root,missing,,Typedef-Implementation-Summary,Typedef-Implementation-Summary.md,2025-07-06 11:12:40,N/A,5295,0,TypeDef Implementation Summary
+CHANGELOG.md,root,missing,,Changelog,Changelog.md,2025-07-06 00:13:47,N/A,2718,0,Changelog
+INSTALLATION.md,root,out-of-date,guides/Installation.md,Installation,guides/Installation.md,2025-07-06 10:41:29,2025-07-06 10:33:58,10722,568,Installation & Setup Guide
+wiki_coverage_gap_report.md,root,missing,,Wiki-Coverage-Gap-Report,Wiki-Coverage-Gap-Report.md,2025-07-06 11:33:58,N/A,6357,0,Wiki Coverage Gap Report
+ARCHITECTURE_SUMMARY.md,root,missing,,Architecture-Summary,developer/Architecture-Summary.md,2025-07-06 11:00:06,N/A,4892,0,🏗️ Iron-Anarchy Minecraft Bot - Architecture Summary
+README.md,root,out-of-date,README.md,Readme,Readme.md,2025-07-06 10:49:31,2025-07-06 10:35:04,18915,3673,🎮 Iron-Anarchy Minecraft Bot v2.0
+DEPLOYMENT_STATUS.md,root,missing,,Deployment-Status,guides/Deployment-Status.md,2025-07-05 22:51:59,N/A,2153,0,🚀 Iron-Anarchy Bot v2.0 - Deployment Status
+RELEASE_NOTES_v2.0.2.md,root,missing,,Release-Notes-V2.0.2,Release-Notes-V2.0.2.md,2025-07-06 00:14:04,N/A,2426,0,🚀 Iron-Anarchy Minecraft Bot v2.0.2 - Dual Registry Release
+docs/FINALIZATION_SUMMARY.md,docs,missing,,Finalization-Summary,Finalization-Summary.md,2025-07-05 22:22:31,N/A,4853,0,Iron-Anarchy Bot v2.0 - Finalization Summary
+docs/GITHUB_PACKAGES.md,docs,missing,,Github-Packages,Github-Packages.md,2025-07-05 23:15:48,N/A,8228,0,📦 GitHub Packages Distribution
+docs/ISSUES_FOUND.md,docs,missing,,Issues-Found,troubleshooting/Issues-Found.md,2025-07-05 21:12:52,N/A,1985,0,🐛 Issues Found During Feature Testing
+docs/FEATURE_TEST_REPORT.md,docs,missing,,Feature-Test-Report,Feature-Test-Report.md,2025-07-05 21:12:39,N/A,7116,0,🧪 Enhanced Features Test Report
+docs/DISCORD_INTEGRATION_GUIDE.md,docs,missing,,Discord-Integration-Guide,Discord-Integration-Guide.md,2025-07-05 20:53:58,N/A,3899,0,Discord Bot Integration - End-to-End Testing Guide
+docs/TROUBLESHOOTING_GUIDE.md,docs,missing,,Troubleshooting-Guide,troubleshooting/Troubleshooting-Guide.md,2025-07-06 10:49:13,N/A,10399,0,🔧 Troubleshooting Guide
+docs/FEATURES_OVERVIEW.md,docs,missing,,Features-Overview,Features-Overview.md,2025-07-06 10:48:15,N/A,8015,0,🚀 Bot Features Overview
+docs/USAGE_EXAMPLES.md,docs,missing,,Usage-Examples,Usage-Examples.md,2025-07-06 10:47:30,N/A,5876,0,🎮 Bot Usage Examples
+docs/deprecation_fixes_summary.md,docs,missing,,Deprecation-Fixes-Summary,Deprecation-Fixes-Summary.md,2025-07-05 20:38:29,N/A,716,0,N/A
+docs/USER_GUIDE.md,docs,missing,,User-Guide,User-Guide.md,2025-07-06 10:46:34,N/A,15900,0,🎮 Minecraft Bot User Guide
+docs/recording-validation-report.md,docs,missing,,Recording-Validation-Report,Recording-Validation-Report.md,2025-07-05 20:59:12,N/A,2883,0,Recording and Replay Features Validation Report
+docs/NPM_INSTALLATION_GUIDE.md,docs,missing,,Npm-Installation-Guide,guides/Npm-Installation-Guide.md,2025-07-05 22:32:27,N/A,3459,0,📦 Iron-Anarchy Bot - NPM Installation Guide
+docs/PLUGIN_TYPES.md,docs,missing,,Plugin-Types,Plugin-Types.md,2025-07-06 11:11:45,N/A,9445,0,Plugin System Type Definitions
+docs/INSTRUCTIONS.md,docs,missing,,Instructions,Instructions.md,2025-07-05 18:31:20,N/A,7784,0,🔥 Iron-Anarchy PvP Bot - Complete Instructions
+docs/PLUGIN_AUDIT_SUMMARY.md,docs,missing,,Plugin-Audit-Summary,Plugin-Audit-Summary.md,2025-07-05 20:26:00,N/A,5439,0,🔥 Plugin Audit & Loading Summary - Iron-Anarchy Minecraft Bot
+docs/DOCUMENTATION_INDEX.md,docs,missing,,Documentation-Index,Documentation-Index.md,2025-07-06 10:49:52,N/A,3593,0,📚 Documentation Index
+docs/COMMAND_REFERENCE.md,docs,missing,,Command-Reference,reference/Command-Reference.md,2025-07-06 10:46:49,N/A,1088,0,🎮 Bot Command Quick Reference
+docs/ENHANCED_FEATURES.md,docs,missing,,Enhanced-Features,Enhanced-Features.md,2025-07-05 19:20:23,N/A,5256,0,🔥 Enhanced Iron-Anarchy Bot Features
+docs/PVP_PLUGIN_ANALYSIS.md,docs,missing,,Pvp-Plugin-Analysis,Pvp-Plugin-Analysis.md,2025-07-05 19:48:56,N/A,695,0,N/A
+docs/DASHBOARD_TEST_RESULTS.md,docs,missing,,Dashboard-Test-Results,Dashboard-Test-Results.md,2025-07-05 22:01:28,N/A,4456,0,Web Dashboard and Inventory Viewer Test Results
+docs/DEVELOPER_ARCHITECTURE.md,docs,missing,,Developer-Architecture,community/Developer-Architecture.md,2025-07-06 10:59:31,N/A,17819,0,🏗️ Iron-Anarchy Minecraft Bot - Developer Documentation & Architecture Overview

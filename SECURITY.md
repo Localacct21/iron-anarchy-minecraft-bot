@@ -14,7 +14,7 @@ We currently support the following versions with security updates:
 If you discover a security vulnerability, please report it responsibly:
 
 1. **Do NOT** open a public issue
-2. Email us directly at: localacct@ironanarchy.lol
+2. Email us directly at: <localacct@ironanarchy.lol>
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

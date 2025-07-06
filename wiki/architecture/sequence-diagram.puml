@@ -1,0 +1,94 @@
+@startuml sequence-diagram
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Bot Startup Sequence
+
+actor User
+participant "index.js" as Main
+participant "ironanarchy-bot.js" as Bot
+participant "PluginLoader" as Loader
+participant "Mineflayer" as MF
+participant "Discord" as Discord
+participant "Server" as Server
+
+User -> Main: npm start
+activate Main
+
+Main -> Bot: require('./src/bots/ironanarchy-bot.js')
+activate Bot
+
+Bot -> Bot: Load configuration
+Bot -> Bot: Initialize global variables
+
+Bot -> Loader: loadPluginSafely(pathfinder)
+activate Loader
+Loader -> Loader: Validate plugin function
+Loader -> MF: bot.loadPlugin(pathfinder)
+activate MF
+MF --> Loader: Plugin loaded
+deactivate MF
+Loader --> Bot: Success
+deactivate Loader
+
+Bot -> Loader: loadPluginSafely(pvp)
+activate Loader
+Loader -> Loader: Extract plugin function
+Loader -> MF: bot.loadPlugin(pvpPlugin)
+activate MF
+MF --> Loader: Plugin loaded
+deactivate MF
+Loader --> Bot: Success
+deactivate Loader
+
+Bot -> Loader: loadPluginSafely(autoEat)
+activate Loader
+Loader -> MF: bot.loadPlugin(autoEat)
+activate MF
+MF --> Loader: Plugin loaded
+deactivate MF
+Loader --> Bot: Success
+deactivate Loader
+
+Bot -> Loader: loadPluginSafely(remaining plugins...)
+activate Loader
+Loader -> MF: Load armor manager, collect block, etc.
+activate MF
+MF --> Loader: All plugins loaded
+deactivate MF
+Loader --> Bot: All successful
+deactivate Loader
+
+Bot -> MF: mineflayer.createBot(config)
+activate MF
+MF -> Server: Connect to Minecraft server
+activate Server
+Server --> MF: Connection established
+deactivate Server
+MF --> Bot: Bot instance created
+deactivate MF
+
+Bot -> Discord: Initialize Discord bot (if enabled)
+activate Discord
+Discord -> Discord: Login with token
+Discord -> Discord: Setup channels
+Discord --> Bot: Discord ready
+deactivate Discord
+
+MF -> Bot: 'spawn' event
+Bot -> Bot: Configure pathfinder
+Bot -> Bot: Setup auto-eat options
+Bot -> Bot: Start web inventory
+Bot -> Server: Chat "Iron-Anarchy PvP Bot Online!"
+Bot -> Bot: Log success message
+
+Bot -> MF: Register event handlers
+Bot -> MF: on('chat', chatHandler)
+Bot -> MF: on('playerJoined', joinHandler)
+Bot -> MF: on('error', errorHandler)
+
+deactivate Bot
+deactivate Main
+
+note over Bot: Bot is now running and\nready to receive commands
+
+@enduml

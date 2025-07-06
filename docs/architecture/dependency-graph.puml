@@ -1,0 +1,88 @@
+@startuml dependency-graph
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Dependency Graph
+
+package "External Dependencies" {
+  [mineflayer] as MF
+  [discord.js] as Discord
+  [mineflayer-pathfinder] as Pathfinder
+  [mineflayer-pvp] as PvP
+  [mineflayer-auto-eat] as AutoEat
+  [mineflayer-armor-manager] as Armor
+  [mineflayer-collectblock] as Collect
+  [mineflayer-bloodhound] as Bloodhound
+  [mineflayer-web-inventory] as WebInv
+  [fs-extra] as FS
+  [moment] as Moment
+}
+
+package "Core Application" {
+  [index.js] as Main
+  [ironanarchy-bot.js] as Bot
+  [enhanced-discord-bot.js] as DiscordBot
+  [plugin-loader.js] as Loader
+  [plugin-validator.js] as Validator
+}
+
+package "Configuration" {
+  [config.json] as Config
+  [discord-config.json] as DiscordConfig
+  [.env] as EnvFile
+}
+
+package "Utilities" {
+  [Logger] as LogUtil
+  [Command Processor] as CmdProc
+  [Event Manager] as EventMgr
+}
+
+' Main dependencies
+Main --> Bot
+Main --> Config
+
+' Bot core dependencies
+Bot --> MF
+Bot --> Pathfinder
+Bot --> PvP
+Bot --> AutoEat
+Bot --> Armor
+Bot --> Collect
+Bot --> Bloodhound
+Bot --> WebInv
+Bot --> FS
+Bot --> Moment
+Bot --> Config
+Bot --> Loader
+
+' Discord bot dependencies
+DiscordBot --> Discord
+DiscordBot --> Bot
+DiscordBot --> DiscordConfig
+DiscordBot --> MF
+
+' Plugin system
+Loader --> Validator
+Bot --> Loader
+
+' Configuration dependencies
+Config --> EnvFile
+DiscordConfig --> EnvFile
+
+' Utility dependencies
+Bot --> LogUtil
+Bot --> CmdProc
+Bot --> EventMgr
+
+' Plugin dependencies (what plugins depend on)
+Pathfinder --> MF
+PvP --> MF
+AutoEat --> MF
+Armor --> MF
+Collect --> MF
+Bloodhound --> MF
+WebInv --> MF
+
+note bottom : All mineflayer plugins ultimately\ndepend on the core mineflayer library
+
+@enduml

@@ -11,6 +11,7 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
@@ -20,10 +21,11 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Environment:**
- - OS: [e.g. Windows, macOS, Linux]
- - Node.js version: [e.g. 16.14.0]
- - Bot version: [e.g. 2.0.0]
- - Minecraft version: [e.g. 1.20.1]
+
+- OS: [e.g. Windows, macOS, Linux]
+- Node.js version: [e.g. 16.14.0]
+- Bot version: [e.g. 2.0.0]
+- Minecraft version: [e.g. 1.20.1]
 
 **Additional context**
 Add any other context about the problem here.

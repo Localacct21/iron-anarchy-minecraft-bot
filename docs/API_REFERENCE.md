@@ -13,11 +13,13 @@ Professional API documentation for developers integrating with or extending the 
 ## 🚀 Getting Started
 
 ### Installation
+
 ```javascript
 const IronAnarchyBot = require('iron-anarchy-minecraft-bot');
 ```
 
 ### Basic Usage
+
 ```javascript
 const bot = new IronAnarchyBot({
   host: 'ironanarchy.net',
@@ -35,14 +37,17 @@ bot.start();
 ### Bot Class
 
 #### Constructor
+
 ```javascript
 new IronAnarchyBot(config)
 ```
 
 **Parameters:**
+
 - `config` (Object) - Bot configuration object
 
 **Example:**
+
 ```javascript
 const config = {
   host: 'ironanarchy.net',
@@ -58,6 +63,7 @@ const bot = new IronAnarchyBot(config);
 #### Methods
 
 ##### `start()`
+
 Starts the bot and connects to the server.
 
 ```javascript
@@ -67,6 +73,7 @@ bot.start()
 ```
 
 ##### `stop()`
+
 Safely disconnects and stops the bot.
 
 ```javascript
@@ -74,6 +81,7 @@ await bot.stop();
 ```
 
 ##### `reconnect()`
+
 Reconnects to the server with exponential backoff.
 
 ```javascript
@@ -87,6 +95,7 @@ await bot.reconnect();
 ### PVP System
 
 #### `enablePVP(options)`
+
 Enables PVP assistance with configurable options.
 
 ```javascript
@@ -99,6 +108,7 @@ bot.enablePVP({
 ```
 
 #### `disablePVP()`
+
 Disables PVP assistance.
 
 ```javascript
@@ -108,6 +118,7 @@ bot.disablePVP();
 ### Pathfinding
 
 #### `goTo(position, options)`
+
 Navigate to specific coordinates.
 
 ```javascript
@@ -119,6 +130,7 @@ await bot.goTo({ x: 100, y: 64, z: 200 }, {
 ```
 
 #### `follow(player, distance)`
+
 Follow a specific player.
 
 ```javascript
@@ -130,6 +142,7 @@ bot.follow('PlayerName', 3); // Follow at 3 block distance
 ## 💬 Discord Integration API
 
 ### Setup
+
 ```javascript
 const discordConfig = {
   token: 'your-bot-token',
@@ -143,6 +156,7 @@ bot.enableDiscord(discordConfig);
 ### Events
 
 #### `discord:message`
+
 Triggered when a Discord message is received.
 
 ```javascript
@@ -152,6 +166,7 @@ bot.on('discord:message', (message) => {
 ```
 
 #### `discord:command`
+
 Triggered when a Discord command is executed.
 
 ```javascript
@@ -165,6 +180,7 @@ bot.on('discord:command', (command, args, message) => {
 ### Methods
 
 #### `sendToDiscord(message)`
+
 Send a message to the configured Discord channel.
 
 ```javascript
@@ -176,6 +192,7 @@ bot.sendToDiscord('Hello from Minecraft!');
 ## 📹 Recording System API
 
 ### Configuration
+
 ```javascript
 const recordingConfig = {
   enabled: true,
@@ -190,6 +207,7 @@ bot.enableRecording(recordingConfig);
 ### Methods
 
 #### `startRecording(filename)`
+
 Start recording session.
 
 ```javascript
@@ -197,6 +215,7 @@ bot.startRecording('session-2023-01-01');
 ```
 
 #### `stopRecording()`
+
 Stop current recording.
 
 ```javascript
@@ -205,6 +224,7 @@ console.log(`Recording saved: ${recording.filename}`);
 ```
 
 #### `getRecordings()`
+
 List all available recordings.
 
 ```javascript
@@ -219,6 +239,7 @@ recordings.forEach(rec => {
 ## 🌐 Web Dashboard API
 
 ### Configuration
+
 ```javascript
 const dashboardConfig = {
   enabled: true,
@@ -233,9 +254,11 @@ bot.enableDashboard(dashboardConfig);
 ### REST Endpoints
 
 #### GET `/api/status`
+
 Get current bot status.
 
 **Response:**
+
 ```json
 {
   "status": "connected",
@@ -247,9 +270,11 @@ Get current bot status.
 ```
 
 #### POST `/api/command`
+
 Execute bot command.
 
 **Request:**
+
 ```json
 {
   "command": "goTo",
@@ -258,9 +283,11 @@ Execute bot command.
 ```
 
 #### GET `/api/inventory`
+
 Get current inventory state.
 
 **Response:**
+
 ```json
 {
   "slots": [
@@ -277,6 +304,7 @@ Get current inventory state.
 ### Creating Plugins
 
 #### Basic Plugin Structure
+
 ```javascript
 // plugins/example-plugin.js
 module.exports = function(bot) {
@@ -301,11 +329,13 @@ module.exports = function(bot) {
 ```
 
 #### Loading Plugins
+
 ```javascript
 bot.loadPlugin('./plugins/example-plugin.js');
 ```
 
 #### Plugin Lifecycle
+
 ```javascript
 const plugin = {
   initialize: (bot) => {
@@ -333,6 +363,7 @@ const plugin = {
 ### Core Events
 
 #### `spawn`
+
 Bot has spawned in the world.
 
 ```javascript
@@ -342,6 +373,7 @@ bot.on('spawn', () => {
 ```
 
 #### `death`
+
 Bot has died.
 
 ```javascript
@@ -352,6 +384,7 @@ bot.on('death', () => {
 ```
 
 #### `chat`
+
 Chat message received.
 
 ```javascript
@@ -361,6 +394,7 @@ bot.on('chat', (username, message) => {
 ```
 
 #### `playerJoined`
+
 Player joined the server.
 
 ```javascript
@@ -372,6 +406,7 @@ bot.on('playerJoined', (player) => {
 ### Custom Events
 
 #### `bot:ready`
+
 Bot is fully initialized and ready.
 
 ```javascript
@@ -381,6 +416,7 @@ bot.on('bot:ready', () => {
 ```
 
 #### `bot:error`
+
 Bot encountered an error.
 
 ```javascript
@@ -394,6 +430,7 @@ bot.on('bot:error', (error) => {
 ## 🔧 Configuration Schema
 
 ### Main Configuration
+
 ```javascript
 const config = {
   // Server connection
@@ -442,6 +479,7 @@ const config = {
 ### Error Types
 
 #### `ConnectionError`
+
 Connection to Minecraft server failed.
 
 ```javascript
@@ -454,6 +492,7 @@ bot.on('error', (error) => {
 ```
 
 #### `AuthenticationError`
+
 Invalid username or password.
 
 ```javascript
@@ -466,6 +505,7 @@ bot.on('error', (error) => {
 ```
 
 #### `PluginError`
+
 Plugin loading or execution error.
 
 ```javascript
@@ -486,16 +526,19 @@ bot.on('plugin:error', (pluginName, error) => {
 ## 🔒 Security Considerations
 
 ### Credentials Management
+
 - Use environment variables for sensitive data
 - Never commit passwords to version control
 - Rotate bot passwords regularly
 
 ### Discord Integration
+
 - Use dedicated bot accounts
 - Limit bot permissions to necessary channels
 - Validate all user inputs
 
 ### Plugin Security
+
 - Validate plugin sources
 - Sandbox plugin execution where possible
 - Regular security audits
@@ -505,6 +548,7 @@ bot.on('plugin:error', (pluginName, error) => {
 ## 📈 Performance Optimization
 
 ### Memory Management
+
 ```javascript
 // Enable garbage collection monitoring
 bot.enableMemoryMonitoring({
@@ -515,6 +559,7 @@ bot.enableMemoryMonitoring({
 ```
 
 ### Network Optimization
+
 ```javascript
 // Configure packet handling
 bot.setPacketOptions({
@@ -525,6 +570,7 @@ bot.setPacketOptions({
 ```
 
 ### Recording Performance
+
 ```javascript
 // Optimize recording settings
 bot.configureRecording({
@@ -539,6 +585,7 @@ bot.configureRecording({
 ## 🧪 Testing
 
 ### Unit Tests
+
 ```javascript
 const { IronAnarchyBot } = require('iron-anarchy-minecraft-bot');
 const assert = require('assert');
@@ -553,6 +600,7 @@ describe('Bot Configuration', () => {
 ```
 
 ### Integration Tests
+
 ```javascript
 describe('Bot Connection', () => {
   it('should connect to server', async () => {
@@ -567,4 +615,4 @@ describe('Bot Connection', () => {
 ---
 
 **Professional API built on 25 years of IT experience** 🏢  
-**Contact**: localacct@ironanarchy.lol
+**Contact**: <localacct@ironanarchy.lol>

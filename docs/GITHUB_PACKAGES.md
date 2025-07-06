@@ -5,6 +5,7 @@
 The Iron-Anarchy Minecraft Bot is available through **GitHub Packages**, providing enterprise-grade package distribution directly integrated with our GitHub repository.
 
 **Benefits of GitHub Packages:**
+
 - 🔒 **Enhanced Security** - Integrated with GitHub's security features
 - 🏢 **Enterprise Integration** - Native GitHub organization support
 - 📊 **Advanced Analytics** - Detailed download and usage metrics
@@ -77,6 +78,7 @@ iron-anarchy-bot
 ## 📊 Package Information
 
 ### Package Details
+
 - **Name**: `@localacct21/iron-anarchy-minecraft-bot`
 - **Registry**: GitHub Packages
 - **Scope**: `@localacct21`
@@ -93,19 +95,21 @@ iron-anarchy-bot
 ### Download Statistics
 
 View detailed package analytics at:
-**https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages**
+**<https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages>**
 
 ---
 
 ## 🔐 Security & Access
 
 ### Package Security
+
 - **Vulnerability Scanning** - Automated security analysis
 - **Dependency Auditing** - Regular dependency security checks
 - **Access Logging** - Detailed download and access logs
 - **Integrity Verification** - Package integrity validation
 
 ### Access Control
+
 - **Public Access** - Available to all GitHub users
 - **Enterprise Features** - Advanced features for GitHub Enterprise
 - **Audit Trail** - Complete access and modification history
@@ -116,12 +120,14 @@ View detailed package analytics at:
 ## 🏢 Enterprise Features
 
 ### GitHub Enterprise Integration
+
 - **Organization Management** - Centralized package management
 - **Team Access Control** - Role-based team permissions
 - **Compliance Reporting** - Enterprise compliance features
 - **Single Sign-On** - Integrated authentication
 
 ### Advanced Analytics
+
 - **Download Metrics** - Detailed usage statistics
 - **Geographic Distribution** - Global usage patterns
 - **Version Adoption** - Version usage analytics
@@ -235,6 +241,7 @@ CMD ["iron-anarchy-bot"]
 | **Cost** | Included with GitHub | Separate pricing |
 
 ### When to Use GitHub Packages
+
 - ✅ **Enterprise environments** with GitHub Enterprise
 - ✅ **Security-focused** organizations
 - ✅ **Integrated workflows** with GitHub Actions
@@ -242,6 +249,7 @@ CMD ["iron-anarchy-bot"]
 - ✅ **Organization package management**
 
 ### When to Use NPM
+
 - ✅ **Public distribution** for maximum reach
 - ✅ **Community adoption** focus
 - ✅ **Simple installation** requirements
@@ -254,6 +262,7 @@ CMD ["iron-anarchy-bot"]
 ### Authentication Issues
 
 **Problem**: Cannot authenticate with GitHub Packages
+
 ```bash
 # Solution: Generate Personal Access Token
 # 1. Go to GitHub Settings > Developer settings > Personal access tokens
@@ -262,6 +271,7 @@ CMD ["iron-anarchy-bot"]
 ```
 
 **Problem**: Permission denied during installation
+
 ```bash
 # Solution: Check package visibility and permissions
 # 1. Verify package is public or you have access
@@ -272,6 +282,7 @@ CMD ["iron-anarchy-bot"]
 ### Installation Issues
 
 **Problem**: Package not found
+
 ```bash
 # Solution: Verify registry configuration
 npm config get registry
@@ -279,6 +290,7 @@ npm config set @localacct21:registry https://npm.pkg.github.com
 ```
 
 **Problem**: Version conflicts
+
 ```bash
 # Solution: Clear npm cache and reinstall
 npm cache clean --force
@@ -289,6 +301,7 @@ npm install
 ### Publishing Issues
 
 **Problem**: Publishing fails with authentication error
+
 ```bash
 # Solution: Verify GitHub token permissions
 # 1. Token needs 'packages:write' permission
@@ -301,12 +314,14 @@ npm install
 ## 📞 Support
 
 ### GitHub Packages Support
+
 - **Documentation**: [GitHub Packages Docs](https://docs.github.com/en/packages)
 - **Community**: [GitHub Community](https://github.community)
 - **Enterprise Support**: Contact GitHub Enterprise support
 
 ### Project Support
-- **Email**: localacct@ironanarchy.lol
+
+- **Email**: <localacct@ironanarchy.lol>
 - **Issues**: [GitHub Issues](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Localacct21/iron-anarchy-minecraft-bot/discussions)
 
@@ -314,10 +329,10 @@ npm install
 
 ## 🔗 Quick Links
 
-- **📦 Package Page**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages
-- **📊 Analytics**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages (requires access)
-- **🔒 Security**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/security
-- **📚 Documentation**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki
+- **📦 Package Page**: <https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages>
+- **📊 Analytics**: <https://github.com/Localacct21/iron-anarchy-minecraft-bot/packages> (requires access)
+- **🔒 Security**: <https://github.com/Localacct21/iron-anarchy-minecraft-bot/security>
+- **📚 Documentation**: <https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki>
 
 ---
 

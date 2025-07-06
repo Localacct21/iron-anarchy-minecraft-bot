@@ -1,0 +1,66 @@
+@startuml build-pipeline
+!theme aws-orange
+
+title Iron-Anarchy Minecraft Bot - Build & Deployment Pipeline
+
+|Development|
+start
+:Developer makes changes;
+:Commit to Git;
+
+|Quality Assurance|
+:Run Tests;
+note right: npm test\n16 test suites\nPlugin validation
+
+if (Tests Pass?) then (yes)
+  :Generate Documentation;
+  note right: Auto-update docs\nAPI reference
+else (no)
+  :Fix Issues;
+  stop
+endif
+
+|Build|
+:Update Version;
+note right: package.json\nCHANGELOG.md
+
+:Build Package;
+note right: npm pack\nGenerate tarball
+
+|Registry Publication|
+fork
+  :Publish to NPM;
+  note right: npm registry\npublic access
+fork again
+  :Publish to GitHub;
+  note right: GitHub Packages\n@localacct21 scope
+end fork
+
+|Deployment|
+:Tag Release;
+note right: Git tag\nRelease notes
+
+if (Production Deploy?) then (yes)
+  :Deploy to Servers;
+  note right: Live gaming servers\nDocker containers
+  
+  :Verify Deployment;
+  note right: Health checks\nBot connectivity
+  
+  :Monitor Performance;
+  note right: Logs analysis\nDiscord notifications
+else (no)
+  :Development Testing;
+  note right: Local validation\nIntegration tests
+endif
+
+|Maintenance|
+:Update Dependencies;
+note right: Security patches\nFeature updates
+
+:Performance Monitoring;
+note right: Server metrics\nBot analytics
+
+stop
+
+@enduml

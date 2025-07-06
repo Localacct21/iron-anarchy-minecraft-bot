@@ -3,6 +3,7 @@
 ## 🆕 New Features Added
 
 ### 📱 Discord Integration
+
 - **Real-time chat bridge** between Minecraft and Discord
 - **Command execution** from Discord channel
 - **Status monitoring** with rich embeds
@@ -10,6 +11,7 @@
 - **Screenshot sharing** capabilities
 
 ### 📹 Recording System
+
 - **Event recording** - All bot actions, chat, PvP events
 - **JSON format** recordings for analysis
 - **Automatic saving** when recording gets large
@@ -17,6 +19,7 @@
 - **Performance tracking**
 
 ### 🎮 Enhanced Dashboard
+
 - **Web dashboard** on port 8080
 - **Real-time bot monitoring**
 - **Visual bot status**
@@ -25,10 +28,12 @@
 ## 🔧 Setup Instructions
 
 ### Discord Bot Setup
-1. Create a Discord application at https://discord.com/developers/applications
+
+1. Create a Discord application at <https://discord.com/developers/applications>
 2. Create a bot and get the token
 3. Invite bot to your server with message permissions
 4. Edit `discord-config.json`:
+
    ```json
    {
      "discord": {
@@ -47,7 +52,9 @@
    ```
 
 ### Recording Setup
+
 The recording feature is enabled by default and will:
+
 - Create `./recordings/` directory
 - Save events in JSON format
 - Auto-save every 1000 events
@@ -56,6 +63,7 @@ The recording feature is enabled by default and will:
 ## 📋 New Commands
 
 ### In-Game Commands
+
 - `!record start` - Start recording bot events
 - `!record stop` - Stop and save recording
 - `!screenshot` - Take a screenshot (if available)
@@ -63,7 +71,9 @@ The recording feature is enabled by default and will:
 - `!status` - Enhanced status with Discord/Recording info
 
 ### Discord Commands
+
 Use these in your Discord channel:
+
 - `!status` - Show detailed bot status embed
 - `!say <message>` - Send message to Minecraft chat
 - `!record start/stop` - Control recording from Discord
@@ -73,12 +83,14 @@ Use these in your Discord channel:
 ## 🌐 Web Interfaces
 
 ### Dashboard (Port 8080)
+
 - Real-time bot visualization
 - Interactive map view
 - Bot status monitoring
 - Player tracking
 
 ### Inventory (Port 3000)
+
 - View bot inventory
 - Item management
 - Real-time updates
@@ -99,6 +111,7 @@ minecraft-bot/
 ## 🎯 Usage Examples
 
 ### Discord Integration
+
 1. Set up Discord bot token in `discord-config.json`
 2. Start enhanced bot: `./start-enhanced.sh`
 3. In Discord: `!status` to see bot status
@@ -106,20 +119,23 @@ minecraft-bot/
 5. Chat bridge automatically syncs messages
 
 ### Recording Features
+
 1. Recording starts automatically when bot spawns
 2. Use `!record stop` to save current session
 3. Recordings saved in `./recordings/` directory
 4. Each recording contains all events with timestamps
 
 ### Enhanced Monitoring
-1. Web dashboard: http://localhost:8080
-2. Web inventory: http://localhost:3000
+
+1. Web dashboard: <http://localhost:8080>
+2. Web inventory: <http://localhost:3000>
 3. Discord status updates
 4. Enhanced console logging with colors
 
 ## 📊 Recording Data Format
 
 Each recording contains:
+
 ```json
 {
   "startTime": "2025-07-05T22:30:00.000Z",
@@ -150,17 +166,20 @@ Each recording contains:
 ## 🐛 Troubleshooting
 
 ### Discord Issues
+
 - Check token is valid
 - Verify bot has message permissions
 - Ensure channel ID is correct
 - Check Discord bot is online
 
 ### Recording Issues
+
 - Check disk space for recordings
 - Verify write permissions to `./recordings/`
 - Large recordings auto-save every 1000 events
 
 ### Dashboard Issues
+
 - Port 8080 must be available
 - Check firewall settings for web access
 - Dashboard loads after bot spawns
@@ -168,6 +187,7 @@ Each recording contains:
 ## 🚀 Performance
 
 The enhanced bot includes:
+
 - **Efficient event logging** - Minimal performance impact
 - **Auto-cleanup** - Recordings auto-save to prevent memory issues
 - **Async Discord** - Non-blocking Discord integration
@@ -176,6 +196,7 @@ The enhanced bot includes:
 ## 🆙 Upgrade Path
 
 To use enhanced features:
+
 1. Update dependencies: `npm install`
 2. Configure Discord: Edit `discord-config.json`
 3. Start enhanced bot: `./start-enhanced.sh`

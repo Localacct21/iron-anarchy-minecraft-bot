@@ -24,6 +24,7 @@ export DISCORD_BOT_LOG_CHANNEL_ID="your_bot_log_channel_id_here"
 ```
 
 This will:
+
 - ✅ Verify environment variables are set
 - ✅ Test Discord bot login
 - ✅ Test channel connections
@@ -37,6 +38,7 @@ This will:
 ```
 
 This will start the full bot with:
+
 - ✅ Discord integration
 - ✅ Minecraft server connection
 - ✅ Chat bridging (Minecraft ⇄ Discord)
@@ -56,21 +58,25 @@ This will start the full bot with:
 ## Features Tested
 
 ### ✅ Bot Joins Guild
+
 - Bot connects to Discord server
 - Confirms channel access
 - Sends startup message
 
 ### ✅ Chat Relay (Minecraft ⇄ Discord)
+
 - Minecraft chat messages appear in Discord
 - Discord messages are sent to Minecraft
 - Proper formatting and user attribution
 
 ### ✅ Admin Commands
+
 - Commands work from Discord
 - Proper error handling for invalid commands
 - Real-time status reporting
 
 ### ✅ Error Handling
+
 - Bot errors are logged to designated bot log channel
 - Meaningful error messages with context
 - Automatic reconnection on disconnection
@@ -79,21 +85,25 @@ This will start the full bot with:
 ## Troubleshooting
 
 ### Bot Not Connecting to Discord
+
 - Check if `DISCORD_TOKEN` is correct
 - Verify bot has proper permissions in the Discord server
 - Ensure bot is added to the guild
 
 ### Bot Can't Send Messages
+
 - Check if bot has "Send Messages" permission
 - Verify channel IDs are correct
 - Ensure bot can see the channels
 
 ### Chat Not Bridging
+
 - Check if `chatBridge` is enabled in configuration
 - Verify bot has joined the Minecraft server
 - Check bot logs for connection errors
 
 ### Commands Not Working
+
 - Verify command prefix is correct (default: `!`)
 - Check if bot has "Read Message History" permission
 - Ensure bot is listening to the correct channel
@@ -101,6 +111,7 @@ This will start the full bot with:
 ## Configuration Files
 
 ### discord-config.json
+
 ```json
 {
   "discord": {
@@ -123,21 +134,25 @@ This will start the full bot with:
 ## Success Indicators
 
 ### ✅ Discord Connection
+
 - Bot appears online in Discord
 - Startup message appears in channel
 - Bot responds to `!help` command
 
 ### ✅ Minecraft Connection
+
 - Bot joins the Minecraft server
 - "Bot has joined the Minecraft server!" message in Discord
 - Bot log channel shows successful spawn
 
 ### ✅ Chat Bridge
+
 - Minecraft chat appears in Discord
 - Discord messages appear in Minecraft
 - Proper formatting maintained
 
 ### ✅ Error Handling
+
 - Errors appear in bot log channel
 - Meaningful error descriptions
 - Automatic recovery attempts

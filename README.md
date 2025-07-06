@@ -35,10 +35,21 @@
 
 <div align="center">
 
-### 🚀 Get started in 30 seconds!
+### 🚀 Get started in 30 seconds
+
+**From NPM Registry:**
 
 ```bash
 npm install -g iron-anarchy-minecraft-bot
+npm run setup
+npm start
+```
+
+**From GitHub Registry:**
+
+```bash
+npm config set @localacct21:registry https://npm.pkg.github.com
+npm install -g @localacct21/iron-anarchy-minecraft-bot
 npm run setup
 npm start
 ```
@@ -58,7 +69,9 @@ npm start
 <td align="center" width="25%">
 
 ### 🤖 Smart Automation
+
 **Advanced AI Systems**
+
 - PVP Combat Assistance
 - Intelligent Pathfinding
 - Resource Location & Mining
@@ -68,7 +81,9 @@ npm start
 <td align="center" width="25%">
 
 ### 💬 Discord Integration
+
 **Real-Time Communication**
+
 - Chat Bridge
 - Status Monitoring
 - Remote Commands
@@ -78,7 +93,9 @@ npm start
 <td align="center" width="25%">
 
 ### 📹 Recording System
+
 **Professional Logging**
+
 - Session Recording
 - Video Output (MP4)
 - Performance Analytics
@@ -88,7 +105,9 @@ npm start
 <td align="center" width="25%">
 
 ### 🌐 Web Dashboard
+
 **Live Monitoring**
+
 - Real-Time Stats
 - Inventory Viewer
 - Control Interface
@@ -135,10 +154,10 @@ npm start
 ### Installation Methods
 
 <details>
-<summary><b>📦 Method 1: NPM Global (Recommended)</b></summary>
+<summary><b>📦 Method 1: NPM Registry (Recommended)</b></summary>
 
 ```bash
-# Install globally for system-wide access
+# Install from npm registry
 npm install -g iron-anarchy-minecraft-bot
 
 # Verify installation
@@ -149,6 +168,66 @@ npm run setup
 
 # Start the bot
 npm start
+```
+
+</details>
+
+<details>
+<summary><b>📦 Method 2: GitHub Package Registry</b></summary>
+
+```bash
+# Configure npm to use GitHub registry for @localacct21 packages
+npm config set @localacct21:registry https://npm.pkg.github.com
+
+# Install from GitHub registry
+npm install -g @localacct21/iron-anarchy-minecraft-bot
+
+# Verify installation
+iron-anarchy-bot --version
+
+# Set up configuration
+npm run setup
+
+# Start the bot
+npm start
+```
+
+**Note:** For GitHub Package Registry, you'll need to authenticate with a personal access token that has `read:packages` permission.
+
+</details>
+
+<details>
+<summary><b>🔧 Method 3: Local Development</b></summary>
+
+```bash
+# Clone repository
+git clone https://github.com/Localacct21/iron-anarchy-minecraft-bot.git
+cd iron-anarchy-minecraft-bot
+
+# Install dependencies
+npm install
+
+# Set up configuration
+npm run setup
+
+# Start development
+npm start
+```
+
+</details>
+
+<details>
+<summary><b>⚡ Method 4: NPX (No Installation)</b></summary>
+
+```bash
+# Run directly without installation from npm
+npx iron-anarchy-minecraft-bot
+
+# Or from GitHub registry
+npx @localacct21/iron-anarchy-minecraft-bot
+
+# Quick test run
+npx iron-anarchy-minecraft-bot --help
 ```
 
 </details>
@@ -319,6 +398,7 @@ DASHBOARD_ENABLED=true
 ```
 
 **Professional Development Standards:**
+
 - ✅ Modular architecture for maintainability
 - ✅ Comprehensive error handling
 - ✅ Extensive test coverage (16 test suites)
@@ -366,9 +446,11 @@ npm run test:discord   # Discord integration tests
 ![Dashboard Preview](https://via.placeholder.com/800x400/1a1a2e/eee?text=Live+Web+Dashboard)
 
 ### 📊 Real-Time Monitoring
+
 Access your bot's web dashboard at `http://localhost:3001`
 
 **Features:**
+
 - 📈 Live performance metrics
 - 🎒 Real-time inventory display
 - 🎮 Bot status and health monitoring
@@ -382,16 +464,19 @@ Access your bot's web dashboard at `http://localhost:3001`
 ## 💼 Professional Use Cases
 
 ### 🏢 Enterprise Gaming
+
 - **Corporate Gaming Events** - Automated tournament management
 - **Team Building Activities** - Coordinated multiplayer experiences
 - **Training Simulations** - Educational and skill development scenarios
 
 ### 🎮 Community Servers
+
 - **Server Administration** - Automated moderation and management
 - **Player Engagement** - Interactive events and challenges
 - **Resource Management** - Efficient resource distribution and monitoring
 
 ### 🔬 Development & Testing
+
 - **Server Load Testing** - Performance validation and optimization
 - **Plugin Development** - Testing and validation environment
 - **Automation Research** - AI and machine learning experimentation
@@ -404,6 +489,7 @@ Access your bot's web dashboard at `http://localhost:3001`
 <summary><b>🔌 Connection Issues</b></summary>
 
 **Bot won't connect to server:**
+
 1. Verify username/password in `config.json`
 2. Check server address and port
 3. Ensure Minecraft version compatibility
@@ -420,6 +506,7 @@ npm run validate
 <summary><b>💬 Discord Integration</b></summary>
 
 **Discord features not working:**
+
 1. Verify bot token in `discord-config.json`
 2. Check channel ID is correct
 3. Ensure bot has proper permissions
@@ -436,6 +523,7 @@ npm run test:discord
 <summary><b>🧪 Test Failures</b></summary>
 
 **Tests not passing:**
+
 1. Ensure all dependencies are installed
 2. Check Node.js version (14.0+ required)
 3. Verify configuration files exist
@@ -453,6 +541,7 @@ npm test
 <summary><b>📊 Performance Issues</b></summary>
 
 **Bot running slowly:**
+
 1. Check system resources (RAM, CPU)
 2. Optimize recording settings
 3. Disable unnecessary features
@@ -471,7 +560,7 @@ npm run enhanced  # Optimized mode
 
 <div align="center">
 
-### 🌟 Join Our Professional Development Community!
+### 🌟 Join Our Professional Development Community
 
 We welcome contributions from developers of all skill levels. Built on **25 years of IT experience**, we maintain high standards while fostering learning and growth.
 
@@ -556,6 +645,7 @@ npm test
 [![NPM](https://img.shields.io/badge/NPM-iron--anarchy--minecraft--bot-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/iron-anarchy-minecraft-bot)
 
 ### 💼 Professional Services Available
+
 - **Custom Bot Development** - Tailored automation solutions
 - **Server Infrastructure Consulting** - Enterprise gaming setup
 - **Integration Services** - Custom Discord and web integrations
@@ -610,3 +700,53 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Contribute to make it even better!** 🚀
 
 </div>
+
+## 📚 Documentation
+
+### User Guides
+
+- **[Complete User Guide](./docs/USER_GUIDE.md)** - Comprehensive guide with all features and commands
+- **[Command Reference](./docs/COMMAND_REFERENCE.md)** - Quick reference for all bot commands
+- **[Usage Examples](./docs/USAGE_EXAMPLES.md)** - Real-world usage scenarios and examples
+- **[Features Overview](./docs/FEATURES_OVERVIEW.md)** - Detailed feature breakdown
+- **[Troubleshooting Guide](./docs/TROUBLESHOOTING_GUIDE.md)** - Solutions for common issues
+
+### Technical Documentation
+
+- **[API Reference](./docs/API_REFERENCE.md)** - Technical API documentation
+- **[Discord Integration Guide](./docs/DISCORD_INTEGRATION_GUIDE.md)** - Discord setup and configuration
+- **[Enhanced Features](./docs/ENHANCED_FEATURES.md)** - Advanced feature details
+- **[Plugin Audit Summary](./docs/PLUGIN_AUDIT_SUMMARY.md)** - Plugin compatibility and testing
+
+## 🎮 Quick Start
+
+1. **Install dependencies**: `npm install`
+2. **Choose your bot variant**:
+   - Basic: `node src/bots/bot.js`
+   - Advanced: `node src/bots/advanced-bot.js`
+   - Enhanced: `node src/bots/enhanced-ironanarchy-bot.js`
+3. **Configure settings** in the bot files
+4. **Start playing** with chat commands like `!help`
+
+## 🚀 Key Features
+
+- ⚔️ **Advanced PvP** - Smart combat with target tracking
+- 🗺️ **Intelligent Pathfinding** - Navigate any terrain automatically  
+- 🤖 **Auto-Features** - Eating, reconnection, anti-AFK, equipment management
+- 💬 **Discord Integration** - Chat bridging and remote control
+- 📊 **Monitoring** - Web dashboard and comprehensive logging
+- 🎯 **Commands** - 15+ chat commands for full control
+- 🔄 **Reliability** - Auto-reconnect with exponential backoff
+- 📱 **Web Interface** - Browser-based inventory and dashboard
+
+## 📋 Essential Commands
+
+- `!come` - Bot comes to you
+- `!follow [player]` - Follow a player  
+- `!attack <player>` - Attack target
+- `!guard` - Toggle mob protection
+- `!collect <block> [amount]` - Gather resources
+- `!status` - Show bot status
+- `!help` - List all commands
+
+For the complete command list and usage examples, see the [User Guide](./docs/USER_GUIDE.md).

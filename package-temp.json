@@ -1,0 +1,101 @@
+{
+  "name": "@localacct21/iron-anarchy-minecraft-bot",
+  "version": "2.0.1",
+  "description": "Enterprise-grade Minecraft automation bot with Discord integration, recording features, and web dashboard. Built by 25-year IT veteran currently managing live gaming servers.",
+  "main": "index.js",
+  "bin": {
+    "iron-anarchy-bot": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "enhanced": "node src/bots/enhanced-ironanarchy-bot.js",
+    "advanced": "node src/bots/advanced-bot.js",
+    "basic": "node src/bots/bot.js",
+    "discord": "node src/bots/enhanced-discord-bot.js",
+    "test": "node tests/run-all-tests.js",
+    "test:plugin": "node tests/plugin-loader-simple.test.js",
+    "test:discord": "node tests/discord-integration-simple.test.js",
+    "setup": "node scripts/setup.js",
+    "validate": "node examples/plugin-test-bot.js"
+  },
+  "keywords": [
+    "minecraft",
+    "bot",
+    "automation",
+    "pvp",
+    "iron-anarchy",
+    "discord",
+    "recording",
+    "dashboard",
+    "enterprise",
+    "professional",
+    "gaming",
+    "server",
+    "mineflayer",
+    "artificial-intelligence",
+    "nodejs",
+    "javascript"
+  ],
+  "author": {
+    "name": "Local Acct",
+    "email": "localacct@ironanarchy.lol",
+    "url": "https://github.com/Localacct21"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Localacct21/iron-anarchy-minecraft-bot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Localacct21/iron-anarchy-minecraft-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "mailto:localacct@ironanarchy.lol"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "tests/",
+    "config/",
+    "scripts/",
+    "examples/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "package.json"
+  ],
+  "directories": {
+    "lib": "src",
+    "test": "tests",
+    "example": "examples",
+    "doc": "docs"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.17.2",
+    "fs-extra": "^11.3.0",
+    "mineflayer": "^4.30.0",
+    "mineflayer-armor-manager": "^2.0.1",
+    "mineflayer-auto-eat": "^5.0.2",
+    "mineflayer-bloodhound": "^0.0.2",
+    "mineflayer-collectblock": "^1.6.0",
+    "mineflayer-dashboard": "^2.0.1",
+    "mineflayer-pathfinder": "^2.4.5",
+    "mineflayer-pvp": "^1.3.2",
+    "mineflayer-statemachine": "^1.7.0",
+    "mineflayer-utils": "^0.1.4",
+    "mineflayer-web-inventory": "^1.8.5",
+    "moment": "^2.30.1",
+    "prismarine-viewer": "^1.28.0"
+  }
+}

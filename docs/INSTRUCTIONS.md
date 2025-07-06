@@ -3,12 +3,15 @@
 ## 📁 Quick Start
 
 ### 1. Start the Bot
+
 ```bash
 ./start-ironanarchy.sh
 ```
 
 ### 2. Basic Commands
+
 Once connected to Iron-Anarchy, use these commands in chat:
+
 - `!help` - Show all available commands
 - `!status` - Check bot status and position
 - `!health` - Show health and food levels
@@ -18,6 +21,7 @@ Once connected to Iron-Anarchy, use these commands in chat:
 ## 🎯 Bot Configuration
 
 ### Server Settings (config.json)
+
 ```json
 {
   "server": {
@@ -34,7 +38,8 @@ Once connected to Iron-Anarchy, use these commands in chat:
 
 **Important**: Change the `username` to something unique!
 
-### To Edit Configuration:
+### To Edit Configuration
+
 ```bash
 nano config.json
 ```
@@ -44,6 +49,7 @@ nano config.json
 ## ⚔️ Combat Commands
 
 ### Basic PvP
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `!attack <player>` | Attack a specific player | `!attack Steve` |
@@ -53,6 +59,7 @@ nano config.json
 | `!escape` | Toggle flee-from-combat mode | `!escape` |
 
 ### Advanced Combat
+
 - **Kill-Aura Mode**: Automatically attacks any player within 6 blocks
 - **Escape Mode**: Bot will flee when taking damage instead of fighting
 - **Guard Mode**: Protects against mobs while doing other tasks
@@ -73,6 +80,7 @@ nano config.json
 ## 🛠️ Utility Commands
 
 ### Information
+
 | Command | Description |
 |---------|-------------|
 | `!health` | Show health and food bars |
@@ -82,6 +90,7 @@ nano config.json
 | `!status` | Show bot status and modes |
 
 ### Actions
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `!collect <block> [amount]` | Collect specific blocks | `!collect diamond_ore 5` |
@@ -92,17 +101,20 @@ nano config.json
 ## 🔧 Bot Features
 
 ### Automatic Features
+
 - **Auto-Eat**: Eats food when hungry (starts at 14/20 food)
 - **Auto-Armor**: Automatically equips better armor
 - **Auto-Reconnect**: Reconnects if disconnected
 - **Smart Pathfinding**: Navigates terrain intelligently
 
 ### Logging
+
 - All chat messages logged to `logs/ironanarchy_YYYY-MM-DD.log`
 - PvP events and commands tracked
 - Console output with color coding
 
 ### Web Interface
+
 - View bot inventory at: `http://localhost:3000`
 - Real-time inventory management
 - Accessible from any web browser
@@ -112,37 +124,47 @@ nano config.json
 ## 📋 Usage Scenarios
 
 ### 1. Bodyguard Mode
+
 ```
 !follow Steve
 !guard
 ```
+
 Bot will follow Steve and protect against mobs.
 
 ### 2. Aggressive PvP Mode
+
 ```
 !killaura
 ```
+
 Bot will attack any nearby players automatically.
 
 ### 3. Peaceful Exploration
+
 ```
 !escape
 !follow
 ```
+
 Bot will follow you and flee if attacked.
 
 ### 4. Resource Gathering
+
 ```
 !collect diamond_ore 10
 !guard
 ```
+
 Bot will collect diamonds while defending against mobs.
 
 ### 5. Base Defense
+
 ```
 !guard
 !killaura
 ```
+
 Bot will attack both mobs and players near your base.
 
 ---
@@ -150,18 +172,21 @@ Bot will attack both mobs and players near your base.
 ## 🚨 Important Notes
 
 ### Iron-Anarchy Specific
+
 - This is an **anarchy server** - expect chaos!
 - Players may attack without warning
 - Use `!escape` mode in dangerous areas
 - The bot can handle grief and PvP situations
 
 ### Safety Tips
+
 1. **Never leave bot unattended** in important areas
 2. **Use escape mode** when carrying valuable items
 3. **Change username** to avoid targeting
 4. **Monitor logs** for suspicious activity
 
 ### Performance
+
 - Bot works best with good internet connection
 - May lag slightly with many players nearby
 - Kill-aura works within 6 block radius
@@ -172,6 +197,7 @@ Bot will attack both mobs and players near your base.
 ## 🐛 Troubleshooting
 
 ### Connection Issues
+
 ```bash
 # Test connection
 node test-bot.js
@@ -181,16 +207,19 @@ ping ironanarchy.lol
 ```
 
 ### Bot Stuck
+
 1. Use `!stop` to reset all actions
 2. Use `!suicide` to respawn if completely stuck
 3. Restart bot if commands don't respond
 
 ### Commands Not Working
+
 - Make sure you're typing `!` before commands
 - Commands work in both public chat and whispers
 - Check if bot is online and connected
 
 ### Common Errors
+
 | Error | Solution |
 |-------|----------|
 | "Cannot find player" | Player might be offline or too far away |
@@ -246,17 +275,20 @@ minecraft-bot/
 ## 🔄 Updates and Maintenance
 
 ### Updating Dependencies
+
 ```bash
 npm update
 ```
 
 ### Backup Important Files
+
 ```bash
 cp config.json config.json.backup
 cp -r logs/ logs_backup/
 ```
 
 ### Performance Monitoring
+
 - Check `logs/` directory for errors
 - Monitor console output for warnings
 - Use web interface to check inventory
@@ -266,12 +298,14 @@ cp -r logs/ logs_backup/
 ## 🆘 Support
 
 ### Getting Help
+
 1. Check this INSTRUCTIONS.md file
 2. Review console logs for errors
 3. Test connection with `node test-bot.js`
 4. Check Iron-Anarchy server status
 
 ### Useful Commands for Debugging
+
 ```bash
 # Test basic connection
 node test-bot.js
@@ -304,6 +338,7 @@ npm list
 ## ⚡ Quick Reference Card
 
 ### Essential Commands
+
 ```
 !help          - Show commands
 !follow        - Follow me
@@ -315,6 +350,7 @@ npm list
 ```
 
 ### Emergency Commands
+
 ```
 !stop          - Emergency stop
 !suicide       - Respawn bot
@@ -322,6 +358,7 @@ npm list
 ```
 
 ### File Locations
+
 ```
 ./start-ironanarchy.sh    - Start bot
 ./config.json             - Settings
