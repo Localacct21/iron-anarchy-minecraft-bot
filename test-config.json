@@ -1,0 +1,33 @@
+{
+  "host": "localhost",
+  "port": 25565,
+  "username": "TestBot",
+  "password": "",
+  "version": "1.20.4",
+  "plugins": {
+    "pathfinder": true,
+    "pvp": true,
+    "autoEat": true,
+    "armorManager": true,
+    "collectBlock": true,
+    "bloodhound": true,
+    "webInventory": true,
+    "dashboard": true
+  },
+  "behaviors": {
+    "stashFinder": true,
+    "pvpAssist": true,
+    "autoReconnect": true,
+    "antiKick": true,
+    "chatGuard": true
+  },
+  "autofarms": {
+    "enabled": false,
+    "crops": ["wheat", "carrots", "potatoes"],
+    "replant": true
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO"
+  }
+}

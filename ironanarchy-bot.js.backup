@@ -1,10 +1,10 @@
 const mineflayer = require('mineflayer')
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
-const autoEatModule = require('mineflayer-auto-eat')
+const autoEat = require('mineflayer-auto-eat')
 const armorManager = require('mineflayer-armor-manager')
-const collectBlockModule = require('mineflayer-collectblock')
-const bloodhound = require('mineflayer-bloodhound')
+const collectBlock = require('mineflayer-collectblock')
+const { plugin: bloodhound } = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
 const moment = require('moment')
@@ -13,57 +13,6 @@ const moment = require('moment')
 const config = require('./config.json')
 
 console.log('🔥 Iron-Anarchy PvP Bot Starting...')
-
-// Enhanced plugin loading function
-function loadPluginSafely(bot, plugin, pluginName) {
-  console.log(`Loading plugin: ${pluginName}`)
-  
-  if (!plugin) {
-    throw new Error(`Plugin ${pluginName} is null or undefined`)
-  }
-  
-  if (typeof plugin !== 'function') {
-    throw new Error(`Plugin ${pluginName} is not a function. Expected a function but got ${typeof plugin}. This may indicate a version mismatch or incorrect import.`)
-  }
-  
-  try {
-    bot.loadPlugin(plugin)
-    console.log(`✅ Successfully loaded: ${pluginName}`)
-    return true
-  } catch (error) {
-    console.error(`❌ Failed to load ${pluginName}:`, error.message)
-    throw error
-  }
-}
-
-// Extract correct plugin functions
-console.log('📦 Preparing plugins...')
-
-// PVP plugin - handle { plugin } export
-let pvpPlugin
-if (typeof mineflayerPvp === 'function') {
-  pvpPlugin = mineflayerPvp
-} else if (mineflayerPvp.plugin && typeof mineflayerPvp.plugin === 'function') {
-  pvpPlugin = mineflayerPvp.plugin
-} else if (mineflayerPvp.default && typeof mineflayerPvp.default === 'function') {
-  pvpPlugin = mineflayerPvp.default
-} else {
-  throw new Error('mineflayer-pvp plugin could not be loaded. Expected a function export, { plugin } export, or { default } export.')
-}
-
-// Auto-eat plugin - handle { loader } export
-const autoEat = autoEatModule.loader || autoEatModule
-if (typeof autoEat !== 'function') {
-  throw new Error('mineflayer-auto-eat plugin could not be loaded. Expected loader function.')
-}
-
-// Collect block plugin - handle { plugin } export
-const collectBlock = collectBlockModule.plugin || collectBlockModule
-if (typeof collectBlock !== 'function') {
-  throw new Error('mineflayer-collectblock plugin could not be loaded. Expected plugin function.')
-}
-
-console.log('🤖 Creating Iron-Anarchy bot...')
 
 // Create bot
 const bot = mineflayer.createBot({
@@ -74,25 +23,14 @@ const bot = mineflayer.createBot({
   auth: config.bot.auth
 })
 
-console.log('🔌 Loading plugins sequentially...')
-
-// Load plugins with enhanced validation
-try {
-  loadPluginSafely(bot, pathfinder, 'pathfinder')
-  loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
-  loadPluginSafely(bot, autoEat, 'mineflayer-auto-eat')
-  loadPluginSafely(bot, armorManager, 'mineflayer-armor-manager')
-  loadPluginSafely(bot, collectBlock, 'mineflayer-collectblock')
-  loadPluginSafely(bot, bloodhound, 'mineflayer-bloodhound')
-  loadPluginSafely(bot, webInventory, 'mineflayer-web-inventory')
-  
-  console.log('🎉 All plugins loaded successfully!')
-  
-} catch (error) {
-  console.error('💥 Critical plugin loading error:', error.message)
-  console.error('Bot cannot continue without required plugins.')
-  process.exit(1)
-}
+// Load plugins
+bot.loadPlugin(pathfinder)
+loadPluginSafely(bot, pvpPlugin, 'mineflayer-pvp')
+bot.loadPlugin(autoEat)
+bot.loadPlugin(armorManager)
+bot.loadPlugin(collectBlock)
+bot.loadPlugin(bloodhound)
+bot.loadPlugin(webInventory)
 
 // Create logs directory
 fs.ensureDirSync('./logs')
@@ -131,35 +69,25 @@ function logMessage(type, message, data = null) {
   }
 }
 
-// Enhanced bot events
+// Bot events
 bot.once('spawn', () => {
-  logMessage('SUCCESS', '🔥 Iron-Anarchy bot connected!')
+  logMessage('SUCCESS', '🔥 Connected to Iron-Anarchy successfully!')
   
-  // Test plugin functionality
-  console.log('🧪 Testing plugin functionality...')
-  console.log('Pathfinder:', bot.pathfinder ? '✅' : '❌')
-  console.log('PvP:', bot.pvp ? '✅' : '❌')
-  console.log('Auto-eat:', bot.autoEat ? '✅' : '❌')
-  console.log('Armor Manager:', bot.armorManager ? '✅' : '❌')
-  console.log('Collect Block:', bot.collectBlock ? '✅' : '❌')
-  console.log('Bloodhound:', bot.bloodhound ? '✅' : '❌')
-  console.log('Web Inventory:', bot.webInventory ? '✅' : '❌')
-  
-  // Set up pathfinder
+  // Set up pathfinder for anarchy server
   const defaultMove = new Movements(bot)
   defaultMove.allowFreeMotion = true
   defaultMove.allowParkour = true
   defaultMove.canDig = true
   bot.pathfinder.setMovements(defaultMove)
   
-  // Configure auto-eat
+  // Configure auto-eat for survival
   if (config.features.autoEat.enabled) {
     bot.autoEat.options = {
       priority: config.features.autoEat.priority,
       startAt: config.features.autoEat.startAt,
       bannedFood: []
     }
-    logMessage('INFO', 'Auto-eat configured for Iron-Anarchy')
+    logMessage('INFO', 'Auto-eat configured for survival')
   }
   
   // Start web inventory
@@ -168,11 +96,12 @@ bot.once('spawn', () => {
     logMessage('INFO', `Web inventory: http://localhost:${config.features.webInventory.port}`)
   }
   
+  // Iron-Anarchy welcome message
   setTimeout(() => {
-    bot.chat('🔥 Iron-Anarchy PvP Bot Online!')
+    bot.chat('🔥 Iron-Anarchy PvP Bot Online! Type !help for commands')
   }, 2000)
   
-  logMessage('ANARCHY', 'Iron-Anarchy bot ready! 🔥⚔️')
+  logMessage('ANARCHY', 'Ready for chaos on Iron-Anarchy! 🔥')
 })
 
 bot.on('chat', (username, message) => {
@@ -186,9 +115,82 @@ bot.on('chat', (username, message) => {
   if (message.startsWith('!')) {
     handleCommand(username, message.slice(1))
   }
+  
+  // Auto-responses for anarchy server
+  if (message.toLowerCase().includes('hack') || message.toLowerCase().includes('cheat')) {
+    logMessage('ANARCHY', `Possible hacker detected: ${username}`)
+  }
 })
 
-// Command handling
+bot.on('whisper', (username, message) => {
+  logMessage('CHAT', `${username} whispers: ${message}`)
+  
+  // Handle whisper commands
+  if (message.startsWith('!')) {
+    handleCommand(username, message.slice(1))
+  }
+})
+
+bot.on('kicked', (reason) => {
+  logMessage('ERROR', `Kicked from Iron-Anarchy: ${reason}`)
+})
+
+bot.on('error', (err) => {
+  logMessage('ERROR', `Bot error: ${err.message}`)
+})
+
+bot.on('death', () => {
+  logMessage('PVP', '💀 Bot died on Iron-Anarchy!')
+  
+  // Reset all combat modes
+  isGuarding = false
+  following = null
+  autoKillAura = false
+  escapeMode = false
+  
+  if (guardInterval) {
+    clearInterval(guardInterval)
+    guardInterval = null
+  }
+  if (killAuraInterval) {
+    clearInterval(killAuraInterval)
+    killAuraInterval = null
+  }
+  
+  bot.chat('💀 Died! Respawning for revenge...')
+})
+
+bot.on('respawn', () => {
+  logMessage('SUCCESS', '🔥 Respawned on Iron-Anarchy!')
+})
+
+// Enhanced PvP Events for Anarchy
+bot.on('playerJoined', (player) => {
+  logMessage('INFO', `Player joined Iron-Anarchy: ${player.username}`)
+})
+
+bot.on('playerLeft', (player) => {
+  logMessage('INFO', `Player left Iron-Anarchy: ${player.username}`)
+})
+
+bot.on('entityHurt', (entity) => {
+  if (entity === bot.entity) {
+    const attacker = findNearestPlayer()
+    if (attacker) {
+      lastAttacker = attacker.username
+      logMessage('PVP', `Taking damage from ${attacker.username}!`)
+      
+      // Auto-retaliate if not in escape mode
+      if (!escapeMode && autoKillAura) {
+        setTimeout(() => {
+          bot.pvp.attack(attacker)
+        }, 100)
+      }
+    }
+  }
+})
+
+// Enhanced command handling for anarchy server
 function handleCommand(username, command) {
   const args = command.split(' ')
   const cmd = args[0].toLowerCase()
@@ -248,82 +250,19 @@ function handleCommand(username, command) {
     case 'revenge':
       revengeAttack()
       break
-    case 'plugins':
-      bot.chat('🔌 All plugins loaded and validated for Iron-Anarchy!')
+    case 'suicide':
+      bot.chat('💀 Committing suicide...')
+      bot.chat('/kill')
       break
     case 'help':
-      showHelp()
+      showAnarchyHelp()
       break
     default:
-      bot.chat(`❌ Unknown command: ${cmd}. Use !help for commands.`)
+      bot.chat(`❌ Unknown command: ${cmd}. Use !help for Iron-Anarchy commands.`)
   }
 }
 
-// Basic command functions
-function stopAllActions() {
-  bot.pathfinder.setGoal(null)
-  if (bot.pvp && bot.pvp.stop) bot.pvp.stop()
-  following = null
-  isGuarding = false
-  autoKillAura = false
-  escapeMode = false
-  
-  if (guardInterval) {
-    clearInterval(guardInterval)
-    guardInterval = null
-  }
-  if (killAuraInterval) {
-    clearInterval(killAuraInterval)
-    killAuraInterval = null
-  }
-  
-  bot.chat('🛑 All actions stopped')
-  logMessage('INFO', 'Stopped all actions')
-}
-
-function followPlayer(commander, targetName) {
-  const player = bot.players[targetName]
-  if (!player || !player.entity) {
-    bot.chat(`❌ Cannot find player: ${targetName}`)
-    return
-  }
-  
-  stopAllActions()
-  following = targetName
-  
-  const goal = new goals.GoalFollow(player.entity, 2)
-  bot.pathfinder.setGoal(goal)
-  bot.chat(`🏃 Following ${targetName} on Iron-Anarchy`)
-  logMessage('INFO', `Started following ${targetName}`)
-}
-
-function attackPlayer(targetName) {
-  const target = bot.players[targetName]
-  if (!target || !target.entity) {
-    bot.chat(`❌ Cannot find player: ${targetName}`)
-    return
-  }
-  
-  if (escapeMode) {
-    bot.chat('🏃 Cannot attack in escape mode!')
-    return
-  }
-  
-  if (target.entity.position.distanceTo(bot.entity.position) > 6) {
-    const goal = new goals.GoalNear(target.entity.position.x, target.entity.position.y, target.entity.position.z, 2)
-    bot.pathfinder.setGoal(goal)
-    
-    bot.once('goal_reached', () => {
-      bot.pvp.attack(target.entity)
-    })
-  } else {
-    bot.pvp.attack(target.entity)
-  }
-  
-  bot.chat(`⚔️ Attacking ${targetName} on Iron-Anarchy!`)
-  logMessage('PVP', `Started attacking ${targetName}`)
-}
-
+// Anarchy-specific functions
 function toggleKillAura() {
   if (autoKillAura) {
     autoKillAura = false
@@ -350,18 +289,6 @@ function toggleKillAura() {
   }
 }
 
-function findNearestPlayer() {
-  const players = Object.values(bot.players)
-    .filter(player => player.entity && player.username !== bot.username)
-    .sort((a, b) => {
-      const distA = a.entity.position.distanceTo(bot.entity.position)
-      const distB = b.entity.position.distanceTo(bot.entity.position)
-      return distA - distB
-    })
-  
-  return players[0]?.entity || null
-}
-
 function toggleEscapeMode() {
   if (escapeMode) {
     escapeMode = false
@@ -377,6 +304,133 @@ function toggleEscapeMode() {
     bot.chat('🏃 Escape mode enabled - will flee from combat')
     logMessage('ANARCHY', 'Escape mode enabled')
   }
+}
+
+function revengeAttack() {
+  if (!lastAttacker) {
+    bot.chat('😤 No one to get revenge on!')
+    return
+  }
+  
+  const target = bot.players[lastAttacker]
+  if (!target || !target.entity) {
+    bot.chat(`😤 ${lastAttacker} is not online for revenge!`)
+    return
+  }
+  
+  bot.chat(`😤 Getting revenge on ${lastAttacker}!`)
+  attackPlayer(lastAttacker)
+}
+
+function findNearestPlayer() {
+  const players = Object.values(bot.players)
+    .filter(player => player.entity && player.username !== bot.username)
+    .sort((a, b) => {
+      const distA = a.entity.position.distanceTo(bot.entity.position)
+      const distB = b.entity.position.distanceTo(bot.entity.position)
+      return distA - distB
+    })
+  
+  return players[0]?.entity || null
+}
+
+function showCoords() {
+  const pos = bot.entity.position
+  const coords = `X: ${Math.floor(pos.x)}, Y: ${Math.floor(pos.y)}, Z: ${Math.floor(pos.z)}`
+  bot.chat(`📍 Coordinates: ${coords}`)
+  logMessage('INFO', `Shared coordinates: ${coords}`)
+}
+
+function showAnarchyHelp() {
+  const commands = [
+    '🔥 Iron-Anarchy Bot Commands:',
+    '!follow [player] - Follow a player',
+    '!stop - Stop all actions',
+    '!attack <player> - Attack a player',
+    '!guard - Toggle guard mode',
+    '!killaura - Toggle kill-aura mode',
+    '!escape - Toggle escape mode',
+    '!revenge - Attack last attacker',
+    '!collect <block> [amount] - Collect blocks',
+    '!come - Come to you',
+    '!health - Show health status',
+    '!inv - Show inventory',
+    '!status - Show bot status',
+    '!players - List online players',
+    '!coords - Show coordinates',
+    '!suicide - Kill bot',
+    '!help - Show this help'
+  ]
+  
+  commands.forEach((cmd, i) => {
+    setTimeout(() => bot.chat(cmd), i * 150)
+  })
+}
+
+// Enhanced functions for anarchy server
+function followPlayer(commander, targetName) {
+  const player = bot.players[targetName]
+  if (!player || !player.entity) {
+    bot.chat(`❌ Cannot find player: ${targetName}`)
+    return
+  }
+  
+  stopAllActions()
+  following = targetName
+  
+  const goal = new goals.GoalFollow(player.entity, 2)
+  bot.pathfinder.setGoal(goal)
+  bot.chat(`🏃 Following ${targetName} on Iron-Anarchy`)
+  logMessage('INFO', `Started following ${targetName}`)
+}
+
+function stopAllActions() {
+  bot.pathfinder.setGoal(null)
+  bot.pvp.stop()
+  following = null
+  isGuarding = false
+  autoKillAura = false
+  escapeMode = false
+  
+  if (guardInterval) {
+    clearInterval(guardInterval)
+    guardInterval = null
+  }
+  if (killAuraInterval) {
+    clearInterval(killAuraInterval)
+    killAuraInterval = null
+  }
+  
+  bot.chat('🛑 All actions stopped')
+  logMessage('INFO', 'Stopped all actions')
+}
+
+function attackPlayer(targetName) {
+  const target = bot.players[targetName]
+  if (!target || !target.entity) {
+    bot.chat(`❌ Cannot find player: ${targetName}`)
+    return
+  }
+  
+  if (escapeMode) {
+    bot.chat('🏃 Cannot attack in escape mode!')
+    return
+  }
+  
+  if (target.entity.position.distanceTo(bot.entity.position) > 6) {
+    // Move closer first
+    const goal = new goals.GoalNear(target.entity.position.x, target.entity.position.y, target.entity.position.z, 2)
+    bot.pathfinder.setGoal(goal)
+    
+    bot.once('goal_reached', () => {
+      bot.pvp.attack(target.entity)
+    })
+  } else {
+    bot.pvp.attack(target.entity)
+  }
+  
+  bot.chat(`⚔️ Attacking ${targetName} on Iron-Anarchy!`)
+  logMessage('PVP', `Started attacking ${targetName}`)
 }
 
 function toggleGuardMode() {
@@ -410,22 +464,6 @@ function toggleGuardMode() {
   }
 }
 
-function revengeAttack() {
-  if (!lastAttacker) {
-    bot.chat('😤 No one to get revenge on!')
-    return
-  }
-  
-  const target = bot.players[lastAttacker]
-  if (!target || !target.entity) {
-    bot.chat(`😤 ${lastAttacker} is not online for revenge!`)
-    return
-  }
-  
-  bot.chat(`😤 Getting revenge on ${lastAttacker}!`)
-  attackPlayer(lastAttacker)
-}
-
 function collectBlocks(blockName, amount) {
   const blocks = bot.findBlocks({
     matching: (block) => block.name === blockName,
@@ -441,6 +479,7 @@ function collectBlocks(blockName, amount) {
   bot.chat(`⛏️ Collecting ${blocks.length}x ${blockName} on Iron-Anarchy`)
   logMessage('INFO', `Started collecting ${blocks.length}x ${blockName}`)
   
+  // Collect blocks
   blocks.forEach((blockPos, index) => {
     setTimeout(() => {
       const block = bot.blockAt(blockPos)
@@ -495,7 +534,7 @@ function showStatus() {
   
   bot.chat(`📊 Status: ${status}`)
   bot.chat(`📍 Position: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)}`)
-  bot.chat(`👥 Players: ${Object.keys(bot.players).length}`)
+  bot.chat(`👥 Players online: ${Object.keys(bot.players).length}`)
 }
 
 function listPlayers() {
@@ -508,92 +547,58 @@ function listPlayers() {
   bot.chat(`👥 Iron-Anarchy players: ${players.join(', ')}`)
 }
 
-function showCoords() {
-  const pos = bot.entity.position
-  const coords = `X: ${Math.floor(pos.x)}, Y: ${Math.floor(pos.y)}, Z: ${Math.floor(pos.z)}`
-  bot.chat(`📍 Coordinates: ${coords}`)
-  logMessage('INFO', `Shared coordinates: ${coords}`)
+// Auto-reconnect for Iron-Anarchy
+let reconnectAttempts = 0
+const maxReconnectAttempts = 10
+
+// Helper function to safely load plugins with better error handling
+function loadPluginSafely(bot, plugin, pluginName) {
+  if (typeof plugin !== 'function') {
+    throw new Error(`Plugin ${pluginName} is not a function. Expected a function but got ${typeof plugin}. This may indicate a version mismatch or incorrect import.`)
+  }
+  bot.loadPlugin(plugin)
 }
 
-function showHelp() {
-  const commands = [
-    '🔥 Iron-Anarchy Bot Commands:',
-    '!follow [player] - Follow a player',
-    '!stop - Stop all actions',
-    '!attack <player> - Attack a player',
-    '!guard - Toggle guard mode',
-    '!killaura - Toggle kill-aura mode',
-    '!escape - Toggle escape mode',
-    '!revenge - Attack last attacker',
-    '!collect <block> [amount] - Collect blocks',
-    '!come - Come to you',
-    '!health - Show health status',
-    '!inv - Show inventory',
-    '!status - Show bot status',
-    '!players - List online players',
-    '!coords - Show coordinates',
-    '!plugins - Show plugin status',
-    '!help - Show this help'
-  ]
-  
-  commands.forEach((cmd, i) => {
-    setTimeout(() => bot.chat(cmd), i * 150)
-  })
+// Extract PVP plugin - handle both direct function export and { plugin } export
+let pvpPlugin
+if (typeof mineflayerPvp === 'function') {
+  pvpPlugin = mineflayerPvp
+} else if (mineflayerPvp.plugin && typeof mineflayerPvp.plugin === 'function') {
+  pvpPlugin = mineflayerPvp.plugin
+} else if (mineflayerPvp.default && typeof mineflayerPvp.default === 'function') {
+  pvpPlugin = mineflayerPvp.default
+} else {
+  throw new Error('mineflayer-pvp plugin could not be loaded. Expected a function export, { plugin } export, or { default } export.')
 }
-
-// Event handlers
-bot.on('playerJoined', (player) => {
-  logMessage('INFO', `Player joined: ${player.username}`)
-  bot.chat(`👋 Welcome to Iron-Anarchy, ${player.username}!`)
-})
-
-bot.on('playerLeft', (player) => {
-  logMessage('INFO', `Player left: ${player.username}`)
-})
-
-bot.on('entityHurt', (entity) => {
-  if (entity === bot.entity) {
-    logMessage('PVP', 'Bot took damage on Iron-Anarchy!', { 
-      health: bot.health,
-      food: bot.food,
-      position: bot.entity.position
-    })
-  }
-})
-
-bot.on('death', () => {
-  logMessage('PVP', 'Bot died on Iron-Anarchy!')
-  bot.chat('💀 I died! Respawning...')
-  
-  // Reset states
-  isGuarding = false
-  following = null
-  autoKillAura = false
-  escapeMode = false
-  
-  if (guardInterval) {
-    clearInterval(guardInterval)
-    guardInterval = null
-  }
-  if (killAuraInterval) {
-    clearInterval(killAuraInterval)
-    killAuraInterval = null
-  }
-})
-
-bot.on('respawn', () => {
-  logMessage('INFO', 'Bot respawned on Iron-Anarchy!')
-})
-
-bot.on('error', (err) => {
-  logMessage('ERROR', `Bot error: ${err.message}`)
-})
 
 bot.on('end', () => {
   logMessage('ERROR', 'Disconnected from Iron-Anarchy')
+  
+  if (reconnectAttempts < maxReconnectAttempts) {
+    const delay = Math.min(5000 * Math.pow(2, reconnectAttempts), 30000)
+    reconnectAttempts++
+    
+    logMessage('INFO', `Reconnecting to Iron-Anarchy in ${delay/1000}s... (${reconnectAttempts}/${maxReconnectAttempts})`)
+    
+    setTimeout(() => {
+      const newBot = mineflayer.createBot({
+        host: config.server.host,
+        port: config.server.port,
+        username: config.bot.username,
+        version: config.server.version,
+        auth: config.bot.auth
+      })
+    }, delay)
+  } else {
+    logMessage('ERROR', 'Max reconnection attempts reached for Iron-Anarchy')
+  }
 })
 
-logMessage('ANARCHY', '🔥 Iron-Anarchy PvP Bot starting...', {
+bot.on('spawn', () => {
+  reconnectAttempts = 0
+})
+
+logMessage('ANARCHY', '🔥 Iron-Anarchy PvP Bot connecting...', {
   host: config.server.host,
   port: config.server.port,
   username: config.bot.username,
