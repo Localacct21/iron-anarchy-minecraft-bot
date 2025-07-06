@@ -1,41 +1,101 @@
-# Security Policy
+# 🔒 Security Policy
 
-## Supported Versions
+## 🛡️ Supported Versions
 
-We currently support the following versions with security updates:
+We actively support the following versions with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.x   | :white_check_mark: |
-| 1.x.x   | :x:                |
+| 2.0.x   | ✅ Yes             |
+| 1.x.x   | ❌ No              |
 
-## Reporting a Vulnerability
+## 🚨 Reporting a Vulnerability
 
-If you discover a security vulnerability, please report it responsibly:
+If you discover a security vulnerability, please follow these steps:
 
-1. **Do NOT** open a public issue
-2. Email us directly at: <localacct@ironanarchy.lol>
-3. Include:
-   - Description of the vulnerability
-   - Steps to reproduce
-   - Potential impact
-   - Any suggested fixes
+### 📧 Contact Information
 
-## Response Timeline
+- **Email**: [localacct@ironanarchy.lol](mailto:localacct@ironanarchy.lol)
+- **Subject**: "Security Vulnerability Report - Iron Anarchy Bot"
 
-- We aim to acknowledge security reports within 48 hours
-- We will provide a detailed response within 7 days
-- Security fixes will be prioritized and released as soon as possible
+### 📝 What to Include
 
-## Security Best Practices
+Please include the following information:
 
-When using this bot:
+1. **Description** of the vulnerability
+2. **Steps to reproduce** the issue
+3. **Potential impact** assessment
+4. **Suggested fix** (if available)
+5. **Your contact information** for follow-up
 
-- Keep your Minecraft credentials secure
-- Use environment variables for sensitive data
-- Regularly update to the latest version
-- Monitor bot logs for unusual activity
-- Use strong Discord bot tokens
-- Limit bot permissions to necessary channels only
+### ⏰ Response Timeline
 
-Thank you for helping keep our project secure!
+- **Initial Response**: Within 24 hours
+- **Vulnerability Assessment**: Within 72 hours
+- **Fix Development**: Within 7 days (for critical issues)
+- **Release**: Within 14 days
+
+### 🔐 Security Measures
+
+Our security practices include:
+
+- **Automated Security Scanning** via CodeQL
+- **Dependency Vulnerability Scanning** 
+- **Container Security** with non-root users
+- **Regular Security Updates**
+- **Secure Coding Practices**
+
+### 🏆 Recognition
+
+Security researchers who responsibly disclose vulnerabilities will be:
+
+- **Credited** in release notes (with permission)
+- **Listed** in our security acknowledgments
+- **Thanked** publicly (unless anonymity requested)
+
+## 🛠️ Security Best Practices
+
+When using the Iron Anarchy Minecraft Bot:
+
+### 🔒 Authentication
+- Use strong, unique passwords
+- Enable 2FA where possible
+- Rotate credentials regularly
+
+### 🐳 Container Security
+```bash
+# Run with security constraints
+docker run --security-opt=no-new-privileges:true \
+  --read-only --tmpfs /tmp \
+  --user 1001:1001 \
+  ghcr.io/localacct21/iron-anarchy-minecraft-bot:latest
+```
+
+### 🌐 Network Security
+- Use firewalls to restrict access
+- Enable TLS/SSL where possible
+- Monitor network traffic
+
+### 📊 Monitoring
+- Enable audit logging
+- Monitor for suspicious activity
+- Set up alerts for security events
+
+## 🔄 Security Updates
+
+Security updates are released as:
+
+- **Patch releases** for minor issues
+- **Minor releases** for moderate issues  
+- **Emergency releases** for critical issues
+
+Subscribe to [GitHub Releases](https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases) for notifications.
+
+## 🤝 Security Community
+
+Join our security community:
+
+- [GitHub Security Advisories](https://github.com/Localacct21/iron-anarchy-minecraft-bot/security/advisories)
+- [Security Discussions](https://github.com/Localacct21/iron-anarchy-minecraft-bot/discussions/categories/security)
+
+Thank you for helping keep Iron Anarchy Minecraft Bot secure! 🛡️
