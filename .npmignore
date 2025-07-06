@@ -1,0 +1,35 @@
+# Git files
+.git/
+.gitignore
+
+# Test files and coverage
+coverage/
+*.log
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Recordings and temporary files
+recordings/
+*.tmp
+*.temp
+
+# Environment and config files (keep examples)
+.env
+config.json
+discord-config.json
+
+# Node modules (already excluded by default)
+node_modules/
+
+# Build artifacts
+dist/
+build/

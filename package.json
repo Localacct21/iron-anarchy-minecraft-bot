@@ -1,20 +1,58 @@
 {
   "name": "iron-anarchy-minecraft-bot",
   "version": "2.0.0",
-  "description": "Enhanced Iron-Anarchy Minecraft Bot with Discord Integration and Recording Features",
+  "description": "Enhanced Iron-Anarchy Minecraft Bot with Discord Integration, Recording Features, and Web Dashboard",
   "main": "enhanced-ironanarchy-bot.js",
+  "bin": {
+    "iron-anarchy-bot": "./ironanarchy-bot.js"
+  },
   "scripts": {
     "start": "node ironanarchy-bot.js",
     "enhanced": "node enhanced-ironanarchy-bot.js",
     "test": "node tests/run-all-tests.js",
     "test:plugin": "node tests/plugin-loader-simple.test.js",
-    "test:discord": "node tests/discord-integration-simple.test.js", 
+    "test:discord": "node tests/discord-integration-simple.test.js",
     "basic": "node bot.js",
     "advanced": "node advanced-bot.js"
   },
-  "keywords": ["minecraft", "bot", "pvp", "iron-anarchy", "discord", "recording", "dashboard"],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "minecraft",
+    "bot",
+    "pvp",
+    "iron-anarchy",
+    "discord",
+    "recording",
+    "dashboard",
+    "automation",
+    "mineflayer",
+    "gaming"
+  ],
+  "author": {
+    "name": "Localacct21",
+    "url": "https://github.com/Localacct21"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Localacct21/iron-anarchy-minecraft-bot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Localacct21/iron-anarchy-minecraft-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "*.js",
+    "plugins/",
+    "tests/",
+    "config.json.example",
+    "discord-config.json.example",
+    "README.md",
+    "FINALIZATION_SUMMARY.md",
+    "package.json"
+  ],
   "type": "commonjs",
   "dependencies": {
     "discord.js": "^14.17.2",
