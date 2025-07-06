@@ -4,7 +4,7 @@
   "description": "Enhanced Iron-Anarchy Minecraft Bot with Discord Integration, Recording Features, and Web Dashboard",
   "main": "enhanced-ironanarchy-bot.js",
   "bin": {
-    "iron-anarchy-bot": "ironanarchy-bot.js"
+    "iron-anarchy-bot": "./ironanarchy-bot.js"
   },
   "scripts": {
     "start": "node ironanarchy-bot.js",
@@ -29,6 +29,7 @@
   ],
   "author": {
     "name": "Localacct21",
+    "email": "localacct@ironanarchy.lol",
     "url": "https://github.com/Localacct21"
   },
   "license": "MIT",
