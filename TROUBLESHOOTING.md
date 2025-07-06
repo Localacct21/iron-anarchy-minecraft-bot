@@ -88,3 +88,85 @@ Check log files for detailed error information:
 tail -f logs/bot.log
 tail -f logs/error.log
 ```
+
+## ESM-Related Issues
+
+### ESM Module Loading Errors
+
+**Issue**: Cannot load ESM-only plugins
+```
+Error [ERR_REQUIRE_ESM]: require() of ES modules is not supported
+```
+
+**Solutions**:
+1. Use ESM-compatible bot files:
+   ```bash
+   npm run basic           # Basic ESM-compatible bot
+   npm run enhanced        # Enhanced ESM-compatible bot
+   ```
+2. Verify Node.js version (14.0.0+ required):
+   ```bash
+   node --version
+   ```
+3. Test ESM plugin loading:
+   ```bash
+   node -e "import('mineflayer-auto-eat').then(console.log).catch(console.error)"
+   ```
+
+### Plugin Compatibility Issues
+
+**Issue**: Mixed CommonJS and ESM plugins
+```
+TypeError: plugin is not a function
+```
+
+**Solutions**:
+1. Use fixed bot files that handle both types
+2. Check plugin export patterns:
+   ```javascript
+   const plugin = module.default || module.plugin || module
+   ```
+3. Verify plugin versions:
+   ```bash
+   npm list | grep mineflayer
+   ```
+
+### Dynamic Import Failures
+
+**Issue**: Dynamic imports not working
+```
+SyntaxError: Unexpected token '('
+```
+
+**Solutions**:
+1. Update Node.js to 14.0.0+
+2. Use async/await properly:
+   ```javascript
+   async function loadPlugin() {
+     const module = await import('plugin-name')
+     return module.default
+   }
+   ```
+
+## ESM Diagnostic Commands
+
+```bash
+# Test ESM support
+node -e "console.log(typeof import)"
+
+# Test specific ESM plugin
+node -e "import('mineflayer-auto-eat').then(m => console.log('✅ ESM works')).catch(console.error)"
+
+# Run ESM compatibility test
+npm run test:esm
+
+# Check bot with ESM support
+npm run basic
+```
+
+## ESM Resources
+
+- [ESM Compatibility Guide](wiki/guides/ESM-Compatibility-Guide.md)
+- [ESM Troubleshooting Guide](wiki/guides/ESM-Troubleshooting-Guide.md)
+- [Fixed Bot Files Guide](wiki/guides/Fixed-Bot-Files-Guide.md)
+- [Migration Guide](wiki/guides/Migration-Guide.md)

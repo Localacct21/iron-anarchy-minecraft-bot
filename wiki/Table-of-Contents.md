@@ -14,8 +14,16 @@
 ### Getting Started
 
 - [[Installation]] - Step-by-step installation instructions
+- [[Installation ESM]] - ESM-compatible installation guide
 - [[Quick Start]] - Get running in 5 minutes
 - [[Configuration]] - Complete configuration guide
+
+### ESM Compatibility (NEW)
+
+- [[ESM Compatibility Guide]] - Complete ESM module compatibility guide
+- [[ESM Troubleshooting Guide]] - ESM-specific troubleshooting
+- [[Fixed Bot Files Guide]] - Guide to ESM-compatible bot files
+- [[Migration Guide]] - Upgrading to ESM-compatible version
 
 ### Usage Documentation
 
@@ -43,6 +51,7 @@
 - [[Build Process]] - Build system and deployment
 - [[Code Style]] - Coding standards and conventions
 - [[Ci Cd]] - Continuous integration and deployment
+- [[Plugin Development]] - Creating custom plugins with ESM support
 
 ---
 
@@ -62,6 +71,7 @@
 - [[Database]] - Database structure and queries
 - [[Network]] - Minecraft protocol implementation
 - [[Metrics]] - Performance metrics and monitoring
+- [[ESM Module Support]] - ESM compatibility reference
 
 ---
 
@@ -72,6 +82,7 @@
 ### Problem Resolution
 
 - [[Common Issues]] - Frequently encountered problems
+- [[ESM Troubleshooting Guide]] - ESM-specific issues and solutions
 - [[Error Codes]] - Complete error code reference
 - [[Performance]] - Performance tuning guide
 - [[Debug Mode]] - Debugging and diagnostics
@@ -80,6 +91,7 @@
 
 - [[Logs]] - Understanding and analyzing logs
 - [[Health Checks]] - System health monitoring
+- [[Fixed Bot Files Guide]] - ESM-compatible bot files
 
 ---
 
@@ -98,19 +110,41 @@
 - [[Release Notes]] - Version history and changes
 - [[Contributors]] - Project contributors and acknowledgments
 - [[Feature Requests]] - Requesting new features
+- [[Migration Guide]] - Upgrading between versions
+
+---
+
+## 🆕 What's New in v2.0.4+
+
+### ESM Compatibility Features
+
+- ✅ **ESM Module Support**: Full support for ES Module packages
+- ✅ **Fixed Bot Files**: ESM-compatible bot implementations
+- ✅ **Dynamic Imports**: Graceful loading of ESM and CommonJS modules
+- ✅ **Migration Tools**: Easy upgrade from previous versions
+- ✅ **Troubleshooting**: Comprehensive ESM debugging guides
+
+### New Documentation
+
+- **ESM Compatibility Guide**: Complete ESM implementation guide
+- **ESM Troubleshooting**: ESM-specific problem solving
+- **Fixed Bot Files Guide**: When and how to use ESM-compatible bots
+- **Migration Guide**: Step-by-step upgrade instructions
+- **Enhanced Installation**: Updated installation with ESM support
 
 ---
 
 ## 📊 Documentation Statistics
 
 | Section | Pages | Status |
-|---------|-------|--------|
-| Guides | 8 | 🔄 In Progress |
-| Developer | 7 | 🔄 In Progress |
-| Reference | 7 | 🔄 In Progress |
-| Troubleshooting | 6 | 🔄 In Progress |
+|---------|-------|-----------|
+| Guides | 12 | ✅ Complete |
+| ESM Docs | 4 | ✅ Complete |
+| Developer | 8 | 🔄 In Progress |
+| Reference | 8 | 🔄 In Progress |
+| Troubleshooting | 8 | ✅ Complete |
 | Community | 6 | 🔄 In Progress |
-| **Total** | **34** | **🔄 In Progress** |
+| **Total** | **46** | **🔄 In Progress** |
 
 ## 🔍 Search Tips
 
@@ -118,10 +152,28 @@
 - Each section is color-coded with emojis
 - Cross-references are provided throughout
 - Use GitHub's built-in search for specific topics
+- ESM-related content is marked with 🟢
+
+## 🆘 Quick Help
+
+### For Installation Issues
+1. Check [Installation ESM](./guides/Installation-ESM.md)
+2. Review [ESM Compatibility Guide](./guides/ESM-Compatibility-Guide.md)
+3. Try [ESM Troubleshooting](./guides/ESM-Troubleshooting-Guide.md)
+
+### For Plugin Problems
+1. Check [Fixed Bot Files Guide](./guides/Fixed-Bot-Files-Guide.md)
+2. Review [ESM Troubleshooting](./guides/ESM-Troubleshooting-Guide.md)
+3. Use `npm run basic` for ESM-compatible bot
+
+### For Migration
+1. Follow [Migration Guide](./guides/Migration-Guide.md)
+2. Test with [Fixed Bot Files](./guides/Fixed-Bot-Files-Guide.md)
+3. Get help from [ESM Troubleshooting](./guides/ESM-Troubleshooting-Guide.md)
 
 ---
 
-*Last Updated: $(date +%Y-%m-%d) | Iron-Anarchy Minecraft Bot v2.0.2*
+*Last Updated: 2024-12-19 | Iron-Anarchy Minecraft Bot v2.0.4+*
 
 ---
 

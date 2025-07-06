@@ -1,175 +1,177 @@
-# 🎮 Welcome to Iron-Anarchy Minecraft Bot
+# 🏠 Iron-Anarchy Minecraft Bot Wiki
 
-<div align="center">
+Welcome to the comprehensive documentation for the Iron-Anarchy Minecraft Bot - an enterprise-grade Minecraft automation solution with full ESM compatibility.
 
-![Iron-Anarchy Bot](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Iron-Anarchy%20Bot&fontSize=35&fontAlignY=35)
+## 🆕 Latest Updates (v2.0.4+)
 
-[![npm version](https://badge.fury.io/js/iron-anarchy-minecraft-bot.svg)](https://www.npmjs.com/package/iron-anarchy-minecraft-bot)
-[![GitHub release](https://img.shields.io/github/release/Localacct21/iron-anarchy-minecraft-bot.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/npm/dt/iron-anarchy-minecraft-bot.svg)](https://www.npmjs.com/package/iron-anarchy-minecraft-bot)
-[![GitHub stars](https://img.shields.io/github/stars/Localacct21/iron-anarchy-minecraft-bot?style=social)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
-[![Discord](https://img.shields.io/discord/KteVHS4nne)](https://discord.gg/KteVHS4nne)
+### ✨ ESM Compatibility Now Available!
+The bot now fully supports ES Module (ESM) packages, ensuring compatibility with modern npm packages while maintaining backward compatibility with CommonJS modules.
 
-**🏆 Enterprise-grade Minecraft automation solution built by a 25-year IT veteran**
-
-</div>
-
----
-
-## 🌟 Project Overview
-
-**Iron-Anarchy Minecraft Bot** is a professional automation solution that brings enterprise-level functionality to Minecraft gameplay. Built by an experienced IT professional with 25 years of experience managing live gaming servers, this bot combines advanced AI capabilities with robust production-ready features.
-
-### 🎯 Why Iron-Anarchy Bot?
-
-- **🏢 Enterprise Heritage**: Built by IT professionals with decades of experience
-- **📊 Production Tested**: Running on live servers with 99.9% uptime
-- **🚀 Easy Setup**: Get started in under 30 seconds
-- **🔧 Highly Configurable**: Extensive customization for any use case
-- **🤝 Community Driven**: Active development with regular updates
-
----
-
-## 📚 Documentation Table of Contents
-
-### 🚀 Getting Started
-- [Quick Start Guide](guides/Quick-Start.md) - Get up and running in minutes
-- [Installation Guide](guides/Installation.md) - Comprehensive installation instructions
-- [NPM Installation Guide](guides/Npm-Installation-Guide.md) - Package manager setup
-- [Deployment Status](guides/Deployment-Status.md) - Current deployment information
-
-### 👥 User Documentation
-- [User Guide](User-Guide.md) - Complete user manual
-- [Usage Examples](Usage-Examples.md) - Practical examples and tutorials
-- [Instructions](Instructions.md) - Step-by-step usage instructions
-- [Features Overview](Features-Overview.md) - Complete feature listing
-- [Enhanced Features](Enhanced-Features.md) - Advanced functionality guide
-
-### 🔧 Technical Documentation
-- [API Reference](developer/API-Reference.md) - Complete API documentation
-- [Architecture Summary](developer/Architecture-Summary.md) - System architecture overview
-- [Developer Architecture](community/Developer-Architecture.md) - Technical architecture details
-- [Plugin Types](Plugin-Types.md) - Available plugin types
-- [Discord Integration Guide](Discord-Integration-Guide.md) - Discord bot integration
-
-### 📖 Reference Materials
-- [Command Reference](reference/Command-Reference.md) - All available commands
-- [Commands](reference/Commands.md) - Command usage guide
-- [Documentation Index](Documentation-Index.md) - Searchable documentation index
-- [Table of Contents](Table-of-Contents.md) - Structured content navigation
-
-### 🛠️ Troubleshooting
-- [Troubleshooting Guide](troubleshooting/Troubleshooting-Guide.md) - Common issues and solutions
-- [Common Issues](troubleshooting/Common-Issues.md) - Frequently encountered problems
-- [Issues Found](troubleshooting/Issues-Found.md) - Known issues and workarounds
-
-### 📊 Reports & Analysis
-- [Feature Test Report](Feature-Test-Report.md) - Test results and coverage
-- [Dashboard Test Results](Dashboard-Test-Results.md) - Dashboard functionality tests
-- [Plugin Audit Summary](Plugin-Audit-Summary.md) - Plugin security audit
-- [PVP Plugin Analysis](Pvp-Plugin-Analysis.md) - PVP functionality analysis
-- [Recording Validation Report](Recording-Validation-Report.md) - Recording feature validation
-
-### 🏗️ Development & Architecture
-- [Architecture](developer/Architecture.md) - Detailed architecture documentation
-- [Typedef Implementation Summary](Typedef-Implementation-Summary.md) - Type definitions
-- [Deprecation Fixes Summary](Deprecation-Fixes-Summary.md) - Deprecation handling
-- [Finalization Summary](Finalization-Summary.md) - Project completion status
-
-### 📈 Project Management
-- [Changelog](Changelog.md) - Version history and changes
-- [Release Notes V2.0.2](Release-Notes-V2.0.2.md) - Latest release information
-- [Wiki Coverage Gap Report](Wiki-Coverage-Gap-Report.md) - Documentation coverage analysis
-- [Final Wiki Coverage Gap Report](Final-Wiki-Coverage-Gap-Report.md) - Final coverage analysis
-- [WIKI Structure](WIKI_STRUCTURE.md) - Documentation organization
-
-### 🌐 Distribution & Packages
-- [GitHub Packages](Github-Packages.md) - Package distribution information
-
-### 🤝 Community & Guidelines
-- [Contributing](community/Contributing.md) - How to contribute to the project
-- [Code of Conduct](Code-Of-Conduct.md) - Community guidelines
-- [Security](Security.md) - Security policies and reporting
-
-### 📋 Navigation & Utilities
-- [Sidebar](_Sidebar.md) - Wiki navigation sidebar
-- [README](README.md) - Project overview and setup
-- [Readme](Readme.md) - Alternative readme file
-
----
-
-## 🚀 Quick Installation
-
-### ⚡ NPM Registry (Recommended)
-
+**🚀 Quick Start with ESM:**
 ```bash
-npm install -g iron-anarchy-minecraft-bot
-npm run setup
-npm start
+git clone https://github.com/Localacct21/iron-anarchy-minecraft-bot.git
+cd iron-anarchy-minecraft-bot
+npm install
+npm run basic  # ESM-compatible bot
 ```
 
-### 🐙 GitHub Registry
+## 📚 Documentation Sections
 
+### 🎯 New Users Start Here
+
+#### Essential Guides
+- **[📖 Installation Guide](guides/Installation-ESM.md)** - Complete setup with ESM support
+- **[🚀 Quick Start](guides/Quick-Start.md)** - Get running in 5 minutes
+- **[⚙️ Configuration](../CONFIGURATION.md)** - Configure your bot
+
+#### ESM Compatibility (NEW)
+- **[🔧 ESM Compatibility Guide](guides/ESM-Compatibility-Guide.md)** - Understanding ESM support
+- **[🤖 Fixed Bot Files Guide](guides/Fixed-Bot-Files-Guide.md)** - When to use ESM-compatible bots
+- **[🔄 Migration Guide](guides/Migration-Guide.md)** - Upgrade from older versions
+
+### 🛠️ For Developers
+
+#### Development Resources
+- **[💻 API Reference](developer/API-Reference.md)** - Complete API documentation
+- **[🏗️ Architecture](developer/Architecture.md)** - System architecture overview
+- **[🤝 Contributing](community/Contributing.md)** - How to contribute
+
+#### Plugin Development
+- **[🔌 Plugin Types](Plugin-Types.md)** - Available plugin types
+- **[📦 Plugin API](developer/Plugin-API.md)** - Plugin development API
+- **[🧪 Testing](../tests/)** - Testing your plugins
+
+### 🔧 Troubleshooting & Support
+
+#### Problem Resolution
+- **[🐛 ESM Troubleshooting](guides/ESM-Troubleshooting-Guide.md)** - ESM-specific issues
+- **[🔧 General Troubleshooting](../TROUBLESHOOTING.md)** - Common issues and solutions
+- **[📊 Performance](guides/Performance-Guide.md)** - Optimization tips
+
+#### System Administration
+- **[📝 Logs](guides/Logs-Guide.md)** - Understanding bot logs
+- **[❤️ Health Checks](guides/Health-Checks.md)** - Monitoring bot health
+
+## 🎯 Popular Topics
+
+### Most Accessed Pages
+1. **[ESM Compatibility Guide](guides/ESM-Compatibility-Guide.md)** - New ESM support
+2. **[Installation Guide](guides/Installation-ESM.md)** - Setup instructions
+3. **[Fixed Bot Files Guide](guides/Fixed-Bot-Files-Guide.md)** - ESM-compatible bots
+4. **[Troubleshooting](../TROUBLESHOOTING.md)** - Problem solving
+5. **[Configuration](../CONFIGURATION.md)** - Bot configuration
+
+### Quick Actions
+- 🚀 **[Start Bot Now](guides/Quick-Start.md)** - 5-minute setup
+- 🔧 **[Fix ESM Issues](guides/ESM-Troubleshooting-Guide.md)** - ESM problems
+- 📱 **[Discord Setup](guides/Discord-Integration.md)** - Discord bot
+- 🐳 **[Docker Deploy](guides/Docker-Deployment.md)** - Container setup
+
+## 🆘 Need Help?
+
+### Quick Solutions
+- **ESM Module Issues?** → [ESM Troubleshooting Guide](guides/ESM-Troubleshooting-Guide.md)
+- **Installation Problems?** → [Installation Guide](guides/Installation-ESM.md)
+- **Plugin Not Loading?** → [Fixed Bot Files Guide](guides/Fixed-Bot-Files-Guide.md)
+- **General Issues?** → [Troubleshooting](../TROUBLESHOOTING.md)
+
+### Test Commands
 ```bash
-npm config set @localacct21:registry https://npm.pkg.github.com
-npm install -g @localacct21/iron-anarchy-minecraft-bot
+# Test ESM compatibility
+npm run test:esm
+
+# Start ESM-compatible bot
+npm run basic
+
+# Validate configuration
+npm run validate
+
+# Run diagnostics
+npm run test:startup
 ```
 
-### 🎯 Try Without Installing
+### Community Support
+- **GitHub Issues**: [Report bugs](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
+- **Discord Community**: Join our Discord server
+- **Email Support**: localacct@ironanarchy.lol
 
-```bash
-npx iron-anarchy-minecraft-bot --demo
-```
+## 🗺️ Site Navigation
+
+### Core Documentation
+- [📖 Table of Contents](Table-of-Contents.md) - Complete documentation index
+- [🏗️ Project Structure](../STRUCTURE.md) - Code organization
+- [📊 Features Overview](Features-Overview.md) - What the bot can do
+
+### Technical References
+- [🔌 Plugin Types](Plugin-Types.md) - Available plugins
+- [⚙️ Configuration Options](../CONFIGURATION.md) - All settings
+- [📝 API Documentation](developer/API-Reference.md) - Developer API
+
+### Community Resources
+- [🤝 Contributing Guidelines](community/Contributing.md) - How to help
+- [🔒 Security Policy](../SECURITY.md) - Security reporting
+- [📜 Code of Conduct](../CODE_OF_CONDUCT.md) - Community rules
+
+## 🔍 Search Tips
+
+- Use **Ctrl+F** to search within pages
+- Check the **[Table of Contents](Table-of-Contents.md)** for all pages
+- Use **GitHub's search** for specific topics
+- **ESM-related content** is marked with 🟢
+
+## 📊 Quick Stats
+
+| Metric | Value |
+|--------|-------|
+| **Documentation Pages** | 46+ |
+| **ESM Guides** | 4 |
+| **Code Examples** | 100+ |
+| **Supported Plugins** | 15+ |
+| **Node.js Versions** | 14.0.0+ |
+
+## 🆕 What's New
+
+### v2.0.4 Highlights
+- ✅ **Full ESM Support** - Compatible with modern ES Module packages
+- ✅ **Fixed Bot Files** - Ready-to-use ESM-compatible implementations
+- ✅ **Migration Tools** - Easy upgrade from previous versions
+- ✅ **Enhanced Documentation** - Comprehensive ESM guides
+
+### Recent Additions
+- **ESM Compatibility Guide** - Complete implementation guide
+- **Fixed Bot Files Guide** - When and how to use ESM bots
+- **Migration Guide** - Step-by-step upgrade instructions
+- **ESM Troubleshooting** - ESM-specific problem solving
+
+## 🎯 Getting Started Checklist
+
+### For New Users
+- [ ] Read [Installation Guide](guides/Installation-ESM.md)
+- [ ] Configure bot with [Configuration Guide](../CONFIGURATION.md)
+- [ ] Start with `npm run basic`
+- [ ] Test ESM compatibility with `npm run test:esm`
+- [ ] Join Discord community for support
+
+### For Upgrading Users
+- [ ] Review [Migration Guide](guides/Migration-Guide.md)
+- [ ] Backup current configuration
+- [ ] Test with [Fixed Bot Files](guides/Fixed-Bot-Files-Guide.md)
+- [ ] Update to latest version
+- [ ] Verify ESM compatibility
+
+### For Developers
+- [ ] Check [ESM Compatibility Guide](guides/ESM-Compatibility-Guide.md)
+- [ ] Review [Plugin Development](developer/Plugin-Development.md)
+- [ ] Test with ESM modules
+- [ ] Update to dynamic imports
+- [ ] Submit pull requests
 
 ---
 
-## 🔥 Key Features
+**Welcome to the Iron-Anarchy community! 🎮**
 
-### 🤖 Advanced AI Systems
-- **Smart Pathfinding**: Advanced A* algorithm with dynamic obstacle avoidance
-- **Combat AI**: Intelligent PvP strategies with situational awareness
-- **Resource Management**: Automated inventory optimization and item sorting
-- **Adaptive Behavior**: Machine learning-based gameplay improvements
-
-### 💬 Real-Time Communication
-- **Discord Integration**: Full-featured Discord bot with server status
-- **Live Chat**: Real-time communication with server players
-- **Event Notifications**: Instant alerts for important game events
-- **Voice Commands**: Optional voice control integration
-
-### 📊 Professional Logging
-- **Comprehensive Analytics**: Track performance metrics and gameplay statistics
-- **Error Tracking**: Advanced error monitoring with stack traces
-- **Performance Monitoring**: Real-time resource usage tracking
-- **Audit Trails**: Complete activity logging for compliance
-
-### 🌐 Live Monitoring
-- **Web Dashboard**: Real-time monitoring interface
-- **Mobile Support**: Responsive design for mobile management
-- **API Access**: RESTful API for third-party integrations
-- **Alerts System**: Configurable notification system
+*Professional Minecraft automation for the modern age*
 
 ---
 
-## 📞 Support & Community
-
-- **💬 Discord**: [Join our community](https://discord.gg/KteVHS4nne)
-- **📧 Email**: localacct@ironanarchy.lol
-- **🐛 Issues**: [GitHub Issues](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
-- **📖 Wiki**: Complete documentation available here
-- **🎥 Tutorials**: Video guides on our YouTube channel
-
----
-
-## 📄 License & Legal
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-**Built with ❤️ by IT professionals with 25+ years of experience**
-
----
-
-*Last Updated: 2024-07-06*
-
-[🔝 Back to Top](#-welcome-to-iron-anarchy-minecraft-bot)
+[📖 Browse All Documentation](Table-of-Contents.md) | [🚀 Quick Start](guides/Quick-Start.md) | [🔧 ESM Guide](guides/ESM-Compatibility-Guide.md)
