@@ -1,11 +1,10 @@
 const mineflayer = require('mineflayer')
-const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+const { pathfinder, Movements } = require('mineflayer-pathfinder')
 const mineflayerPvp = require('mineflayer-pvp')
 const armorManager = require('mineflayer-armor-manager')
 const bloodhound = require('mineflayer-bloodhound')
 const webInventory = require('mineflayer-web-inventory')
 const fs = require('fs-extra')
-const moment = require('moment')
 
 // Load configuration
 const config = require('../../config/config.json')
