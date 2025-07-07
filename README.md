@@ -1,44 +1,61 @@
-# 🤖 Iron-Anarchy Minecraft Bot
+# 🏠 Iron-Anarchy Minecraft Bot
 
 [![Version](https://img.shields.io/npm/v/@localacct/iron-anarchy-minecraft-bot.svg)](https://www.npmjs.com/package/@localacct/iron-anarchy-minecraft-bot)
 [![License](https://img.shields.io/github/license/Localacct21/iron-anarchy-minecraft-bot.svg)](LICENSE)
 [![Node.js](https://img.shields.io/node/v/@localacct/iron-anarchy-minecraft-bot.svg)](package.json)
-[![ESM Compatible](https://img.shields.io/badge/ESM-Compatible-brightgreen.svg)](wiki/guides/ESM-Compatibility-Guide.md)
+[![ESM Compatible](https://img.shields.io/badge/ESM-Compatible-brightgreen.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Compatibility-Guide)
 
-**Enterprise-grade Minecraft automation bot with full ESM compatibility, Discord integration, recording features, and web dashboard. Built by a 25-year IT veteran currently managing live gaming servers.**
+**Enterprise-grade Minecraft automation solution with full ESM compatibility, Discord integration, and comprehensive documentation.**
 
-## 🆕 What's New in v2.0.4+
+## 🆕 Latest Updates (v2.0.4+)
 
-### ✨ ESM Compatibility
-- **Full ESM Support**: Compatible with modern ES Module packages
-- **Fixed Bot Files**: ESM-compatible bot implementations ready to use
-- **Dynamic Loading**: Graceful handling of both CommonJS and ESM modules
-- **Migration Tools**: Easy upgrade from previous versions
+### ✨ ESM Compatibility Now Available!
+The bot now fully supports ES Module (ESM) packages, ensuring compatibility with modern npm packages while maintaining backward compatibility with CommonJS modules.
 
-### 🚀 Quick Start with ESM
-
+**🚀 Quick Start with ESM:**
 ```bash
-# Clone and install
 git clone https://github.com/Localacct21/iron-anarchy-minecraft-bot.git
 cd iron-anarchy-minecraft-bot
 npm install
-
-# Start with ESM support (recommended)
-npm run basic
+npm run basic  # ESM-compatible bot
 ```
 
-## 📋 Table of Contents
+## 📚 Documentation
 
-- [🎯 Features](#-features)
-- [🛠️ Installation](#️-installation)
-- [🚀 Quick Start](#-quick-start)
-- [🤖 Bot Types](#-bot-types)
-- [🔧 ESM Compatibility](#-esm-compatibility)
-- [⚙️ Configuration](#️-configuration)
-- [💻 Usage](#-usage)
-- [📊 Monitoring](#-monitoring)
-- [🐛 Troubleshooting](#-troubleshooting)
-- [📚 Documentation](#-documentation)
+### 🎯 New Users Start Here
+
+#### Essential Guides
+- **[📖 Installation Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Installation-ESM)** - Complete setup with ESM support
+- **[🚀 Quick Start](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Quick-Start)** - Get running in 5 minutes
+- **[⚙️ Configuration](CONFIGURATION.md)** - Configure your bot
+
+#### ESM Compatibility (NEW)
+- **[🔧 ESM Compatibility Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Compatibility-Guide)** - Understanding ESM support
+- **[🤖 Fixed Bot Files Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Fixed-Bot-Files-Guide)** - When to use ESM-compatible bots
+- **[🔄 Migration Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Migration-Guide)** - Upgrade from older versions
+
+### 🛠️ For Developers
+
+#### Development Resources
+- **[💻 API Reference](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/API-Reference)** - Complete API documentation
+- **[🏗️ Architecture](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Architecture)** - System architecture overview
+- **[🤝 Contributing](CONTRIBUTING.md)** - How to contribute
+
+#### Plugin Development
+- **[🔌 Plugin Types](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Plugin-Types)** - Available plugin types
+- **[📦 Plugin API](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Plugin-Api)** - Plugin development API
+- **[🧪 Testing](tests/)** - Testing your plugins
+
+### 🔧 Troubleshooting & Support
+
+#### Problem Resolution
+- **[🐛 ESM Troubleshooting](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Troubleshooting-Guide)** - ESM-specific issues
+- **[🔧 General Troubleshooting](TROUBLESHOOTING.md)** - Common issues and solutions
+- **[📊 Performance](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Performance)** - Optimization tips
+
+#### System Administration
+- **[📝 Logs](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Logs)** - Understanding bot logs
+- **[❤️ Health Checks](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Health-Checks)** - Monitoring bot health
 
 ## 🎯 Features
 
@@ -64,14 +81,6 @@ npm run basic
 - ✅ **Screenshot capture** for visual monitoring
 - ✅ **Comprehensive logging** with configurable log levels
 - ✅ **Health monitoring** and automatic recovery systems
-
-### Enterprise Features
-- ✅ **Docker support** with multi-architecture containers
-- ✅ **Environment-based configuration** for different deployment scenarios
-- ✅ **Plugin system** with hot-loading capabilities
-- ✅ **Performance monitoring** with memory and CPU tracking
-- ✅ **Error recovery** and automatic reconnection
-- ✅ **Security features** with authentication and access controls
 
 ## 🛠️ Installation
 
@@ -107,7 +116,7 @@ docker run -d --name minecraft-bot \
   localacct/iron-anarchy-minecraft-bot
 ```
 
-For detailed installation instructions, see: [📖 Installation Guide](wiki/guides/Installation-ESM.md)
+For detailed installation instructions, see: **[📖 Installation Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Installation-ESM)**
 
 ## 🚀 Quick Start
 
@@ -152,7 +161,7 @@ curl http://localhost:3001
 - ✅ Perfect for testing and development
 
 ### Enhanced Bot (`npm run enhanced`)
-**File**: `src/bots/ironanarchy-bot-fixed.js`
+**File**: `src/bots/enhanced-ironanarchy-bot.js`
 - ✅ Full ESM support
 - ✅ Web inventory interface
 - ✅ Recording capabilities
@@ -166,269 +175,88 @@ curl http://localhost:3001
 - ✅ Real-time status updates
 - ✅ Cross-platform communication
 
-## 🔧 ESM Compatibility
+## 🆘 Need Help?
 
-### What is ESM?
-ES Modules (ESM) are the official JavaScript module system. Many modern npm packages are ESM-only, requiring special handling in CommonJS projects.
+### Quick Solutions
+- **ESM Module Issues?** → [ESM Troubleshooting Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Troubleshooting-Guide)
+- **Installation Problems?** → [Installation Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Installation-ESM)
+- **Plugin Not Loading?** → [Fixed Bot Files Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Fixed-Bot-Files-Guide)
+- **General Issues?** → [Troubleshooting](TROUBLESHOOTING.md)
 
-### ESM-Compatible Packages
-| Package | Version | Status |
-|---------|---------|--------|
-| mineflayer-auto-eat | 5.0.0+ | ESM-only |
-| mineflayer-collectblock | 2.0.0+ | ESM-only |
-| mineflayer-dashboard | 2.0.0+ | ESM-only |
-
-### How It Works
-Our fixed bot files use dynamic imports to handle ESM modules:
-
-```javascript
-// Graceful ESM loading
-try {
-  const autoEatModule = await import('mineflayer-auto-eat')
-  const autoEat = autoEatModule.plugin || autoEatModule.default
-  bot.loadPlugin(autoEat)
-  console.log('✅ Auto-eat loaded (ESM)')
-} catch (error) {
-  console.log('⚠️ Auto-eat not available:', error.message)
-}
-```
-
-### Migration from v2.0.3
+### Test Commands
 ```bash
-# Old way
-npm start
-
-# New way (ESM compatible)
-npm run basic
-```
-
-For complete ESM documentation:
-- [🔧 ESM Compatibility Guide](wiki/guides/ESM-Compatibility-Guide.md)
-- [🤖 Fixed Bot Files Guide](wiki/guides/Fixed-Bot-Files-Guide.md)
-- [🔄 Migration Guide](wiki/guides/Migration-Guide.md)
-
-## ⚙️ Configuration
-
-### Environment Variables (.env)
-```bash
-# Server Configuration
-MC_SERVER_HOST=ironanarchy.lol
-MC_SERVER_PORT=25565
-MC_SERVER_VERSION=1.21.4
-
-# Bot Authentication
-MC_BOT_USERNAME=YourBotName
-MC_BOT_AUTH=microsoft
-
-# ESM Configuration
-USE_ESM_PLUGINS=true
-ESM_PLUGIN_TIMEOUT=30000
-FALLBACK_TO_CJS=true
-
-# Discord (Optional)
-DISCORD_TOKEN=your_token_here
-DISCORD_CHANNEL_ID=your_channel_id
-
-# Features
-WEB_DASHBOARD_PORT=3001
-RECORDING_ENABLED=true
-LOG_LEVEL=info
-```
-
-### Configuration File (config.json)
-```json
-{
-  "server": {
-    "host": "ironanarchy.lol",
-    "port": 25565,
-    "version": "1.21.4"
-  },
-  "bot": {
-    "username": "YourBotName",
-    "auth": "microsoft",
-    "type": "fixed"
-  },
-  "plugins": {
-    "autoEat": {
-      "enabled": true,
-      "esm": true,
-      "startAt": 14
-    },
-    "collectBlock": {
-      "enabled": true,
-      "esm": true
-    }
-  }
-}
-```
-
-## 💻 Usage
-
-### Starting Different Bot Types
-```bash
-# ESM-compatible basic bot
-npm run basic
-
-# Enhanced bot with full features
-npm run enhanced
-
-# Discord-integrated bot
-npm run discord
-
-# Advanced AI bot
-npm run advanced
-
-# Custom configuration
-CONFIG_FILE=custom.json npm run basic
-```
-
-### Available Scripts
-```bash
-npm run start       # Default bot
-npm run basic       # ESM-compatible basic bot
-npm run enhanced    # ESM-compatible enhanced bot
-npm run discord     # Discord-integrated bot
-npm run test        # Run all tests
-npm run test:esm    # Test ESM compatibility
-npm run setup       # Initial setup
-npm run validate    # Validate configuration
-```
-
-### Web Interface
-Access the web inventory at: http://localhost:3001
-- View bot inventory
-- Monitor bot status
-- Execute commands
-- View performance metrics
-
-### Discord Commands
-```
-!status         - Bot status
-!inventory      - Show inventory
-!health         - Health information
-!location       - Current location
-!help           - Available commands
-```
-
-## 📊 Monitoring
-
-### Log Files
-```bash
-# Bot logs
-tail -f logs/bot.log
-
-# Error logs
-tail -f logs/error.log
-
-# Discord logs (if enabled)
-tail -f logs/discord.log
-
-# Performance logs
-tail -f logs/performance.log
-```
-
-### Health Checks
-```bash
-# Check bot status
-npm run validate
-
-# Test ESM compatibility
-npm run test:esm
-
-# Run diagnostics
-node scripts/health-check.js
-
-# Monitor resources
-top -p $(pgrep -f "node.*bot")
-```
-
-### Performance Monitoring
-- Memory usage tracking
-- CPU utilization monitoring
-- Network connection status
-- Plugin load times
-- Error rate tracking
-
-## 🐛 Troubleshooting
-
-### Common ESM Issues
-
-#### Issue: "require() of ES modules is not supported"
-```bash
-# Solution: Use ESM-compatible bot
-npm run basic
-```
-
-#### Issue: Plugin not loading
-```bash
-# Check Node.js version (14.0.0+ required)
-node --version
-
-# Test ESM support
-node -e "import('mineflayer-auto-eat').then(console.log)"
-
-# Use fixed bot files
-npm run basic
-```
-
-#### Issue: Memory problems
-```bash
-# Increase memory limit
-export NODE_OPTIONS="--max-old-space-size=2048"
-npm run basic
-```
-
-### Debug Commands
-```bash
-# Enable debug mode
-DEBUG=* npm run basic
-
-# Test plugin compatibility
+# Test plugin loading
 npm run test:plugin
 
-# Validate configuration
-node scripts/validate-config.js
+# Start ESM-compatible bot
+npm run basic
 
-# ESM compatibility test
-npm run test:esm
+# Validate configuration
+npm run validate
+
+# Run startup diagnostics
+npm run test:startup
 ```
 
-### Getting Help
-1. **Check Logs**: Review `logs/bot.log` and `logs/error.log`
-2. **Run Diagnostics**: Use `npm run test:esm`
-3. **GitHub Issues**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues
-4. **Discord Community**: [Join our Discord]
-5. **Email Support**: localacct@ironanarchy.lol
+### Community Support
+- **GitHub Issues**: [Report bugs](https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues)
+- **Discord Community**: Join our Discord server
+- **Email Support**: localacct@ironanarchy.lol
 
-For comprehensive troubleshooting:
-- [🔧 ESM Troubleshooting Guide](wiki/guides/ESM-Troubleshooting-Guide.md)
-- [🐛 General Troubleshooting](TROUBLESHOOTING.md)
+## 📊 Quick Stats
 
-## 📚 Documentation
+| Metric | Value |
+|--------|-------|
+| **Documentation Pages** | 46+ |
+| **ESM Guides** | 4 |
+| **Code Examples** | 100+ |
+| **Supported Plugins** | 15+ |
+| **Node.js Versions** | 14.0.0+ |
+
+## 🗺️ Complete Documentation
 
 ### Core Documentation
-- [📖 Installation Guide](wiki/guides/Installation-ESM.md) - Complete installation instructions
-- [⚙️ Configuration Guide](CONFIGURATION.md) - Detailed configuration options
-- [🚀 Quick Start](wiki/guides/Quick-Start.md) - Get started in 5 minutes
-- [🏗️ Architecture](STRUCTURE.md) - Project structure and architecture
+- **[📖 Complete Wiki](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki)** - All documentation
+- **[📋 Table of Contents](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Table-of-Contents)** - Complete documentation index
+- **[🏗️ Project Structure](STRUCTURE.md)** - Code organization
+- **[📊 Features Overview](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Features-Overview)** - What the bot can do
 
-### ESM Compatibility (NEW)
-- [🔧 ESM Compatibility Guide](wiki/guides/ESM-Compatibility-Guide.md) - Complete ESM implementation
-- [🤖 Fixed Bot Files Guide](wiki/guides/Fixed-Bot-Files-Guide.md) - ESM-compatible bot files
-- [🔄 Migration Guide](wiki/guides/Migration-Guide.md) - Upgrade from previous versions
-- [🐛 ESM Troubleshooting](wiki/guides/ESM-Troubleshooting-Guide.md) - ESM-specific issues
+### Technical References
+- **[🔌 Plugin Types](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Plugin-Types)** - Available plugins
+- **[⚙️ Configuration Options](CONFIGURATION.md)** - All settings
+- **[📝 API Documentation](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/API-Reference)** - Developer API
 
-### Development
-- [🛠️ Contributing](CONTRIBUTING.md) - How to contribute
-- [🔒 Security](SECURITY.md) - Security policies
-- [📝 Code of Conduct](CODE_OF_CONDUCT.md) - Community guidelines
-- [📊 API Reference](wiki/developer/API-Reference.md) - Complete API documentation
+### Community Resources
+- **[🤝 Contributing Guidelines](CONTRIBUTING.md)** - How to help
+- **[🔒 Security Policy](SECURITY.md)** - Security reporting
+- **[📜 Code of Conduct](CODE_OF_CONDUCT.md)** - Community rules
 
-### Additional Resources
-- [📖 Complete Wiki](wiki/Table-of-Contents.md) - All documentation
-- [🎯 Examples](examples/) - Usage examples
-- [🧪 Tests](tests/) - Test files and examples
-- [📦 Docker](deployment/docker/) - Docker configurations
+### Version History
+- **[📝 Changelog](CHANGELOG.md)** - Version history and release notes
+- **[🔄 Migration Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Migration-Guide)** - Upgrading between versions
+
+## 🎯 Getting Started Checklist
+
+### For New Users
+- [ ] Read [Installation Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Installation-ESM)
+- [ ] Configure bot with [Configuration Guide](CONFIGURATION.md)
+- [ ] Start with `npm run basic`
+- [ ] Test plugin compatibility with `npm run test:plugin`
+- [ ] Join Discord community for support
+
+### For Upgrading Users
+- [ ] Review [Migration Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Migration-Guide)
+- [ ] Backup current configuration
+- [ ] Test with [Fixed Bot Files](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Fixed-Bot-Files-Guide)
+- [ ] Update to latest version
+- [ ] Verify ESM compatibility
+
+### For Developers
+- [ ] Check [ESM Compatibility Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Compatibility-Guide)
+- [ ] Review [Plugin Development](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Plugin-Development)
+- [ ] Test with ESM modules
+- [ ] Update to dynamic imports
+- [ ] Submit pull requests
 
 ## 🤝 Contributing
 
@@ -437,7 +265,7 @@ We welcome contributions! Here's how to get started:
 1. **Fork the repository**
 2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
 3. **Make your changes** (ensure ESM compatibility)
-4. **Test thoroughly**: `npm run test && npm run test:esm`
+4. **Test thoroughly**: `npm test && npm run test:plugin`
 5. **Submit a pull request**
 
 ### Development Setup
@@ -449,7 +277,7 @@ npm install
 
 # Run tests
 npm test
-npm run test:esm
+npm run test:plugin
 
 # Start in development mode
 npm run basic
@@ -469,13 +297,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Iron-Anarchy Server** - For providing the testing environment
 - **Contributors** - Everyone who has contributed to this project
 
-## 📞 Support & Contact
-
-- **GitHub Issues**: https://github.com/Localacct21/iron-anarchy-minecraft-bot/issues
-- **Discord Community**: [Join our Discord server]
-- **Email**: localacct@ironanarchy.lol
-- **Documentation**: [Complete Wiki](wiki/Table-of-Contents.md)
-
 ## 🗺️ Roadmap
 
 ### Upcoming Features
@@ -493,9 +314,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by the Iron-Anarchy community**
+**Welcome to the Iron-Anarchy community! 🎮**
 
 *Professional Minecraft automation for the modern age*
+
+**📖 [Browse Complete Documentation](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki)** | **🚀 [Quick Start](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/Quick-Start)** | **🔧 [ESM Guide](https://github.com/Localacct21/iron-anarchy-minecraft-bot/wiki/ESM-Compatibility-Guide)**
 
 [![GitHub stars](https://img.shields.io/github/stars/Localacct21/iron-anarchy-minecraft-bot.svg?style=social&label=Star)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
 [![Follow on GitHub](https://img.shields.io/github/followers/Localacct21.svg?style=social&label=Follow)](https://github.com/Localacct21)

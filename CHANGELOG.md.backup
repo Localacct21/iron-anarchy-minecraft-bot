@@ -1,0 +1,79 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.0.4] - 2025-01-06
+
+### 🔧 Fixed
+- **ESM Compatibility**: Resolved all ES Module compatibility issues with `mineflayer-auto-eat@5.0.2` and `mineflayer-collectblock`
+- **Configuration Paths**: Fixed incorrect configuration file paths in all bot scripts (`./config.json` → `../../config/config.json`)
+- **Plugin Loading**: Improved plugin loading with better error handling and fallbacks
+- **Bloodhound Plugin**: Fixed plugin extraction and loading mechanism
+- **Web Inventory**: Enhanced error handling for port conflicts and initialization
+
+### 🆕 Added
+- **New Fixed Bot Scripts**: 
+  - `src/bots/ironanarchy-bot-fixed.js` - Full-featured bot with ESM compatibility
+  - `src/bots/bot-fixed.js` - Basic bot with essential plugins
+- **Dynamic Import Support**: Smart loading of ES modules alongside CommonJS modules
+- **Async Bot Initialization**: Updated `index.js` to handle async bot creation
+- **Enhanced Error Handling**: Comprehensive error messages and graceful plugin loading failures
+- **Detailed Logging**: Improved startup progress logging with emoji indicators
+
+### 🚀 Improved
+- **Package.json Scripts**: Updated to use fixed bot scripts for reliability
+- **Plugin Loading System**: Enhanced validation and error recovery
+- **Configuration Management**: Better path resolution and error handling
+- **Test Coverage**: All 16 tests now pass successfully
+- **Documentation**: Updated README with latest fixes and installation instructions
+
+### 🧪 Testing
+- ✅ All ESM modules loading successfully
+- ✅ All CommonJS modules working correctly
+- ✅ Plugin Loader Tests: 6/6 passing
+- ✅ Discord Integration Tests: 10/10 passing
+- ✅ Startup Tests: All passing
+- ✅ Installation validation complete
+
+### 🔄 Migration Guide
+- No breaking changes for existing users
+- Configuration files automatically created with `npm run setup`
+- Existing configurations remain compatible
+- New users benefit from improved stability
+
+### 📦 Dependencies
+- All dependencies remain at current versions
+- Enhanced compatibility with ES modules
+- Improved error handling for version mismatches
+
+## [2.0.3] - Previous Release
+- Initial feature-complete release
+- Basic plugin system implementation
+- Docker deployment support
+- Discord integration
+- Recording capabilities
+
+---
+
+## Release Notes
+
+### v2.0.4 - The Stability Release
+
+This release focuses on resolving compatibility issues and improving the overall stability of the bot. The main achievement is solving the persistent ESM (ES Module) compatibility problems that were preventing the bot from starting in many environments.
+
+**Key Achievements:**
+- 🎯 **Zero ESM Errors**: Complete resolution of `require() of ES Module` errors
+- 🔧 **All Plugins Working**: Every plugin now loads successfully
+- 📊 **100% Test Success**: All tests passing for the first time
+- 🚀 **Improved Reliability**: Enhanced error handling and fallback mechanisms
+
+**Technical Improvements:**
+- Dynamic `import()` statements for ES modules
+- Proper async/await handling in bot initialization
+- Corrected relative path resolution for configuration files
+- Enhanced plugin validation and loading logic
+
+This release represents a major milestone in the project's stability and usability. Users can now deploy the bot with confidence that all features will work as intended.
