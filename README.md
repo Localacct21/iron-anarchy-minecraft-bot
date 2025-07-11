@@ -1,4 +1,17 @@
-# 🏠 Iron-Anarchy Minecraft Bot
+
+[![Deploy Docs](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-docs.yml)
+[![CI](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/ci.yml)
+[![Deploy Master](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-master.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-master.yml)
+[![Deploy Cloud](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-cloud.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-cloud.yml)
+[![Deploy VPS](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-vps.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-vps.yml)
+[![Build](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/build.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/build.yml)
+[![Deploy Docker](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-docker.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/deploy-docker.yml)
+[![Lint](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/lint.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/lint.yml)
+[![Release](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/release.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/release.yml)
+[![Publish Package](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/publish-package.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/publish-package.yml)
+[![CodeQL Analysis](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Localacct21/iron-anarchy-minecraft-bot/actions/workflows/codeql-analysis.yml)
+
+
 
 [![Version](https://img.shields.io/npm/v/@localacct/iron-anarchy-minecraft-bot.svg)](https://www.npmjs.com/package/@localacct/iron-anarchy-minecraft-bot)
 [![License](https://img.shields.io/github/license/Localacct21/iron-anarchy-minecraft-bot.svg)](LICENSE)
@@ -322,3 +335,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [![GitHub stars](https://img.shields.io/github/stars/Localacct21/iron-anarchy-minecraft-bot.svg?style=social&label=Star)](https://github.com/Localacct21/iron-anarchy-minecraft-bot)
 [![Follow on GitHub](https://img.shields.io/github/followers/Localacct21.svg?style=social&label=Follow)](https://github.com/Localacct21)
+## Workflow Test
