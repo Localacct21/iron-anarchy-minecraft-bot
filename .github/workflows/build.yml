@@ -9,14 +9,20 @@ on:
     types: [published]
   workflow_dispatch:
 
+# Permissions
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     name: Build Application
     runs-on: ubuntu-latest
     
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [18.x, 20.x, 22.x]
         
     steps:
     - name: Checkout code
@@ -71,7 +77,7 @@ jobs:
         tar -czf iron-anarchy-bot-${{ matrix.node-version }}.tar.gz -C dist .
         
     - name: Generate documentation
-      if: matrix.node-version == '18.x'
+      if: matrix.node-version == '20.x'
       run: |
         npx jsdoc -c jsdoc.conf.json -d dist/docs/ src/ || echo "JSDoc generation failed"
         
@@ -259,6 +265,6 @@ jobs:
           const used = process.memoryUsage();
           console.log('Memory usage:');
           for (let key in used) {
-            console.log(\`\${key}: \${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB\`);
+            console.log(`${key}: ${Math.round(used[key] / 1024 / 1024 * 100) / 100} MB`);
           }
         "

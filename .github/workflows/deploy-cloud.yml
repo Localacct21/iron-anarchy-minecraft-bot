@@ -25,55 +25,59 @@ on:
         - staging
         - production
 
+# Permissions
+permissions:
+  contents: read
+
 jobs:
   deploy-aws:
     name: Deploy to AWS
     runs-on: ubuntu-latest
     if: github.event.inputs.platform == 'aws'
     environment: ${{ github.event.inputs.environment }}
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ vars.AWS_REGION || 'us-east-1' }}
-        
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '20.x'
         cache: 'npm'
-        
+
     - name: Install dependencies
       run: npm ci --only=production
-      
+
     - name: Create deployment package
       run: |
         zip -r deployment.zip . -x "node_modules/*" "tests/*" ".git/*" "*.backup"
-        
+
     - name: Deploy to AWS Elastic Beanstalk
       run: |
         # Install AWS CLI
         pip install awscli
-        
+
         # Create application version
         aws elasticbeanstalk create-application-version \
           --application-name "minecraft-bot" \
           --version-label "v${{ github.sha }}" \
           --source-bundle S3Bucket="${{ vars.AWS_S3_BUCKET }}",S3Key="deployment.zip" \
           --description "Deployment from GitHub Actions"
-        
+
         # Update environment
         aws elasticbeanstalk update-environment \
           --application-name "minecraft-bot" \
           --environment-name "minecraft-bot-${{ github.event.inputs.environment }}" \
           --version-label "v${{ github.sha }}"
-        
+
         echo "✅ Deployed to AWS Elastic Beanstalk"
 
   deploy-gcp:
@@ -81,41 +85,41 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.platform == 'gcp'
     environment: ${{ github.event.inputs.environment }}
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Setup Google Cloud CLI
       uses: google-github-actions/setup-gcloud@v2
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ vars.GCP_PROJECT_ID }}
-        
+
     - name: Create app.yaml for App Engine
       run: |
         cat > app.yaml << 'APPYAML_EOF'
         runtime: nodejs18
-        
+
         env_variables:
           NODE_ENV: ${{ github.event.inputs.environment }}
           LOG_LEVEL: info
-        
+
         resources:
           cpu: 1
           memory_gb: 0.5
           disk_size_gb: 10
-        
+
         automatic_scaling:
           min_instances: 1
           max_instances: 3
           target_cpu_utilization: 0.6
-        
+
         handlers:
         - url: /.*
           script: auto
         APPYAML_EOF
-        
+
     - name: Deploy to App Engine
       run: |
         gcloud app deploy app.yaml --quiet --version=v${{ github.sha }}
@@ -126,32 +130,32 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.platform == 'azure'
     environment: ${{ github.event.inputs.environment }}
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '20.x'
         cache: 'npm'
-        
+
     - name: Install dependencies
       run: npm ci --only=production
-      
+
     - name: Login to Azure
       uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
+
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v3
       with:
         app-name: ${{ vars.AZURE_APP_NAME }}
         slot-name: ${{ github.event.inputs.environment }}
         package: .
-        
+
     - name: Configure App Service settings
       run: |
         az webapp config appsettings set \
@@ -159,7 +163,7 @@ jobs:
           --name ${{ vars.AZURE_APP_NAME }} \
           --slot ${{ github.event.inputs.environment }} \
           --settings NODE_ENV=${{ github.event.inputs.environment }} LOG_LEVEL=info
-        
+
         echo "✅ Deployed to Azure App Service"
 
   deploy-digitalocean:
@@ -167,27 +171,27 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.platform == 'digitalocean'
     environment: ${{ github.event.inputs.environment }}
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
       with:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-        
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '20.x'
         cache: 'npm'
-        
+
     - name: Build application
       run: |
         npm ci --only=production
         tar -czf minecraft-bot.tar.gz --exclude=node_modules .
-        
+
     - name: Deploy to DigitalOcean App Platform
       run: |
         # Create app spec
@@ -210,7 +214,7 @@ jobs:
           - key: LOG_LEVEL
             value: info
         DOAPP_EOF
-        
+
         # Deploy using doctl
         doctl apps create .do/app.yaml
         echo "✅ Deployed to DigitalOcean App Platform"
@@ -220,27 +224,27 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.platform == 'heroku'
     environment: ${{ github.event.inputs.environment }}
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Setup Heroku CLI
       uses: akhileshns/heroku-deploy@v3.13.15
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "minecraft-bot-${{ github.event.inputs.environment }}"
         heroku_email: ${{ secrets.HEROKU_EMAIL }}
-        
+
     - name: Create Procfile
       run: |
         echo "web: npm start" > Procfile
-        
+
     - name: Set Heroku config vars
       run: |
         heroku config:set NODE_ENV=${{ github.event.inputs.environment }} --app minecraft-bot-${{ github.event.inputs.environment }}
         heroku config:set LOG_LEVEL=info --app minecraft-bot-${{ github.event.inputs.environment }}
-        
+
         echo "✅ Deployed to Heroku"
 
   deployment-notification:
@@ -248,7 +252,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [deploy-aws, deploy-gcp, deploy-azure, deploy-digitalocean, deploy-heroku]
     if: always()
-    
+
     steps:
     - name: Send Discord notification
       if: vars.DISCORD_WEBHOOK_URL
@@ -257,7 +261,7 @@ jobs:
              -X POST \
              -d "{\"embeds\": [{\"title\": \"🚀 Deployment Complete\", \"description\": \"Minecraft bot deployed to ${{ github.event.inputs.platform }} (${{ github.event.inputs.environment }})\", \"color\": 3066993}]}" \
              ${{ vars.DISCORD_WEBHOOK_URL }}
-        
+
     - name: Create deployment summary
       run: |
         echo "## 🚀 Cloud Deployment Summary" >> $GITHUB_STEP_SUMMARY

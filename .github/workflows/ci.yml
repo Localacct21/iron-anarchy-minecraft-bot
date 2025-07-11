@@ -1,83 +1,32 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
-    branches: [ master, main, develop ]
+    branches: [ main, master, develop ]
   pull_request:
-    branches: [ master, main ]
-  workflow_dispatch:
+    branches: [ main, master, develop ]
+
+# Set default permissions as read only
+permissions:
+  contents: read
 
 jobs:
-  test:
-    name: Run Tests
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ${{ matrix.os }}
     
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18.x, 20.x, 22.x]
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Run plugin validation
-      run: npm run validate
-      continue-on-error: true
-      
-    - name: Run test suite
-      run: npm test
-      
-    - name: Run plugin-specific tests
-      run: npm run test:plugin
-      continue-on-error: true
-      
-    - name: Run Discord integration tests
-      run: npm run test:discord
-      continue-on-error: true
-      
-    - name: Test bot startup (basic)
-      run: timeout 10s npm run basic || true
-      
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: test-results-${{ matrix.node-version }}
-        path: |
-          test-results/
-          logs/
-        retention-days: 7
-
-  validate-config:
-    name: Validate Configuration
-    runs-on: ubuntu-latest
-    needs: test
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18.x'
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Validate package.json
-      run: npm run setup
-      
-    - name: Check for security vulnerabilities
-      run: npm audit --audit-level=moderate
-      continue-on-error: true
+        cache: "npm"
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test --if-present

@@ -21,6 +21,10 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
+# Permissions scoped to the deployment needs
+permissions:
+  contents: read
+
 jobs:
   validate-deployment:
     name: 🔍 Validate Deployment Request
@@ -182,7 +186,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '20.x'
         cache: 'npm'
         
     - name: Install dependencies
@@ -397,7 +401,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18.x'
+        node-version: '20.x'
         cache: 'npm'
         
     - name: Install dependencies
